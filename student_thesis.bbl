@@ -1,0 +1,603 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{Bartel2011}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=2eed2caae40686fd61c5266488938d70}{%
+           family={Bartel},
+           familyi={B\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=93f14cf64b8a452b86fb436ac9d6ba2e}{%
+           family={Baumanns},
+           familyi={B\bibinitperiod},
+           given={Sascha},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0367cc30345eba78dfe035f884884a91}{%
+           family={Schöps},
+           familyi={S\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{973fabaa3dadd2dfaa6a4302b09d6789}
+      \strng{fullhash}{973fabaa3dadd2dfaa6a4302b09d6789}
+      \strng{fullhashraw}{973fabaa3dadd2dfaa6a4302b09d6789}
+      \strng{bibnamehash}{973fabaa3dadd2dfaa6a4302b09d6789}
+      \strng{authorbibnamehash}{973fabaa3dadd2dfaa6a4302b09d6789}
+      \strng{authornamehash}{973fabaa3dadd2dfaa6a4302b09d6789}
+      \strng{authorfullhash}{973fabaa3dadd2dfaa6a4302b09d6789}
+      \strng{authorfullhashraw}{973fabaa3dadd2dfaa6a4302b09d6789}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Modeling electric circuits that contain magnetoquasistatic (MQS) devices leads to a coupled system of differential-algebraic equations (DAEs). In our case, the MQS device is described by the eddy current problem being already discretized in space (via edge-elements). This yields a DAE with a properly stated leading term, which has to be solved in the time domain. We are interested in structural properties of this system, which are important for numerical integration. Applying a standard projection technique, we are able to deduce topological conditions such that the tractability index of the coupled problem does not exceed two. Although index-2, we can conclude that the numerical difficulties for this problem are not severe due to a linear dependency on index-2 variables.}
+      \field{issn}{0168-9274}
+      \field{journaltitle}{Applied Numerical Mathematics}
+      \field{number}{12}
+      \field{title}{Structural analysis of electrical circuits including magnetoquasistatic devices}
+      \field{volume}{61}
+      \field{year}{2011}
+      \field{pages}{1257\bibrangedash 1270}
+      \range{pages}{14}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.apnum.2011.08.004
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0168927411001358
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0168927411001358
+      \endverb
+      \keyw{Modified nodal analysis,Differential-algebraic equations,Tractability index,Electromagnetic devices,Maxwellʼs equations,Finite integration technique,Structural analysis,Eddy currents}
+    \endentry
+    \entry{Bartel2013}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=2eed2caae40686fd61c5266488938d70}{%
+           family={Bartel},
+           familyi={B\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e655f018c00f7f6dae1dcd7577684bf0}{%
+           family={Brunk},
+           familyi={B\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=36e06ec0bef21ce0f1cb5421ff73bacc}{%
+           family={Günther},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0367cc30345eba78dfe035f884884a91}{%
+           family={Schöps},
+           familyi={S\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{6f7107020daaa25821c57d3f8f265b18}
+      \strng{fullhash}{ed6f2fec088214f86d6ec2d530fd5557}
+      \strng{fullhashraw}{ed6f2fec088214f86d6ec2d530fd5557}
+      \strng{bibnamehash}{6f7107020daaa25821c57d3f8f265b18}
+      \strng{authorbibnamehash}{6f7107020daaa25821c57d3f8f265b18}
+      \strng{authornamehash}{6f7107020daaa25821c57d3f8f265b18}
+      \strng{authorfullhash}{ed6f2fec088214f86d6ec2d530fd5557}
+      \strng{authorfullhashraw}{ed6f2fec088214f86d6ec2d530fd5557}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Coupled systems of differential-algebraic equations (DAEs) may suffer from instabilities during a dynamic iteration. We extend the existing analysis on recursion estimates, error propagation, and stability to (semiexplicit) index-1 DAEs. In this context, we discuss the influence of certain coupling structures and the computational sequence of the subsystems on the rate of convergence. Furthermore, we investigate in detail convergence and divergence for two coupled problems stemming from refined electric circuit simulation. These are the semiconductor-circuit and field-circuit couplings. We quantify the convergence rate and behavior also using Lipschitz constants and suggest an enhanced modeling of the coupling interface in order to improve convergence.}
+      \field{journaltitle}{SIAM Journal on Scientific Computing}
+      \field{number}{2}
+      \field{title}{Dynamic Iteration for Coupled Problems of Electric Circuits and Distributed Devices}
+      \field{volume}{35}
+      \field{year}{2013}
+      \field{pages}{B315\bibrangedash B335}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1137/120867111
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1137/120867111
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1137/120867111
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1137/120867111
+      \endverb
+    \endentry
+    \entry{Garcia2020}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=11be46e7c40123feef70872c8b3652bd}{%
+           family={{Cortes Garcia}},
+           familyi={C\bibinitperiod},
+           given={Idoia},
+           giveni={I\bibinitperiod}}}%
+        {{hash=82999ead8d0c197eae1b6729485b017f}{%
+           family={De\bibnamedelima Gersem},
+           familyi={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Herbert},
+           giveni={H\bibinitperiod}}}%
+        {{hash=0367cc30345eba78dfe035f884884a91}{%
+           family={Schöps},
+           familyi={S\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fca617067ee9bb6da7b0ccfe46fc0226}
+      \strng{fullhash}{fca617067ee9bb6da7b0ccfe46fc0226}
+      \strng{fullhashraw}{fca617067ee9bb6da7b0ccfe46fc0226}
+      \strng{bibnamehash}{fca617067ee9bb6da7b0ccfe46fc0226}
+      \strng{authorbibnamehash}{fca617067ee9bb6da7b0ccfe46fc0226}
+      \strng{authornamehash}{fca617067ee9bb6da7b0ccfe46fc0226}
+      \strng{authorfullhash}{fca617067ee9bb6da7b0ccfe46fc0226}
+      \strng{authorfullhashraw}{fca617067ee9bb6da7b0ccfe46fc0226}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In some applications, there arises the need of a spatially distributed description of a physical quantity inside a device coupled to a circuit. Then, the in-space discretised system of partial differential equations is coupled to the system of equations describing the circuit (modified nodal analysis) which yields a system of differential algebraic equations (DAEs). This paper deals with the differential index analysis of such coupled systems. For that, a new generalised inductance--like element is defined. The index of the DAEs obtained from a circuit containing such an element is then related to the topological characteristics of the circuit's underlying graph. Field/circuit coupling is performed when circuits are simulated containing elements described by Maxwell's equations. The index of such systems with two different types of magnetoquasistatic formulations (A* and T-Ω) is then deduced by showing that the spatial discretisations in both cases lead to an inductance-like element.}
+      \field{day}{1}
+      \field{issn}{1572-9265}
+      \field{journaltitle}{Numerical Algorithms}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{A structural analysis of field/circuit coupled problems based on a generalised circuit element}
+      \field{volume}{83}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{pages}{373\bibrangedash 394}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1007/s11075-019-00686-x
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s11075-019-00686-x
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s11075-019-00686-x
+      \endverb
+    \endentry
+    \entry{Garcia2017}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=11be46e7c40123feef70872c8b3652bd}{%
+           family={{Cortes Garcia}},
+           familyi={C\bibinitperiod},
+           given={Idoia},
+           giveni={I\bibinitperiod}}}%
+        {{hash=0367cc30345eba78dfe035f884884a91}{%
+           family={Schöps},
+           familyi={S\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=16a324c024c35d36c7e5e4ee20e8c845}{%
+           family={Maciejewski},
+           familyi={M\bibinitperiod},
+           given={Michal},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f2af1bb690ea314abc98ed90c03ef25c}{%
+           family={Bortot},
+           familyi={B\bibinitperiod},
+           given={Lorenzo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=cf7228d6df33f5eb363e189a60122107}{%
+           family={Prioli},
+           familyi={P\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0e809c2e39d85bc1b09394273319772f}{%
+           family={Auchmann},
+           familyi={A\bibinitperiod},
+           given={Bernhard},
+           giveni={B\bibinitperiod}}}%
+        {{hash=688e93fcd6ab765bb0585f2525b39b92}{%
+           family={Verweij},
+           familyi={V\bibinitperiod},
+           given={Arjan},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{40aea14ee88721eeb097dc53d0564d04}
+      \strng{fullhash}{8074ebec16b3f0484979ff53307247e9}
+      \strng{fullhashraw}{8074ebec16b3f0484979ff53307247e9}
+      \strng{bibnamehash}{40aea14ee88721eeb097dc53d0564d04}
+      \strng{authorbibnamehash}{40aea14ee88721eeb097dc53d0564d04}
+      \strng{authornamehash}{40aea14ee88721eeb097dc53d0564d04}
+      \strng{authorfullhash}{8074ebec16b3f0484979ff53307247e9}
+      \strng{authorfullhashraw}{8074ebec16b3f0484979ff53307247e9}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Journal on Multiscale and Multiphysics Computational Techniques}
+      \field{title}{Optimized Field/Circuit Coupling for the Simulation of Quenches in Superconducting Magnets}
+      \field{volume}{2}
+      \field{year}{2017}
+      \field{pages}{97\bibrangedash 104}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/JMMCT.2017.2710128
+      \endverb
+      \keyw{Superconducting magnets;Magnetic domains;Magnetic circuits;Couplings;Integrated circuit modeling;Mathematical model;Convergence;Convergence of numerical methods;coupling circuits;eddy currents;iterative methods}
+    \endentry
+    \entry{Gomes2017}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=412dc08bf47d6e09117ad6a5774c0000}{%
+           family={Gomes},
+           familyi={G\bibinitperiod},
+           given={Cláudio},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c05f3a0f77a4550f4fb6856aa0a6f822}{%
+           family={Thule},
+           familyi={T\bibinitperiod},
+           given={Casper},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2c46a0cddcfed826650063252c231195}{%
+           family={Broman},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=fa3c5df4722569ce875a1a1abe61b54c}{%
+           family={Larsen},
+           familyi={L\bibinitperiod},
+           given={Peter\bibnamedelima Gorm},
+           giveni={P\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=ae584fbe3b96986d19b980d159d31458}{%
+           family={Vangheluwe},
+           familyi={V\bibinitperiod},
+           given={Hans},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{6d41a97b5eb6eb8d84a587bfedd5a7fc}
+      \strng{fullhash}{74b59e8dc907efb56220e1d3667e836e}
+      \strng{fullhashraw}{74b59e8dc907efb56220e1d3667e836e}
+      \strng{bibnamehash}{6d41a97b5eb6eb8d84a587bfedd5a7fc}
+      \strng{authorbibnamehash}{6d41a97b5eb6eb8d84a587bfedd5a7fc}
+      \strng{authornamehash}{6d41a97b5eb6eb8d84a587bfedd5a7fc}
+      \strng{authorfullhash}{74b59e8dc907efb56220e1d3667e836e}
+      \strng{authorfullhashraw}{74b59e8dc907efb56220e1d3667e836e}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Co-simulation: State of the art}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1702.00686
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1702.00686
+      \endverb
+    \endentry
+    \entry{Chung-Wen1975}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=de255eee521e49aed4c2d9295d277bd2}{%
+           family={Ho},
+           familyi={H\bibinitperiod},
+           given={Chung-Wen},
+           giveni={C\bibinithyphendelim W\bibinitperiod}}}%
+        {{hash=46347275f2b0e9379312df8beec5ff3f}{%
+           family={Ruehli},
+           familyi={R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=510987cda6b9316f2b1c8006dff542cf}{%
+           family={Brennan},
+           familyi={B\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{bcff144359f6c23ccd764a57bfe83b93}
+      \strng{fullhash}{bcff144359f6c23ccd764a57bfe83b93}
+      \strng{fullhashraw}{bcff144359f6c23ccd764a57bfe83b93}
+      \strng{bibnamehash}{bcff144359f6c23ccd764a57bfe83b93}
+      \strng{authorbibnamehash}{bcff144359f6c23ccd764a57bfe83b93}
+      \strng{authornamehash}{bcff144359f6c23ccd764a57bfe83b93}
+      \strng{authorfullhash}{bcff144359f6c23ccd764a57bfe83b93}
+      \strng{authorfullhashraw}{bcff144359f6c23ccd764a57bfe83b93}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Circuits and Systems}
+      \field{number}{6}
+      \field{title}{The modified nodal approach to network analysis}
+      \field{volume}{22}
+      \field{year}{1975}
+      \field{pages}{504\bibrangedash 509}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/TCS.1975.1084079
+      \endverb
+      \keyw{Equations;Voltage;Circuit analysis computing;Cancer;Computer networks;Gyrators;Inductors;Capacitors;Admittance}
+    \endentry
+    \entry{Monk2003}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=400b0cb6ac7445d4287351989a823ace}{%
+           family={Monk},
+           familyi={M\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{400b0cb6ac7445d4287351989a823ace}
+      \strng{fullhash}{400b0cb6ac7445d4287351989a823ace}
+      \strng{fullhashraw}{400b0cb6ac7445d4287351989a823ace}
+      \strng{bibnamehash}{400b0cb6ac7445d4287351989a823ace}
+      \strng{authorbibnamehash}{400b0cb6ac7445d4287351989a823ace}
+      \strng{authornamehash}{400b0cb6ac7445d4287351989a823ace}
+      \strng{authorfullhash}{400b0cb6ac7445d4287351989a823ace}
+      \strng{authorfullhashraw}{400b0cb6ac7445d4287351989a823ace}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Since the middle of the last century, computing power has increased sufficiently that the direct numerical approximation of Maxwell’s equations is now an increasingly important tool in science and engineering. Parallel to the increasing use of numerical methods in computational electromagnetism, there has also been considerable progress in the mathematical understanding of the properties of Maxwell’s equations relevant to numerical analysis. The aim of this book is to provide an up-to-date and sound theoretical foundation for finite element methods in computational electromagnetism. The emphasis is on finite element methods for scattering problems that involve the solution of Maxwell’s equations on infinite domains. Suitable variational formulations are developed and justified mathematically. An error analysis of edge finite element methods that are particularly well suited to Maxwell’s equations is the main focus of the book. The analysis involves a complete justification of the discrete de Rham diagram and discrete compactness of edge elements. The numerical methods are justified for Lipschitz polyhedral domains that can cause strong singularities in the solution. The book ends with a short introduction to inverse problems in electromagnetism.}
+      \field{isbn}{9780198508885}
+      \field{month}{04}
+      \field{title}{Finite Element Methods for Maxwell's Equations}
+      \field{year}{2003}
+      \verb{doi}
+      \verb 10.1093/acprof:oso/9780198508885.001.0001
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/acprof:oso/9780198508885.001.0001
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/acprof:oso/9780198508885.001.0001
+      \endverb
+    \endentry
+    \entry{Pels2019}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=b46065f2fb9426cddf73e4b9871d398e}{%
+           family={Pels},
+           familyi={P\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0308ec2919e8c2c1a947747cf2dc8d0e}{%
+           family={Gyselinck},
+           familyi={G\bibinitperiod},
+           given={Johan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0491f84d5a482f7e718ff6da0725f2e3}{%
+           family={Sabariego},
+           familyi={S\bibinitperiod},
+           given={Ruth\bibnamedelima V.},
+           giveni={R\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=0367cc30345eba78dfe035f884884a91}{%
+           family={Schöps},
+           familyi={S\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{6f241c4f1c8703653094fd7d51155960}
+      \strng{fullhash}{99f65667721cf4cd7fcc5bfae4fe0322}
+      \strng{fullhashraw}{99f65667721cf4cd7fcc5bfae4fe0322}
+      \strng{bibnamehash}{6f241c4f1c8703653094fd7d51155960}
+      \strng{authorbibnamehash}{6f241c4f1c8703653094fd7d51155960}
+      \strng{authornamehash}{6f241c4f1c8703653094fd7d51155960}
+      \strng{authorfullhash}{99f65667721cf4cd7fcc5bfae4fe0322}
+      \strng{authorfullhashraw}{99f65667721cf4cd7fcc5bfae4fe0322}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Journal on Multiscale and Multiphysics Computational Techniques}
+      \field{title}{Efficient Simulation of DC–DC Switch-Mode Power Converters by Multirate Partial Differential Equations}
+      \field{volume}{4}
+      \field{year}{2019}
+      \field{pages}{64\bibrangedash 75}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/JMMCT.2018.2888900
+      \endverb
+      \keyw{DC-DC power converters;Finite element analysis;Linear circuits;Partial differential equations;Numerical analysis;DC–DC power conversion;finite-element methods (FEMs);linear circuits;numerical analysis;partial differential equations}
+    \endentry
+    \entry{Petri2022}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=03ddd5a838bf206613fe21f943d34163}{%
+           family={Petri},
+           familyi={P\bibinitperiod},
+           given={Timo},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b054d3503b9d457e3ae0cc5933e6a32c}{%
+           family={Keller},
+           familyi={K\bibinitperiod},
+           given={Marina},
+           giveni={M\bibinitperiod}}}%
+        {{hash=880ec26dbe06ed6de081359708573e07}{%
+           family={Parspour},
+           familyi={P\bibinitperiod},
+           given={Nejila},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d1f12a643daf9ad092a3a9984ceb0ccd}
+      \strng{fullhash}{d1f12a643daf9ad092a3a9984ceb0ccd}
+      \strng{fullhashraw}{d1f12a643daf9ad092a3a9984ceb0ccd}
+      \strng{bibnamehash}{d1f12a643daf9ad092a3a9984ceb0ccd}
+      \strng{authorbibnamehash}{d1f12a643daf9ad092a3a9984ceb0ccd}
+      \strng{authornamehash}{d1f12a643daf9ad092a3a9984ceb0ccd}
+      \strng{authorfullhash}{d1f12a643daf9ad092a3a9984ceb0ccd}
+      \strng{authorfullhashraw}{d1f12a643daf9ad092a3a9984ceb0ccd}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{month}{01}
+      \field{title}{The Insulation Resilience of Inverter-Fed Low Voltage Traction Machines: Review, Challenges, and Opportunities}
+      \field{volume}{10}
+      \field{year}{2022}
+      \field{pages}{104023\bibrangedash 104049}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2022.3210348
+      \endverb
+    \endentry
+    \entry{SchoepsDiss}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=0367cc30345eba78dfe035f884884a91}{%
+           family={Schöps},
+           familyi={S\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Bergische Universität Wuppertal}%
+      }
+      \strng{namehash}{0367cc30345eba78dfe035f884884a91}
+      \strng{fullhash}{0367cc30345eba78dfe035f884884a91}
+      \strng{fullhashraw}{0367cc30345eba78dfe035f884884a91}
+      \strng{bibnamehash}{0367cc30345eba78dfe035f884884a91}
+      \strng{authorbibnamehash}{0367cc30345eba78dfe035f884884a91}
+      \strng{authornamehash}{0367cc30345eba78dfe035f884884a91}
+      \strng{authorfullhash}{0367cc30345eba78dfe035f884884a91}
+      \strng{authorfullhashraw}{0367cc30345eba78dfe035f884884a91}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Multiscale modeling and multirate time integration of field/circuit coupled problems}
+      \field{type}{phdthesis}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb https://nbn-resolving.org/urn:nbn:de:hbz:468-20110718-110524-8
+      \endverb
+      \verb{url}
+      \verb https://nbn-resolving.org/urn:nbn:de:hbz:468-20110718-110524-8
+      \endverb
+    \endentry
+    \entry{Schoeps2010}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=0995676896031805f4d725982bd80239}{%
+           family={Schops},
+           familyi={S\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=82999ead8d0c197eae1b6729485b017f}{%
+           family={De\bibnamedelima Gersem},
+           familyi={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Herbert},
+           giveni={H\bibinitperiod}}}%
+        {{hash=2eed2caae40686fd61c5266488938d70}{%
+           family={Bartel},
+           familyi={B\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{056dc2c8480940c8b99c9a65ca1cd6af}
+      \strng{fullhash}{056dc2c8480940c8b99c9a65ca1cd6af}
+      \strng{fullhashraw}{056dc2c8480940c8b99c9a65ca1cd6af}
+      \strng{bibnamehash}{056dc2c8480940c8b99c9a65ca1cd6af}
+      \strng{authorbibnamehash}{056dc2c8480940c8b99c9a65ca1cd6af}
+      \strng{authornamehash}{056dc2c8480940c8b99c9a65ca1cd6af}
+      \strng{authorfullhash}{056dc2c8480940c8b99c9a65ca1cd6af}
+      \strng{authorfullhashraw}{056dc2c8480940c8b99c9a65ca1cd6af}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Magnetics}
+      \field{number}{8}
+      \field{title}{A Cosimulation Framework for Multirate Time Integration of Field/Circuit Coupled Problems}
+      \field{volume}{46}
+      \field{year}{2010}
+      \field{pages}{3233\bibrangedash 3236}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/TMAG.2010.2045156
+      \endverb
+      \keyw{Coupling circuits;Relaxation methods;Circuit simulation;Electromagnetic fields;Electromagnetic coupling;Convergence;Circuit stability;Stability analysis;Differential algebraic equations;Finite element methods;Convergence of numerical methods;coupling circuits;differential equations;eddy currents;iterative methods}
+    \endentry
+    \entry{Simonyi1979}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=0870652fd7f07213aeda7d91f1f1fe1d}{%
+           family={Simonyi},
+           familyi={S\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin}%
+      }
+      \list{publisher}{1}{%
+        {VEB Deutscher Verlag der Wissenschaften}%
+      }
+      \strng{namehash}{0870652fd7f07213aeda7d91f1f1fe1d}
+      \strng{fullhash}{0870652fd7f07213aeda7d91f1f1fe1d}
+      \strng{fullhashraw}{0870652fd7f07213aeda7d91f1f1fe1d}
+      \strng{bibnamehash}{0870652fd7f07213aeda7d91f1f1fe1d}
+      \strng{authorbibnamehash}{0870652fd7f07213aeda7d91f1f1fe1d}
+      \strng{authornamehash}{0870652fd7f07213aeda7d91f1f1fe1d}
+      \strng{authorfullhash}{0870652fd7f07213aeda7d91f1f1fe1d}
+      \strng{authorfullhashraw}{0870652fd7f07213aeda7d91f1f1fe1d}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{6}
+      \field{langid}{german}
+      \field{title}{Theoretische Elektrotechnik}
+      \field{year}{1977}
+    \endentry
+    \entry{USDRIVE_EDTT}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=d83f88f2616780d295f672e9f7177461}{%
+           family={{U.S. DRIVE Electric Drive Technical Team}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {U.S. Department of Energy, Vehicle Technologies Office}%
+      }
+      \strng{namehash}{d83f88f2616780d295f672e9f7177461}
+      \strng{fullhash}{d83f88f2616780d295f672e9f7177461}
+      \strng{fullhashraw}{d83f88f2616780d295f672e9f7177461}
+      \strng{bibnamehash}{d83f88f2616780d295f672e9f7177461}
+      \strng{authorbibnamehash}{d83f88f2616780d295f672e9f7177461}
+      \strng{authornamehash}{d83f88f2616780d295f672e9f7177461}
+      \strng{authorfullhash}{d83f88f2616780d295f672e9f7177461}
+      \strng{authorfullhashraw}{d83f88f2616780d295f672e9f7177461}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{3}
+      \field{title}{Electric Drive Technical Team Roadmap}
+      \field{type}{techreport}
+      \field{urlday}{23}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.energy.gov/sites/default/files/2024-06/EDTT_Roadmap_2023_JOG_Consensus_compliant.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.energy.gov/sites/default/files/2024-06/EDTT_Roadmap_2023_JOG_Consensus_compliant.pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

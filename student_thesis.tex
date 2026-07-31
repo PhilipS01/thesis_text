@@ -1,0 +1,136 @@
+\documentclass[
+	twoside,
+	pdfa=false,
+	ruledheaders=section,%Ebene bis zu der die Überschriften mit Linien abgetrennt werden, vgl. DEMO-TUDaPub
+	class=report,% Basisdokumentenklasse. Wählt die Korrespondierende KOMA-Script Klasse
+	thesis={type=bachelor},% Dokumententyp Thesis, für Dissertationen siehe die Demo-Datei DEMO-TUDaPhd
+	accentcolor=3d,% Auswahl der Akzentfarbe
+	custommargins=false,% Ränder werden mithilfe von typearea automatisch berechnet
+	marginpar=false,% Kopfzeile und Fußzeile erstrecken sich nicht über die Randnotizspalte
+	%BCOR=5mm,%Bindekorrektur, falls notwendig
+	parskip=half-,%Absatzkennzeichnung durch Abstand vgl. KOMA-Sript
+	fontsize=11pt,%Basisschriftgröße laut Corporate Design ist mit 9pt häufig zu klein
+	%logofile=tuda_logo.pdf, %Falls die Logo Dateien nicht installiert sind
+]{tudapub}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Download des TU-Logos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% https://download.hrz.tu-darmstadt.de/protected/CE/TUDa_LaTeX/tuda_logo.pdf
+% Der Pfad zum Logo kann als "logofile" angegeben werden.
+
+%%%%%%%%%%%%%%%%%%%
+% Sprachanpassung & Verbesserte Trennregeln
+%%%%%%%%%%%%%%%%%%%
+\usepackage[english]{babel}
+\usepackage[autostyle]{csquotes}% Anführungszeichen vereinfacht
+\usepackage{microtype}
+
+%%%%%%%%%%%%%%%%%%%
+% Literaturverzeichnis
+%%%%%%%%%%%%%%%%%%%
+\usepackage{biblatex}   % Literaturverzeichnis
+\addbibresource{literature.bib}
+
+%%%%%%%%%%%%%%%%%%%
+% Paketvorschläge Tabellen
+%%%%%%%%%%%%%%%%%%%
+%\usepackage{array}     % Basispaket für Tabellenkonfiguration, wird von den folgenden automatisch geladen
+\usepackage{tabularx}   % Tabellen, die sich automatisch der Breite anpassen
+%\usepackage{longtable} % Mehrseitige Tabellen
+%\usepackage{xltabular} % Mehrseitige Tabellen mit anpassarer Breite
+\usepackage{booktabs}   % Verbesserte Möglichkeiten für Tabellenlayout über horizontale Linien
+
+%%%%%%%%%%%%%%%%%%%
+% Paketvorschläge Mathematik
+%%%%%%%%%%%%%%%%%%%
+\usepackage{mathtools} % erweiterte Fassung von amsmath
+\usepackage{amssymb}   % erweiterter Zeichensatz
+\usepackage{siunitx}   % Einheiten
+
+%%%%%%%%%%%%%%%%%%%
+% Pseudocode
+%%%%%%%%%%%%%%%%%%%
+\usepackage[linesnumbered,lined,boxruled]{algorithm2e} % Package für Pseudocode
+
+%%%%%%%%%%%%%%%%%%%
+% Plotting und Grafik
+%%%%%%%%%%%%%%%%%%%
+\usepackage{tuda-pgfplots} % Package für Plotting with TUDa mods
+
+%%%%%%%%%%%%%%%%%%%
+% Sonstiges
+%%%%%%%%%%%%%%%%%%%
+\usepackage{blindtext} % Package für Blindtext
+
+\begin{document}
+	\title{Field-Circuit Coupling Using Black-Box Simulation Tools}
+	\subtitle{Coupling to a Reduced-Order Field Representation via Waveform Relaxation}
+	\author[P. Simon]{Philip Simon} %optionales Argument ist die Signatur,
+	\reviewer{Gutachter 1 \and Gutachterin 2} %Gutachten
+
+	%Diese Felder erden untereinander auf der Titelseite platziert.
+	\department{ce} % Das Kürzel wird automatisch ersetzt und als Studienfach gewählt, siehe Liste der Kürzel im Dokument.
+	\institution{
+		% Fügt das CE-Logo über dem Schriftzug ein
+		{\color{accentcolor}\includegraphics[width=0.9\linewidth]{images/ce_logo_black}}
+		% oder etit-Logo: 
+		%\includegraphics[width=0.9\linewidth]{images/etit_logo}
+	}
+	
+	\submissiondate{\today}
+	\examdate{\today}
+
+	%	\tuprints{urn=1234,printid=12345}
+	%	\dedication{Für alle, die \TeX{} nutzen.}
+
+	\maketitle
+	\pagenumbering{gobble} % Seitenzahlen angezeigt, startet ab dem Inhaltsverzeichnis
+
+	\affidavit
+
+	%%%%%%%%%%%%%%%%%%%
+	%Abstract / Kurzzusammenfassung
+	%%%%%%%%%%%%%%%%%%%
+	\include{chapters/zusammenfassung}
+
+	%%%%%%%%%%%%%%%%%%%
+	%Inhaltsverzeichnis 
+	%%%%%%%%%%%%%%%%%%%
+	\cleardoublepage
+	\tableofcontents % Erstellte ein Inhaltsverzeichnis
+	
+	\cleardoublepage
+	\pagenumbering{arabic} % Seitenzahlen angezeigt, startet ab dem Inhaltsverzeichnis
+	\setcounter{page}{1} % Setzt den Seitenzahlenzähler auf 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% INHALT, am Besten ausgelagert in eigene Files/Kapitel und dann mit \include{Unterordner/Filename} eingefügt, sorgt für bessere Übersichtlichkeit und Fehlersuche. Einzelne Dateien sind aktuell im Ordner Sections abgelegt. 
+	
+	\include{chapters/einleitung.tex}
+	
+	\include{chapters/theorie.tex}
+	
+	\include{chapters/xyce.tex}
+	
+	\include{chapters/numerik.tex}
+	
+	\include{chapters/application.tex}
+	
+	\include{chapters/fazit.tex}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%%%%%%%%%%%%%%%%%%%
+	%Abbildungs- und Tabellenverzeichnis
+	%%%%%%%%%%%%%%%%%%%
+	\listoffigures % Abbildungsverzeichnis (captions in den Figuren werden als Referenz genommen)
+	\listoftables % Verzeichnis der Tabellen (captions in den Tabellen werden als Referenz genommen)
+	
+	%%%%%%%%%%%%%%%%%%%
+	%Literaturverzeichnis an dieser Stelle
+	%%%%%%%%%%%%%%%%%%%
+	\printbibliography % Erstellt die Bibliography
+
+\end{document}

@@ -1,0 +1,26 @@
+\babel@toc {english}{}\relax 
+\babel@toc {german}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}State of the Art}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Objective and Contributions}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Limitations}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Outline of the Thesis}{3}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Fundamentals}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Dynamic Iteration}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Coupling Scheme}{4}{section.2.2}%
+\contentsline {paragraph}{\nonumberline Coupling Direction}{5}{paragraph*.2}%
+\contentsline {paragraph}{\nonumberline Transmission Conditions}{5}{paragraph*.3}%
+\contentsline {chapter}{\numberline {3}Coupling with Xyce\texttrademark }{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Requirements on the Circuit Solver (Why Xyce?)}{7}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Field Dummy Solver}{7}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Coupling via the Xyce Binary}{7}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Restarts and Checkpointing}{7}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Interface Condition via Behavioural Source}{7}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Coupling Direction}{7}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}General External Interface and Its Limitations}{7}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Benchmark and Verification}{8}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Application to General Circuits}{9}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusions and Outlook}{10}{chapter.6}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

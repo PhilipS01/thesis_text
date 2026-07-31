@@ -1,0 +1,146 @@
+% TU Darmstadt
+% Computational Electromagnetics Group
+%
+% macros: Definitions for pgfplots 
+% author: Sebastian Schoeps
+% E-Mail: Sebastian.Schoeps@tu-...
+
+\RequirePackage{listings}
+\RequirePackage{graphicx}
+\RequirePackage{pgfplots}
+\RequirePackage{cancel}
+\RequirePackage{media9}
+\RequirePackage{tikz}
+
+% Distinguish between old and new design
+\@ifpackageloaded{beamerthemeTUDa2023}{
+	\usetikzlibrary{fadings}
+	% use fancy gradient for new design
+	\titlegraphic*{%
+		\begin{tikzpicture}[inner sep=0, outer sep=0]
+			\node[] (A) at (0,0) {\includegraphics{cem_home}};
+			\fill[color=white, path fading=north, transform canvas={scale=1.1}] (A.south west) rectangle (A.north east);
+		\end{tikzpicture}%
+	}
+}{
+	\titlegraphic*{\includegraphics{cem_home}}
+	% reformat toc only for old design
+	\setbeamertemplate{section in toc}[square]
+	\setbeamertemplate{subsection in toc}[square]
+}
+\setbeamercolor*{block title}{fg=textonaccentcolor,bg=accentcolor}
+\setbeamercolor*{block body}{fg=black,bg=accentcolor!5}
+\setbeamercolor*{block title alerted}{fg=white,bg=TUDa-9b}
+\setbeamercolor*{block body alerted}{use=normal text,bg=TUDa-9b!5}
+\setbeamercolor*{block frame alerted}{bg=TUDa-9b}
+\setbeamercolor*{block title example}{fg=white,bg=TUDa-1d}
+\setbeamercolor*{block body example}{use=normal text,bg=TUDa-1d!5}
+\setbeamercolor*{block frame example}{bg=TUDa-1d}
+
+% https://github.com/tudace/tuda_latex_templates/issues/459
+\setbeamertemplate{itemize subitem}{\raise.2\baselineskip\hbox{\small\vrule width .5ex height .5ex}}
+\setbeamertemplate{itemize subsubitem}{\raise.2\baselineskip\hbox{\small\vrule width .5ex height 1ex}}
+
+%remove line breaks in bibliography entries
+\setbeamertemplate{bibliography entry title}{}
+\setbeamertemplate{bibliography entry location}{}
+\setbeamertemplate{bibliography entry note}{}
+
+% First section should start with N+1: \previoussection{N}
+\newcommand{\previoussection}[1]{
+	\makeatletter
+	\patchcmd{\beamer@sectionintoc}
+		{\ifnum\beamer@tempcount>0}
+		{\ifnum\beamer@tempcount>-1}
+		{}
+		{}
+	\beamer@tocsectionnumber=#1
+	\makeatother
+}
+
+% add several global path
+\newcommand{\SetTemplatePath}[1]{
+	\graphicspath{{#1/images/},{#1/videos/}}
+	\lstset{inputpath=#1/code}
+	\makeatletter
+	\def\input@path{{#1/tikz/}{#1/frames/}}
+	\makeatother
+	\pgfplotsset{table/search path={#1/data/}}
+	\addmediapath{#1/media/}
+}
+
+% allow to define options for slides
+\newcommand{\checkframe}[3]{\expandafter\ifx\csname #1\endcsname\relax #3\else #2 \fi}%
+\newcommand{\includeframes}[2][]{%
+	\begingroup%
+		\ifthenelse{\equal{#1}{}}{}{\expandafter\newcommand\csname #1\endcsname{}}%
+		\input{#2}%
+	\endgroup%
+}
+
+% allow cancel transitions
+\let\newcancel\cancel
+\renewcommand<>{\cancel}[1]{\alt#2{\newcancel{#1}\vphantom{#1}}{#1}}
+
+% remember tikz positions
+\newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node (#1) {};}
+
+\makeatletter
+% Detect mode. mathpalette is used to detect the used math style
+\newcommand<>\Alt[2]{%
+    \begingroup
+    \ifmmode
+        \expandafter\mathpalette
+        \expandafter\math@Alt
+    \else
+        \expandafter\make@Alt
+    \fi
+    {{#1}{#2}{#3}}%
+    \endgroup
+}
+
+% Un-brace the second argument (required because \mathpalette reads the three arguments as one
+\newcommand\math@Alt[2]{\math@@Alt{#1}#2}
+
+% Set the two arguments in boxes. The math style is given by #1. \m@th sets \mathsurround to 0.
+\newcommand\math@@Alt[3]{%
+    \setbox\z@ \hbox{$\m@th #1{#2}$}%
+    \setbox\@ne\hbox{$\m@th #1{#3}$}%
+    \@Alt
+}
+
+% Un-brace the argument
+\newcommand\make@Alt[1]{\make@@Alt#1}
+
+% Set the two arguments into normal boxes
+\newcommand\make@@Alt[2]{%
+    \sbox\z@ {#1}%
+    \sbox\@ne{#2}%
+    \@Alt
+}
+
+% Place one of the two boxes using \rlap and place a \phantom box with the maximum of the two boxes
+\newcommand\@Alt[1]{%
+    \alt#1%
+        {\rlap{\usebox0}}%
+        {\rlap{\usebox1}}%
+    \setbox\tw@\null
+    \ht\tw@\ifnum\ht\z@>\ht\@ne\ht\z@\else\ht\@ne\fi
+    \dp\tw@\ifnum\dp\z@>\dp\@ne\dp\z@\else\dp\@ne\fi
+    \wd\tw@\ifnum\wd\z@>\wd\@ne\wd\z@\else\wd\@ne\fi
+    \box\tw@
+}
+
+% Allow to disable handout mode locally
+\AtBeginDocument{\edef\saved@beamer@mode{\beamer@currentmode}}
+\def\handoutoff{%
+	\edef\saved@beamer@mode{\beamer@currentmode}%
+	\def\beamer@currentmode{beamer}%
+}
+\def\handoutreset{%
+	\edef\beamer@currentmode{\saved@beamer@mode}%
+}
+
+% Print overlay number e.g. for headings (from Sebastian)
+\newcommand*{\overlaynumber}{\number\beamer@slideinframe}
+\makeatother
