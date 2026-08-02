@@ -2,10 +2,24 @@
 
 \chapter{Fundamentals}
 \label{ch:fundamentals}
-One of the most significant ideas that improved simulation speed by up to two orders of magnitude is decomposing large systems into coupled subsystems that can be integrated independently \cite{Gomes2017}. To implement the coupling of the field and circuit domains via dynamic iteration, the underlying concepts need to be explained first.
+One of the most significant ideas that improved simulation speed by up to two orders of magnitude is decomposing large systems into coupled subsystems that can be integrated independently~\cite{Gomes2017}. To implement the coupling of the field and circuit domains via dynamic iteration, the underlying concepts need to be explained first.
+
+\section{Modified Nodal Analysis}
+The equations that govern the behaviour of the circuit subsystem can be written in abstract form as
+\begin{subequations}\label{eq:mna}
+\begin{align}
+    \textbf{M} \frac{\textrm{d}}{\textrm{d}t} \textbf{x}(t) + \textbf{K} \textbf{x}(t) = \textbf{r}(t) \label{eq:mna-base} \\
+    \textbf{v}_C(t) = \textbf{P}^\top \textbf{x}(t) \label{eq:mna-circuit-port-operator}
+\end{align}
+\end{subequations}
+where, in case of MNA, $\textbf{x}$ denotes the unknown functions of node potentials and the voltage-source and inductor branch currents
+\begin{equation*}
+    \textbf{x}^\top(t) = \lbrack \textbf{\varphi}^\top(t) \quad \textbf{i}_L^\top(t) \quad \textbf{i}_V^\top(t) \rbrack.
+\end{equation*}
+And $\textbf{v}_C$ is the voltage at the field-circuit interface and $\textbf{P}$ is the according port-operator.
 
 \section{Dynamic Iteration}
-The subsystems are integrated independently for a period of time $T_n \rightarrow T_{n+1}$, where $T_n = [t_n, t_{n+1}]$, using the outputs of neighbouring subsystems as inputs. This is the essence of dynamic iteration \cite{Gomes2017}. It is a fixed-point iteration technique, i.e., the iteration
+The subsystems are integrated independently for a period of time $T_n \rightarrow T_{n+1}$, where $T_n = [t_n, t_{n+1}]$, using the outputs of neighbouring subsystems as inputs. This is the essence of dynamic iteration~\cite{Gomes2017}. It is a fixed-point iteration technique, i.e., the iteration
 \begin{equation*}
 	x^{k+1} = \varphi(x^k), \quad k=0,1,2,\dots
 \end{equation*}
@@ -15,15 +29,15 @@ In the case of a field-circuit coupling, the vector of unknowns $x$ contains the
 \begin{equation}
     \underbrace{
         \begin{aligned}
-            V_C^{k+1} &= V_C^{k} \\
-            I_C^{k+1} &= I_C^{k}
+            \textbf{v}_C^{k+1} &= \textbf{v}_C^{k} \\
+            \textbf{i}_C^{k+1} &= \textbf{i}_C^{k}
         \end{aligned}
     }_{\text{circuit}}
     \qquad
     \underbrace{
         \begin{aligned}
-            V_F^{k+1} &= V_F^{k} \\
-            I_F^{k+1} &= I_F^{k}
+            \textbf{v}_F^{k+1} &= \textbf{v}_F^{k} \\
+            \textbf{i}_F^{k+1} &= \textbf{i}_F^{k}
         \end{aligned}
     }_{\text{field}}
 \end{equation}
@@ -32,63 +46,68 @@ where $V_C$ and $I_C$ are the port voltage and current of the circuit-side, and 
 \section{Coupling Scheme}
 Transmission between the subsystems is handled at the ports, i.e., the inputs and outputs of a subsystem. Two independent factors determine the coupling of the field and circuit: the coupling direction and the transmission condition itself.
 
-\paragraph{Coupling Direction} The direction of coupling stipulates which variable from one subsystem (output) is prescribed on another (input) during iteration. For our field/circuit co-simulation, it answers the question: \textit{"Does the field ingest a current or a voltage as its (plain) input?"}. This consideration directly impacts the index of the resulting DAE. It has been shown that voltage-driven field formulations ($\textrm{A}^*$ and $\textrm{T-\Omega}$) result in a lower index system and thereby offer better numerical stability than the current-driven alternative \cite{Bartel2011,Garcia2020}. Hence, a voltage-driven coupling
+\paragraph{Coupling Direction} The direction of coupling stipulates which variable from one subsystem (output) is prescribed on another (input) during iteration. For our field/circuit co-simulation, it answers the question: \textit{"Does the field ingest a current or a voltage as its (plain) input?"}. This consideration directly impacts the index of the resulting DAE. It has been shown that voltage-driven field formulations ($\textrm{A}^*$ and $\textrm{T-\Omega}$) result in a lower index system (index-1) and thereby offer better numerical stability than the current-driven alternative (index-2)~\cite{Garcia2020}. Hence, a voltage-driven coupling
 \begin{equation*}
-    V_F \leftarrow V_C
+    v_F \leftarrow v_C
 \end{equation*}
-is likely the preferred choice for this work's implementation, see Section~\ref{ch:xyce}, though under some scopes the current-driven approach may be considered, cf. e.g. \cite{Garcia2017}.
+is likely the preferred choice for this work's implementation, see Section~\ref{ch:xyce}, though under some scopes the current-driven approach may be considered, cf. e.g.~\cite{Garcia2017}.
 
-\paragraph{Transmission Conditions} Also called the interface conditions, determine \textit{how} the variables are used as inputs and outputs of the subsystems. In classical WR, the plain (zero-order) transmission conditions of the field/circuit problem are
+\paragraph{Transmission Conditions} The transmission conditions, also called interface conditions, specify \textit{how} the exchanged variables enter each subsystem as inputs and leave it as outputs. For a voltage-driven coupling, the plain (zero-order) conditions of the field/circuit problem read
 \begin{equation}
 \label{eq:classical-wr}
-	V_F \leftarrow V_C \quad \text{and} \quad I_C \leftarrow I_F,
+	v_F \leftarrow v_C \quad \text{and} \quad i_C \leftarrow i_F,
 \end{equation}
-in case of a voltage-driven coupling. Note that the exchanged variables are waveforms, i.e., $V_C = V_C(t)$, hence the name "Waveform Relaxation". Previous work \cite{Schoeps2010,SchoepsDiss} has shown the benefit of extracting a ROM of the field domain. The better the ROM, the larger the time windows can be chosen. Since MQS formulations of the field are inherently inductive, so is the ROM \cite{Garcia2020}. Later work in \cite{Garcia2017} showed how the ROM is really just the first-order approximation to the optimal transmission condition.
+that is, the field is prescribed the voltage and returns the current. The exchanged quantities are waveforms, $v_C = v_C(t)$ and $i_F = i_F(t)$, which gives the method its name.
 
-Following the suggestion of \cite{Garcia2017} to implement an excitation of the field by voltages instead of currents, the optimal transmission condition can be derived as follows.
+Extracting a reduced-order model (ROM) of the field domain improves the coupling, and the better the ROM, the larger the admissible time windows~\cite{Schoeps2010,SchoepsDiss}. Because the spatially discretised magnetoquasistatic field behaves as an inductance-like element~\cite{Garcia2020}, the resulting ROM is itself inductive. Later work established that this inductance is precisely the first-order term of a Neumann-series expansion of the optimal transmission condition~\cite{Garcia2017}.
 
-Let the field problem be voltage driven, using a \textsc{Gauss-Seidel} scheme. The zero-order Dirichlet conditions are
+Following the suggestion of \cite{Garcia2017} to excite the field by voltages rather than currents, the optimal transmission condition follows by an analogous derivation.
+
+Let the field problem be voltage driven within a \textsc{Gauss--Seidel} scheme. The zero-order Dirichlet conditions read
 \begin{subequations}\label{eq:tc-gs-plain}
 \begin{align}
-    V_F^{k+1} &= V_C^{k+1}, \label{eq:tc-gs-plain-voltage} \\
-    I_C^{k+1} &= I_F^{k}.   \label{eq:tc-gs-plain-current}
+    v_F^{k+1} &= v_C^{k+1}, \label{eq:tc-gs-plain-voltage} \\
+    i_C^{k+1} &= i_F^{k}.   \label{eq:tc-gs-plain-current}
 \end{align}
 \end{subequations}
 
-The circuit-side transmission condition \eqref{eq:tc-gs-plain-current} can be generalised by including both current and voltage in a linear combination, i.e.,
-\begin{equation}
-	I_C^{k+1} - \beta V_C^{k+1} = I_F^{k} - \beta V_F^{k},
+The circuit-side condition \eqref{eq:tc-gs-plain-current} is generalised to a linear combination of current and voltage,
+\begin{equation}\label{eq:tc-gs-robin}
+	i_C^{k+1} - \beta\, v_C^{k+1} = i_F^{k} - \beta\, v_F^{k},
 \end{equation}
 where $\beta$ is the weighting factor.
-It is worth noting, that the field's input condition \eqref{eq:tc-gs-plain-voltage} is not optimised for, because unlike the field problem, an impedance of arbitrary circuits cannot be easily extracted, cf. \cite{Garcia2017}.
-In order for the fixed point iteration to converge, the error across iterations has to contract, i.e.,
+It is worth noting, that the field's input condition~\eqref{eq:tc-gs-plain-voltage} is left plain: unlike the field, an arbitrary circuit does not admit an easily extractable impedance, so its optimisation is cumbersome, cf.~\cite{Garcia2017}.
+
+Eliminating the internal degrees of freedom from the frequency-domain circuit equations yields the port relation $V_C = g_c - \mathbf{x}_P I_C$, with transfer impedance $\mathbf{x}_P(\omega) = \mathbf{P}^\top(\mathbf{A}_c\, j\omega + \mathbf{B}_c)^{-1}\mathbf{P}$ and projected source term $g_c = P^\top(\mathbf{A}_c\, j\omega + \mathbf{B}_c)^{-1} g(\omega)$.
+The voltage-driven field returns $I_F = \mathbf{Y} V_F$, where the admittance $\mathbf{Y}(\omega) = \mathbf{Z}^{-1}(\omega)$ is the inverse of the port impedance $\mathbf{Z}(\omega)$ of the MQS problem~\cite{Garcia2017}. Inserting the field response and the plain condition \eqref{eq:tc-gs-plain-voltage} into \eqref{eq:tc-gs-robin} and eliminating $V_C^{k+1}$ gives the error propagation
 \begin{equation*}
-    \lVert I_C^{k+1} - I_C^{k} \rVert = \lvert \rho(\beta) \rvert \ \lVert I_C^{k} - I_C^{k-1} \rVert,
+    i_C^{k+1} - i_C^{k}
+      = \rho(\beta)\,\big(i_C^{k} - i_C^{k-1}\big),
+    \qquad
+    \rho(\beta) = \big(\mathbf{I} + \beta\,\mathbf{x}_P\big)^{-1}
+                  \big(\beta - \mathbf{Y}\big)\,\mathbf{x}_P .
 \end{equation*}
-where the contraction factor $ \lvert \rho(\beta) \rvert \overset{!}{<} 1$.
-Adhering to the same assumptions made in the derivation in \cite{Garcia2017}, an analogous admittance of the MQS problem can determined, and the contraction factor
+
+In order for the fixed point iteration to converge, the error across iterations has to contract, i.e., $\lvert\rho(\beta)\rvert < 1$. Since $\mathbf{x}_P$ is invertible, optimal convergence $\rho(\beta) = 0$ is attained for
 \begin{equation*}
-    \rho(\beta) = \big( \textbf{I} + \beta \textbf{x}_P^{-1}(\omega) \big)^{-1} \big( \beta - \textbf{Y}(\omega) \big) \textbf{x}_P^{-1}(\omega).
+    \beta = \mathbf{Y}(\omega),
 \end{equation*}
-Optimal convergence is attained for $\rho(\beta) = 0$, such that
-\begin{equation*}
-    \beta = \textbf{Y}(\omega).
-\end{equation*}
-Thus, the optimized transmission condition of the circuit is given by
-\begin{equation}
-    I_C^{k+1} - \textbf{Y}(\omega) V_C^{k+1} = I_F^{k} - \textbf{Y}(\omega) V_F^{k}.
+so that the optimised circuit-side transmission condition reads
+\begin{equation}\label{eq:tc-optimal-voltage-driven}
+    i_C^{k+1} - \mathbf{Y}(\omega)\, v_C^{k+1}
+      = i_F^{k} - \mathbf{Y}(\omega)\, v_F^{k}.
 \end{equation}
-Naturally, using the admittance in our implementation, which is in the time domain, $\textbf{Y}$ has to be approximated, as pointed out by \cite{Garcia2017}.
 
----
+Since $\mathbf{Z} \approx j\omega\mathbf{L}$ is the low-frequency approximation of the exact port impedance (leading term of the Neumann series, corresponding to the magnetostatic inductance), the admittance inherits $\mathbf{Y} \approx (j\omega\mathbf{L})^{-1}$ in the same regime.
+As in the current-driven case, this frequency-domain expression must be approximated in our time-domain implementation, where $j\omega$ corresponds to a differentiation in time~\cite{Garcia2017}.
+The resulting condition,
+\begin{equation*}
+    i_F(t) \approx \textbf{L}^{-1} \int v_F(t) \, \textrm{d}t
+\end{equation*}
+represents the dual of the flux-linkage condition of the current-driven scheme.
+Since the underlying inductance is relatively cheap to extract (a single magnetostatic solve), it could be re-evaluated at successive working points throughout the transient to track the magnetic saturation effect of the field subsystem, at the cost of repeated extraction; this is not implemented in this work. Eddy-current effects are not covered in this first-order approximation of the inductance -- those dynamics are compensated by the lagged correction term $\Delta i_F^{k} := i_F^{k} - \mathbf{Y}(\omega)\, v_F^{k}$ in Equation~\eqref{eq:tc-optimal-voltage-driven}
 
-A solution of the resulting system of DAEs can be obtained through known algorthims. Most notibly, the \textsc{Gauss-Seidel} (Einzelschrittverfahren) and \textsc{Gauss-Jacobi} (Gesamtschrittverfahren) schemes are common \cite{Bartel2013}. While the former offers faster convergence, the latter has better parallelizability. The implementation in this work will be carried out using the \textsc{Gauss-Seidel} scheme, i.e.,
-\begin{equation}
-\label{eq:classical-wr-gs}	V_F^{k+1} = V_C^{k+1} \quad \text{and} \quad I_C^{k+1} = I_F^{k},
-\end{equation}
-in the voltage-driven field case.
-% TODO: refactor GS for the optimised transmission condition
-
+\paragraph{Note on Algorithms} Though we used a \textsc{Gauss--Seidel} scheme (Einzelschrittverfahren) to obtain a solution of the DAEs in this implementation, other algorithms such as \textsc{Gauss--Jacobi} (Gesamtschrittverfahren) are common, too. While the former offers faster convergence, the latter has better parallelizability~\cite{Bartel2013}.
 
 
 %A fixed point iteration technique that makes use of rollback to repeat the co-simulation step with corrected inputs is called dynamic iteration, waveform iteration, and strong or onion coupling \cite{Gomes2017}.

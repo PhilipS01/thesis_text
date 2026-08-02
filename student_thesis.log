@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.4.12)  31 JUL 2026 18:14
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.4.12)  2 AUG 2026 15:47
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/Users/philipsimon/thesis/student_thesis.tex
@@ -2951,9 +2951,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `RobotoMono' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [13
 
-]
 
 Package tudapub Warning: You did not provide a Label for key introduction.
 (tudapub)                Either you need to recompile your document or add a
@@ -2974,7 +2972,9 @@ Package tudapub Warning: You did not provide a Label for key discussion.
 (tudapub)                Either you need to recompile your document or add a
 (tudapub)                label using \IMRADlabel.
 
-[14] (./student_thesis.aux (./chapters/zusammenfassung.aux) (./chapters/einleitung.aux) (./chapters/theorie.aux) (./chapters/xyce.aux) (./chapters/numerik.aux) (./chapters/application.aux) (./chapters/fazit.aux))
+[13
+
+] (./student_thesis.aux (./chapters/zusammenfassung.aux) (./chapters/einleitung.aux) (./chapters/theorie.aux) (./chapters/xyce.aux) (./chapters/numerik.aux) (./chapters/application.aux) (./chapters/fazit.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -2989,19 +2989,19 @@ Package logreq Info: Writing requests to 'student_thesis.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 60185 strings out of 476076
- 125007,2848258 words of node,token memory allocated
- 7101 words of node memory still in use:
-   86 hlist, 9 vlist, 15 rule, 38 disc, 20 local_par, 6 math, 162 glue, 25 kern, 33 penalty, 3 margin_kern, 348 glyph, 331 attribute, 95 glue_spec, 171 attribute_list, 2 write, 6 pdf_action, 30 pdf_colorstack, 2 pdf_setmatrix, 2 pdf_save, 2 pdf_restore nodes
-   avail lists: 1:7,2:1923,3:579,4:144,5:1345,6:129,7:9851,8:96,9:760,10:24,11:760,12:2
- 81172 multiletter control sequences out of 65536+600000
- 143 fonts using 20166079 bytes
+ 60189 strings out of 476076
+ 125005,2848258 words of node,token memory allocated
+ 7137 words of node memory still in use:
+   86 hlist, 9 vlist, 15 rule, 39 disc, 20 local_par, 6 math, 162 glue, 26 kern, 33 penalty, 3 margin_kern, 350 glyph, 333 attribute, 95 glue_spec, 172 attribute_list, 2 write, 6 pdf_action, 30 pdf_colorstack, 2 pdf_setmatrix, 2 pdf_save, 2 pdf_restore nodes
+   avail lists: 1:5,2:1780,3:547,4:143,5:1345,6:129,7:9846,8:96,9:940,10:24,11:760,12:2
+ 81174 multiletter control sequences out of 65536+600000
+ 147 fonts using 20967455 bytes
  122i,21n,135p,11269b,2170s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/opentype/google/roboto/RobotoMono-Regular.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/xcharter/XCharter-Bold.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/xcharter/XCharter-Italic.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/xcharter/XCharter-Roman.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/google/roboto/Roboto-Bold.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/google/roboto/Roboto-Regular.otf></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on student_thesis.pdf (20 pages, 694947 bytes).
+Output written on student_thesis.pdf (19 pages, 700921 bytes).
 
-PDF statistics: 384 PDF objects out of 1000 (max. 8388607)
- 327 compressed objects within 4 object streams
- 67 named destinations out of 1000 (max. 1048576)
- 176 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 386 PDF objects out of 1000 (max. 8388607)
+ 330 compressed objects within 4 object streams
+ 69 named destinations out of 1000 (max. 1048576)
+ 184 words of extra memory for PDF output out of 10000 (max. 100000000)
 

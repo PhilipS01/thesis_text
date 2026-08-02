@@ -19,56 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
-    \entry{Bartel2011}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=2eed2caae40686fd61c5266488938d70}{%
-           family={Bartel},
-           familyi={B\bibinitperiod},
-           given={Andreas},
-           giveni={A\bibinitperiod}}}%
-        {{hash=93f14cf64b8a452b86fb436ac9d6ba2e}{%
-           family={Baumanns},
-           familyi={B\bibinitperiod},
-           given={Sascha},
-           giveni={S\bibinitperiod}}}%
-        {{hash=0367cc30345eba78dfe035f884884a91}{%
-           family={Schöps},
-           familyi={S\bibinitperiod},
-           given={Sebastian},
-           giveni={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{973fabaa3dadd2dfaa6a4302b09d6789}
-      \strng{fullhash}{973fabaa3dadd2dfaa6a4302b09d6789}
-      \strng{fullhashraw}{973fabaa3dadd2dfaa6a4302b09d6789}
-      \strng{bibnamehash}{973fabaa3dadd2dfaa6a4302b09d6789}
-      \strng{authorbibnamehash}{973fabaa3dadd2dfaa6a4302b09d6789}
-      \strng{authornamehash}{973fabaa3dadd2dfaa6a4302b09d6789}
-      \strng{authorfullhash}{973fabaa3dadd2dfaa6a4302b09d6789}
-      \strng{authorfullhashraw}{973fabaa3dadd2dfaa6a4302b09d6789}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Modeling electric circuits that contain magnetoquasistatic (MQS) devices leads to a coupled system of differential-algebraic equations (DAEs). In our case, the MQS device is described by the eddy current problem being already discretized in space (via edge-elements). This yields a DAE with a properly stated leading term, which has to be solved in the time domain. We are interested in structural properties of this system, which are important for numerical integration. Applying a standard projection technique, we are able to deduce topological conditions such that the tractability index of the coupled problem does not exceed two. Although index-2, we can conclude that the numerical difficulties for this problem are not severe due to a linear dependency on index-2 variables.}
-      \field{issn}{0168-9274}
-      \field{journaltitle}{Applied Numerical Mathematics}
-      \field{number}{12}
-      \field{title}{Structural analysis of electrical circuits including magnetoquasistatic devices}
-      \field{volume}{61}
-      \field{year}{2011}
-      \field{pages}{1257\bibrangedash 1270}
-      \range{pages}{14}
-      \verb{doi}
-      \verb https://doi.org/10.1016/j.apnum.2011.08.004
-      \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/S0168927411001358
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/S0168927411001358
-      \endverb
-      \keyw{Modified nodal analysis,Differential-algebraic equations,Tractability index,Electromagnetic devices,Maxwellʼs equations,Finite integration technique,Structural analysis,Eddy currents}
-    \endentry
     \entry{Bartel2013}{article}{}{}
       \name{author}{4}{}{%
         {{hash=2eed2caae40686fd61c5266488938d70}{%
