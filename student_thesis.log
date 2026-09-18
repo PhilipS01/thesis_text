@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.4.12)  2 AUG 2026 15:47
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.4.12)  18 SEP 2026 16:45
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/Users/philipsimon/thesis/student_thesis.tex
@@ -2153,7 +2153,22 @@ LaTeX Info: Redefining \] on input line 2951.
 \l_MT_below_shortintertext_sep=\dimen278
 \xmathstrut@box=\box68
 \xmathstrut@dim=\dimen279
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks33
+\thm@bodyfont=\toks34
+\thm@headfont=\toks35
+\thm@notefont=\toks36
+\thm@headpunct=\toks37
+\thm@preskip=\skip100
+\thm@postskip=\skip101
+\thm@headsep=\skip102
+\dth@everypar=\toks38
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/xpatch/xpatch.sty
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+)
+Class scrreprt Info: amsthm's \deferred@thm@head patched.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
@@ -2194,10 +2209,12 @@ Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages 
 \l__siunitx_unit_tmp_int=\count481
 \l__siunitx_unit_position_int=\count482
 \l__siunitx_unit_total_int=\count483
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
 \c@AlgoLine=\count484
-\algocf@hangindent=\skip100
+\algocf@hangindent=\skip103
  (/usr/local/texlive/2026/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
 \c@checkoddpage=\count485
@@ -2206,51 +2223,82 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\skiptotal=\skip101
-\skiplinenumber=\skip102
-\skiprule=\skip103
-\skiphlne=\skip104
-\skiptext=\skip105
-\skiplength=\skip106
-\algomargin=\skip107
-\skipalgocfslide=\skip108
+\skiptotal=\skip104
+\skiplinenumber=\skip105
+\skiprule=\skip106
+\skiphlne=\skip107
+\skiptext=\skip108
+\skiplength=\skip109
+\algomargin=\skip110
+\skipalgocfslide=\skip111
 \algowidth=\dimen285
 \inoutsize=\dimen286
 \inoutindent=\dimen287
 \interspacetitleruled=\dimen288
 \interspacealgoruled=\dimen289
 \interspacetitleboxruled=\dimen290
-\algocf@ruledwidth=\skip109
+\algocf@ruledwidth=\skip112
 \algocf@inoutbox=\box77
 \algocf@inputbox=\box78
-\AlCapSkip=\skip110
-\AlCapHSkip=\skip111
-\algoskipindent=\skip112
+\AlCapSkip=\skip113
+\AlCapHSkip=\skip114
+\algoskipindent=\skip115
 \algocf@nlbox=\box79
 \algocf@hangingbox=\box80
 \algocf@untilbox=\box81
-\algocf@skipuntil=\skip113
+\algocf@skipuntil=\skip116
 \algocf@capbox=\box82
-\algocf@lcaptionbox=\skip114
-\algoheightruledefault=\skip115
-\algoheightrule=\skip116
-\algotitleheightruledefault=\skip117
-\algotitleheightrule=\skip118
+\algocf@lcaptionbox=\skip117
+\algoheightruledefault=\skip118
+\algoheightrule=\skip119
+\algotitleheightruledefault=\skip120
+\algotitleheightrule=\skip121
 \c@algocfline=\count486
 \c@algocfproc=\count487
 \c@algocf=\count488
 \algocf@algoframe=\box83
 \algocf@algobox=\box84
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/tuda-ci/tuda-pgfplots.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count489
+\lst@gtempboxa=\box85
+\lst@token=\toks39
+\lst@length=\count490
+\lst@currlwidth=\dimen291
+\lst@column=\count491
+\lst@pos=\count492
+\lst@lostspace=\dimen292
+\lst@width=\dimen293
+\lst@newlines=\count493
+\lst@lineno=\count494
+\lst@maxwidth=\dimen294
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count495
+\lst@skipnumbers=\count496
+\lst@framebox=\box86
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tuda-ci/tuda-pgfplots.sty
 Package: tuda-pgfplots 2025-11-13 v4.05 tuda-ci pgfplots color schemes
  (/usr/local/texlive/2026/texmf-dist/tex/latex/pgfplots/pgfplots.sty (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2025/08/14 v1.18.2 Data Visualization (1.18.2)
  (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks33
-\pgfutil@tempdima=\dimen291
-\pgfutil@tempdimb=\dimen292
+\pgfutil@everybye=\toks40
+\pgfutil@tempdima=\dimen295
+\pgfutil@tempdimb=\dimen296
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box85
+\pgfutil@abb=\box87
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
 ))
@@ -2258,31 +2306,31 @@ Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks34
-\pgfkeys@temptoks=\toks35
+\pgfkeys@pathtoks=\toks41
+\pgfkeys@temptoks=\toks42
  (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks36
+\pgfkeys@tmptoks=\toks43
 ))
-\pgf@x=\dimen293
-\pgf@y=\dimen294
-\pgf@xa=\dimen295
-\pgf@ya=\dimen296
-\pgf@xb=\dimen297
-\pgf@yb=\dimen298
-\pgf@xc=\dimen299
-\pgf@yc=\dimen300
-\pgf@xd=\dimen301
-\pgf@yd=\dimen302
+\pgf@x=\dimen297
+\pgf@y=\dimen298
+\pgf@xa=\dimen299
+\pgf@ya=\dimen300
+\pgf@xb=\dimen301
+\pgf@yb=\dimen302
+\pgf@xc=\dimen303
+\pgf@yc=\dimen304
+\pgf@xd=\dimen305
+\pgf@yd=\dimen306
 \w@pgf@writea=\write4
 \r@pgf@reada=\read4
-\c@pgf@counta=\count489
-\c@pgf@countb=\count490
-\c@pgf@countc=\count491
-\c@pgf@countd=\count492
-\t@pgf@toka=\toks37
-\t@pgf@tokb=\toks38
-\t@pgf@tokc=\toks39
-\pgf@sys@id@count=\count493
+\c@pgf@counta=\count497
+\c@pgf@countb=\count498
+\c@pgf@countc=\count499
+\c@pgf@countd=\count500
+\t@pgf@toka=\toks44
+\t@pgf@tokb=\toks45
+\t@pgf@tokc=\toks46
+\pgf@sys@id@count=\count501
  (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
@@ -2293,59 +2341,59 @@ File: pgfsys-luatex.def 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 ))) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count494
-\pgfsyssoftpath@bigbuffer@items=\count495
+\pgfsyssoftpath@smallbuffer@items=\count502
+\pgfsyssoftpath@bigbuffer@items=\count503
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen303
-\pgfmath@count=\count496
-\pgfmath@box=\box86
-\pgfmath@toks=\toks40
-\pgfmath@stack@operand=\toks41
-\pgfmath@stack@operation=\toks42
+\pgfmath@dimen=\dimen307
+\pgfmath@count=\count504
+\pgfmath@box=\box88
+\pgfmath@toks=\toks47
+\pgfmath@stack@operand=\toks48
+\pgfmath@stack@operation=\toks49
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count497
+\c@pgfmathroundto@lastzeros=\count505
 )) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen304
-\pgf@picmaxx=\dimen305
-\pgf@picminy=\dimen306
-\pgf@picmaxy=\dimen307
-\pgf@pathminx=\dimen308
-\pgf@pathmaxx=\dimen309
-\pgf@pathminy=\dimen310
-\pgf@pathmaxy=\dimen311
-\pgf@xx=\dimen312
-\pgf@xy=\dimen313
-\pgf@yx=\dimen314
-\pgf@yy=\dimen315
-\pgf@zx=\dimen316
-\pgf@zy=\dimen317
+\pgf@picminx=\dimen308
+\pgf@picmaxx=\dimen309
+\pgf@picminy=\dimen310
+\pgf@picmaxy=\dimen311
+\pgf@pathminx=\dimen312
+\pgf@pathmaxx=\dimen313
+\pgf@pathminy=\dimen314
+\pgf@pathmaxy=\dimen315
+\pgf@xx=\dimen316
+\pgf@xy=\dimen317
+\pgf@yx=\dimen318
+\pgf@yy=\dimen319
+\pgf@zx=\dimen320
+\pgf@zy=\dimen321
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen318
-\pgf@path@lasty=\dimen319
+\pgf@path@lastx=\dimen322
+\pgf@path@lasty=\dimen323
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen320
-\pgf@shorten@start@additional=\dimen321
+\pgf@shorten@end@additional=\dimen324
+\pgf@shorten@start@additional=\dimen325
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box87
-\pgf@hbox=\box88
-\pgf@layerbox@main=\box89
-\pgf@picture@serial@count=\count498
+\pgfpic=\box89
+\pgf@hbox=\box90
+\pgf@layerbox@main=\box91
+\pgf@picture@serial@count=\count506
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen322
+\pgflinewidth=\dimen326
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen323
-\pgf@pt@y=\dimen324
-\pgf@pt@temp=\dimen325
+\pgf@pt@x=\dimen327
+\pgf@pt@y=\dimen328
+\pgf@pt@temp=\dimen329
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
@@ -2354,17 +2402,17 @@ File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen326
+\pgfarrowsep=\dimen330
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen327
-\pgf@sys@shading@range@num=\count499
-\pgf@shadingcount=\count500
+\pgf@max=\dimen331
+\pgf@sys@shading@range@num=\count507
+\pgf@shadingcount=\count508
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box90
+\pgfexternal@startupbox=\box92
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
@@ -2375,165 +2423,357 @@ File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box91
+\pgfnodeparttextbox=\box93
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen328
-\pgf@nodesepend=\dimen329
+\pgf@nodesepstart=\dimen332
+\pgf@nodesepend=\dimen333
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 )) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen330
-\pgffor@skip=\dimen331
-\pgffor@stack=\toks43
-\pgffor@toks=\toks44
+\pgffor@iter=\dimen334
+\pgffor@skip=\dimen335
+\pgffor@stack=\toks50
+\pgffor@toks=\toks51
 )) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count501
-\pgfplotmarksize=\dimen332
+\pgf@plot@mark@count=\count509
+\pgfplotmarksize=\dimen336
 )
-\tikz@lastx=\dimen333
-\tikz@lasty=\dimen334
-\tikz@lastxsaved=\dimen335
-\tikz@lastysaved=\dimen336
-\tikz@lastmovetox=\dimen337
-\tikz@lastmovetoy=\dimen338
-\tikzleveldistance=\dimen339
-\tikzsiblingdistance=\dimen340
-\tikz@figbox=\box92
-\tikz@figbox@bg=\box93
-\tikz@tempbox=\box94
-\tikz@tempbox@bg=\box95
-\tikztreelevel=\count502
-\tikznumberofchildren=\count503
-\tikznumberofcurrentchild=\count504
-\tikz@fig@count=\count505
+\tikz@lastx=\dimen337
+\tikz@lasty=\dimen338
+\tikz@lastxsaved=\dimen339
+\tikz@lastysaved=\dimen340
+\tikz@lastmovetox=\dimen341
+\tikz@lastmovetoy=\dimen342
+\tikzleveldistance=\dimen343
+\tikzsiblingdistance=\dimen344
+\tikz@figbox=\box94
+\tikz@figbox@bg=\box95
+\tikz@tempbox=\box96
+\tikz@tempbox@bg=\box97
+\tikztreelevel=\count510
+\tikznumberofchildren=\count511
+\tikznumberofcurrentchild=\count512
+\tikz@fig@count=\count513
  (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count506
-\pgfmatrixcurrentcolumn=\count507
-\pgf@matrix@numberofcolumns=\count508
+\pgfmatrixcurrentrow=\count514
+\pgfmatrixcurrentcolumn=\count515
+\pgf@matrix@numberofcolumns=\count516
 )
-\tikz@expandcount=\count509
+\tikz@expandcount=\count517
  (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
 Package pgfplots info on input line 124: Initializing with LUA version Lua 5.3
 \pgfplots@luabackend@table=\catcodetable17
-\t@pgfplots@toka=\toks45
-\t@pgfplots@tokb=\toks46
-\t@pgfplots@tokc=\toks47
-\pgfplots@tmpa=\dimen341
-\c@pgfplots@coordindex=\count510
-\c@pgfplots@scanlineindex=\count511
+\t@pgfplots@toka=\toks52
+\t@pgfplots@tokb=\toks53
+\t@pgfplots@tokc=\toks54
+\pgfplots@tmpa=\dimen345
+\c@pgfplots@coordindex=\count518
+\c@pgfplots@scanlineindex=\count519
  (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/luamath/pgflibraryluamath.code.tex)
 Package pgfplots info on input line 292: luamath library shipped with pgf 3.1.11a is up-to-date
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
 Package pgfplots info on input line 82: Found new luatex: initializing lua commands instead of write18 (shell-escape)
  (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count512
+\c@pgfplotsarray@tmp=\count520
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count513
-\t@pgfplotstable@a=\toks48
+\c@pgfplotstable@counta=\count521
+\t@pgfplotstable@a=\toks55
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count514
+\c@pgfplotslibrarysurf@no=\count522
  (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-luatex.def))) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen342
-\pgfdecoratedremainingdistance=\dimen343
-\pgfdecoratedinputsegmentcompleteddistance=\dimen344
-\pgfdecoratedinputsegmentremainingdistance=\dimen345
-\pgf@decorate@distancetomove=\dimen346
-\pgf@decorate@repeatstate=\count515
-\pgfdecorationsegmentamplitude=\dimen347
-\pgfdecorationsegmentlength=\dimen348
+\pgfdecoratedcompleteddistance=\dimen346
+\pgfdecoratedremainingdistance=\dimen347
+\pgfdecoratedinputsegmentcompleteddistance=\dimen348
+\pgfdecoratedinputsegmentremainingdistance=\dimen349
+\pgf@decorate@distancetomove=\dimen350
+\pgf@decorate@repeatstate=\count523
+\pgfdecorationsegmentamplitude=\dimen351
+\pgfdecorationsegmentlength=\dimen352
 )
-\tikz@lib@dec@box=\box96
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count516
-\pgfplots@xmin@reg=\dimen349
-\pgfplots@xmax@reg=\dimen350
-\pgfplots@ymin@reg=\dimen351
-\pgfplots@ymax@reg=\dimen352
-\pgfplots@zmin@reg=\dimen353
-\pgfplots@zmax@reg=\dimen354
+\tikz@lib@dec@box=\box98
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex)
+\pgfplots@numplots=\count524
+\pgfplots@xmin@reg=\dimen353
+\pgfplots@xmax@reg=\dimen354
+\pgfplots@ymin@reg=\dimen355
+\pgfplots@ymax@reg=\dimen356
+\pgfplots@zmin@reg=\dimen357
+\pgfplots@zmax@reg=\dimen358
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
 File: tikzlibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))) (/usr/local/texlive/2026/texmf-dist/tex/latex/blindtext/blindtext.sty
-Package: blindtext 2012/01/06 V2.0 blindtext-Package
-\c@blindtext=\count517
-\c@Blindtext=\count518
-\c@blind@countparstart=\count519
-\blind@countxx=\count520
-\blindtext@numBlindtext=\count521
-\blind@countyy=\count522
-\c@blindlist=\count523
-\c@blindlistlevel=\count524
-\c@blindlist@level=\count525
-\blind@listitem=\count526
-\c@blind@listcount=\count527
-\c@blind@levelcount=\count528
-\blind@mathformula=\count529
-\blind@Mathformula=\count530
-\c@blind@randomcount=\count531
-\c@blind@randommax=\count532
-\c@blind@pangramcount=\count533
-\c@blind@pangrammax=\count534
+)))) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowinset=\dimen359
+\pgfarrowlength=\dimen360
+\pgfarrowwidth=\dimen361
+\pgfarrowlinewidth=\dimen362
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+Package tocbasic Info: Loading of class-dependent code for package caption3
+(tocbasic)             prevented on line 50.
+
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen363
+\captionmargin=\dimen364
+\caption@leftmargin=\dimen365
+\caption@rightmargin=\dimen366
+\caption@width=\dimen367
+\caption@indent=\dimen368
+\caption@parindent=\dimen369
+\caption@hangindent=\dimen370
 )
+\c@caption@flags=\count525
+\c@continuedfloat=\count526
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count527
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count528
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+\c@blindtext=\count529
+\c@Blindtext=\count530
+\c@blind@countparstart=\count531
+\blind@countxx=\count532
+\blindtext@numBlindtext=\count533
+\blind@countyy=\count534
+\c@blindlist=\count535
+\c@blindlistlevel=\count536
+\c@blindlist@level=\count537
+\blind@listitem=\count538
+\c@blind@listcount=\count539
+\c@blind@levelcount=\count540
+\blind@mathformula=\count541
+\blind@Mathformula=\count542
+\c@blind@randomcount=\count543
+\c@blind@randommax=\count544
+\c@blind@pangramcount=\count545
+\c@blind@pangrammax=\count546
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries-extra/glossaries-extra.sty
+Package: glossaries-extra 2026/03/06 v2.0 (NLCT)
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries/base/glossaries.sty
+Package: glossaries 2026/03/06 v5.0 (NLCT)
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
+Package: mfirstuc 2025/04/03 v2.09 (NLCT)
+\@glsmfirst=\toks56
+\@glsmrest=\toks57
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/xfor/xfor.sty
+Package: xfor 2009/02/05 v1.05 (NLCT)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/tracklang/tracklang.sty
+Package: tracklang 2025/03/11 v1.6.6 (NLCT) Track Languages
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/tracklang/tracklang.tex)
+Package tracklang Info: Tracking dialect `german' (language `german') on input line 264.
+Package tracklang Info: Tracking dialect `english' (language `english') on input line 264.
+Package tracklang Info: Tracking dialect `english' (language `english') on input line 264.
+Package tracklang Info: Tracking dialect `german' (language `german') on input line 264.
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries-german/glossaries-german.ldf
+File: glossaries-german.ldf 2014/11/23 v1.0
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries-english/glossaries-english.ldf
+File: glossaries-english.ldf 2014/11/23 v1.0
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/datatool/datatool-base.sty
+Package: datatool-base 2025/12/04 v3.4.3 (NLCT)
+\l__datatool_tmpa_int=\count547
+\l__datatool_tmpb_int=\count548
+\l__datatool_tmpc_int=\count549
+\l__datatool_tmpd_int=\count550
+\l__datatool_count_int=\count551
+\l__datatool_tmp_datatype_int=\count552
+\l__datatool_tmpa_dim=\dimen371
+\l__datatool_tmpb_dim=\dimen372
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/datatool/datatool-lua.def
+File: datatool-lua.def 2025/12/04 v3.4.3 (NLCT)
+)
+\@dtl@toks=\toks58
+\@dtl@tmpcount=\count553
+\dtl@tmplength=\skip122
+\l__datatool_measure_box=\box99
+\dtl@sortresult=\count554
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/datatool/datatool-utf8.ldf
+File: datatool-utf8.ldf 2025/12/04 v3.4.3 (NLCT)
+)
+\@dtl@datatype=\count555
+\c_datatool_unknown_int=\count556
+\l__datatool_year_int=\count557
+\l__datatool_month_int=\count558
+\l__datatool_day_int=\count559
+\l__datatool_hour_int=\count560
+\l__datatool_minute_int=\count561
+\l__datatool_second_int=\count562
+\l__datatool_tzhour_int=\count563
+\l__datatool_tzminute_int=\count564
+\l__datatool_julian_int=\count565
+\l__datatool_local_julian_int=\count566
+\l__datatool_prefix_int=\count567
+\l__datatool_suffix_int=\count568
+\@dtl@foreach@level=\count569
+
+
+Package tracklang Warning: No `datatool' support for dialect `german'  on input line 9924.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/datatool-english/datatool-english.ldf
+File: datatool-english.ldf 2025/03/12 v1.1 (NLCT)
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/datatool-english/datatool-english-utf8.ldf
+File: datatool-english-utf8.ldf 2025/03/12 v1.1 (NLCT)
+))
+\dtl@codeA=\count570
+\dtl@codeB=\count571
+)
+\gls@level=\count572
+\@gls@tmpb=\toks59
+\gls@tmplen=\skip123
+\l__glossaries_tmpa_dim=\dimen373
+\l__glossaries_tmpb_dim=\dimen374
+\glskeylisttok=\toks60
+\glslabeltok=\toks61
+\glsshorttok=\toks62
+\glslongtok=\toks63
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty
+Package: glossary-hypernav 2026/03/06 v5.0 (NLCT)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
+Package: glossary-list 2026/03/06 v5.0 (NLCT)
+\glslistdottedwidth=\skip124
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
+Package: glossary-long 2026/03/06 v5.0 (NLCT)
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip125
+\LTright=\skip126
+\LTpre=\skip127
+\LTpost=\skip128
+\LTchunksize=\count573
+\LTcapwidth=\dimen375
+\LT@head=\box100
+\LT@firsthead=\box101
+\LT@foot=\box102
+\LT@lastfoot=\box103
+\LT@gbox=\box104
+\LT@cols=\count574
+\LT@rows=\count575
+\c@LT@tables=\count576
+\c@LT@chunks=\count577
+\LT@p@ftn=\toks64
+)
+Class scrreprt Info: longtable captions redefined on input line 47.
+\glsdescwidth=\skip129
+\glspagelistwidth=\skip130
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
+Package: glossary-super 2026/03/06 v5.0 (NLCT)
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/supertabular/supertabular.sty
+Package: supertabular 2025/06/26 v4.2d the supertabular environment
+\c@tracingst=\count578
+\ST@wd=\dimen376
+\ST@rightskip=\skip131
+\ST@leftskip=\skip132
+\ST@parfillskip=\skip133
+\ST@pageleft=\dimen377
+\ST@headht=\dimen378
+\ST@tailht=\dimen379
+\ST@pagesofar=\dimen380
+\ST@pboxht=\dimen381
+\ST@rowht=\dimen382
+\ST@prevht=\dimen383
+\ST@toadd=\dimen384
+\ST@dimen=\dimen385
+\ST@pbox=\box105
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
+Package: glossary-tree 2026/03/06 v5.0 (NLCT)
+\l__glossaries_tree_max_known_level_int=\count579
+\l__glossaries_tree_offset_dim=\dimen386
+\l__glossaries_tree_namewidth_dim=\dimen387
+\l__glossaries_tree_symbolwidth_dim=\dimen388
+\l__glossaries_tree_prenamesym_width_dim=\dimen389
+\l__glossaries_tree_presubnamesym_width_dim=\dimen390
+\l__glossaries_tree_namewidth_padding_dim=\dimen391
+\l__glossaries_tree_symbolwidth_padding_dim=\dimen392
+\l__glossaries_tree_namesymbolwidth_dim=\dimen393
+\l__glossaries_tree_namesymbolwidth_padding_dim=\dimen394
+\l__glossaries_tree_level_int=\count580
+\glstreeindent=\skip134
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries-extra/glossaries-extra-bib2gls.sty
+Package: glossaries-extra-bib2gls 2026/03/06 v2.0 (NLCT)
+)
+\@glsxtr@leveloffset=\count581
+\glsxtrresourcecount=\count582
+\@glsxtrnewgls@inner=\count583
+\glsshortpltok=\toks65
+\glslongpltok=\toks66
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries-extra/glossaries-extra-abbrstyles.def
+File: glossaries-extra-abbrstyles.def 2026/03/06 v2.0 (NLCT)
+)
+\mglselementindex=\count584
+) (./student_thesis.glstex) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+)
+\c@corollary=\count585
+\c@example=\count586
 Package babel-german Info: Using legacy glottonyms
-(babel-german)             `german' denotes pre-1996 spelling. on input line 66.
+(babel-german)             `german' denotes pre-1996 spelling. on input line 94.
  (/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/de/babel-german.tex
 Package babel Info: Importing basic data for german
 (babel)             from babel-de.ini. Reported on input line 15.
 )
 Package babel Info: Hyphen rules for 'german' set to \l@ngerman-x-2024-02-28
-(babel)             (\language5). Reported on input line 66.
+(babel)             (\language5). Reported on input line 94.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
  (./student_thesis.aux
 Package babel Info: 'german' activates 'german' shorthands.
-(babel)             Reported on input line 13.
- (/usr/local/texlive/2026/texmf-dist/tex/generic/dehyph-exptl/dehyphn-x-2024-02-28.tex dehyph-exptl: using a TeX engine with native UTF-8 support. (/usr/local/texlive/2026/texmf-dist/tex/generic/dehyph-exptl/dehyphn-x-2024-02-28.pat German Hyphenation Patterns (Reformed Orthography, 2006) `dehyphn-x' 2024-02-28 (WL))) (./chapters/zusammenfassung.aux) (./chapters/einleitung.aux) (./chapters/theorie.aux) (./chapters/xyce.aux) (./chapters/numerik.aux) (./chapters/application.aux) (./chapters/fazit.aux))
+(babel)             Reported on input line 40.
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/dehyph-exptl/dehyphn-x-2024-02-28.tex dehyph-exptl: using a TeX engine with native UTF-8 support. (/usr/local/texlive/2026/texmf-dist/tex/generic/dehyph-exptl/dehyphn-x-2024-02-28.pat German Hyphenation Patterns (Reformed Orthography, 2006) `dehyphn-x' 2024-02-28 (WL))) (./chapters/zusammenfassung.aux) (./chapters/einleitung.aux) (./chapters/theorie.aux) (./chapters/interface.aux) (./chapters/xyce.aux) (./chapters/numerik.aux) (./chapters/application.aux) (./chapters/fazit.aux))
 \openout1 = student_thesis.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-Package scrbase Info: activating english \abstractname on input line 66.
-Package scrbase Info: activating english \partname on input line 66.
-Package scrbase Info: activating english \chaptername on input line 66.
-Package scrbase Info: activating english \appendixname on input line 66.
-Package scrbase Info: activating english \figurename on input line 66.
-Package scrbase Info: activating english \tablename on input line 66.
-Package scrbase Info: activating english \contentsname on input line 66.
-Package scrbase Info: activating english \listfigurename on input line 66.
-Package scrbase Info: activating english \listtablename on input line 66.
-Package scrbase Info: activating english \bibname on input line 66.
-Package scrbase Info: activating english \indexname on input line 66.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+Package scrbase Info: activating english \abstractname on input line 94.
+Package scrbase Info: activating english \partname on input line 94.
+Package scrbase Info: activating english \chaptername on input line 94.
+Package scrbase Info: activating english \appendixname on input line 94.
+Package scrbase Info: activating english \figurename on input line 94.
+Package scrbase Info: activating english \tablename on input line 94.
+Package scrbase Info: activating english \contentsname on input line 94.
+Package scrbase Info: activating english \listfigurename on input line 94.
+Package scrbase Info: activating english \listtablename on input line 94.
+Package scrbase Info: activating english \bibname on input line 94.
+Package scrbase Info: activating english \indexname on input line 94.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -2541,76 +2781,76 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 66.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 66.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 66.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 66.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 66.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 66.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 66.
-LaTeX Font Info:    Redeclaring math accent \check on input line 66.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 66.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 66.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 66.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 66.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 66.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 66.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 66.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 66.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 66.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 66.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 66.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 66.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 66.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 66.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 66.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 66.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 94.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 94.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 94.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 94.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 94.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 94.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 94.
+LaTeX Font Info:    Redeclaring math accent \check on input line 94.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 94.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 94.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 94.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 94.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 66.
+(Font)              `operators' in the math version `normal' on input line 94.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/XCharter(0)/m/n on input line 66.
+(Font)                  OT1/cmr/m/n --> TU/XCharter(0)/m/n on input line 94.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 66.
+(Font)              `operators' in the math version `bold' on input line 94.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/XCharter(0)/m/n on input line 66.
+(Font)                  OT1/cmr/bx/n --> TU/XCharter(0)/m/n on input line 94.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/XCharter(0)/m/n --> TU/XCharter(0)/m/n on input line 66.
+(Font)                  TU/XCharter(0)/m/n --> TU/XCharter(0)/m/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/XCharter(0)/m/it on input line 66.
+(Font)                  OT1/cmr/m/it --> TU/XCharter(0)/m/it on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/XCharter(0)/b/n on input line 66.
+(Font)                  OT1/cmr/bx/n --> TU/XCharter(0)/b/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/Roboto(0)/m/n on input line 66.
+(Font)                  OT1/cmss/m/n --> TU/Roboto(0)/m/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/RobotoMono(0)/m/n on input line 66.
+(Font)                  OT1/cmtt/m/n --> TU/RobotoMono(0)/m/n on input line 94.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/XCharter(0)/m/n --> TU/XCharter(0)/b/n on input line 66.
+(Font)                  TU/XCharter(0)/m/n --> TU/XCharter(0)/b/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/XCharter(0)/b/it on input line 66.
+(Font)                  OT1/cmr/bx/it --> TU/XCharter(0)/b/it on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/Roboto(0)/b/n on input line 66.
+(Font)                  OT1/cmss/bx/n --> TU/Roboto(0)/b/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/RobotoMono(0)/b/n on input line 66.
+(Font)                  OT1/cmtt/m/n --> TU/RobotoMono(0)/b/n on input line 94.
  (/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count535
-\scratchdimen=\dimen355
-\scratchbox=\box97
-\nofMPsegments=\count536
-\nofMParguments=\count537
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count538
-\MPscratchDim=\dimen356
-\MPnumerator=\count539
-\makeMPintoPDFobject=\count540
-\everyMPtoPDFconversion=\toks50
+\scratchcounter=\count587
+\scratchdimen=\dimen395
+\scratchbox=\box106
+\nofMPsegments=\count588
+\nofMParguments=\count589
+\everyMPshowfont=\toks67
+\MPscratchCnt=\count590
+\MPscratchDim=\dimen396
+\MPnumerator=\count591
+\makeMPintoPDFobject=\count592
+\everyMPtoPDFconversion=\toks68
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 66.
+Package hyperref Info: Link coloring OFF on input line 94.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -2646,34 +2886,34 @@ Package hyperref Info: Link coloring OFF on input line 66.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\ptxcd_headrule_box=\box98
+\ptxcd_headrule_box=\box107
 Package babel Info: 'english' activates 'german' shorthands.
-(babel)             Reported on input line 66.
-Package scrbase Info: activating english \ptxcd_byname on input line 66.
-Package scrbase Info: activating english \ptxcd_fromname on input line 66.
-Package scrbase Info: activating english \ptxcd_departmentprefix: on input line 66.
-Package scrbase Info: activating english \ptxcd_reviewname on input line 66.
-Package scrbase Info: activating english \ptxcd_examdatename on input line 66.
-Package scrbase Info: activating english \ptxcd_submissiondatename on input line 66.
-Package scrbase Info: activating english \ptxcd_studentIDname on input line 66.
-Package scrbase Info: activating english \ptxcd_thesisType on input line 66.
-Package scrbase Info: activating english \g__ptxcd_cc_attr_by: on input line 66.
-Package scrbase Info: activating english \g__ptxcd_cc_attr_nc: on input line 66.
-Package scrbase Info: activating english \g__ptxcd_cc_attr_sa: on input line 66.
-Package scrbase Info: activating english \g__ptxcd_cc_attr_nd: on input line 66.
-Package scrbase Info: activating english \g__ptxcd_cc_intro: on input line 66.
-Package scrbase Info: activating english \g__ptxcd_cc_sep: on input line 66.
-Package scrbase Info: activating english \researchgroupname on input line 66.
-Package scrbase Info: activating english \institutename on input line 66.
-Package scrbase Info: activating english \authorandname on input line 66.
-Package scrbase Info: activating english \ptxcd_datename on input line 66.
-LaTeX Info: Redefining \microtypecontext on input line 66.
-Package microtype Info: Applying patch `item' on input line 66.
-Package microtype Info: Applying patch `toc' on input line 66.
-Package microtype Info: Applying patch `eqnum' on input line 66.
-Package microtype Info: Applying patch `footnote' on input line 66.
-Package microtype Info: Applying patch `verbatim' on input line 66.
-LaTeX Info: Redefining \microtypesetup on input line 66.
+(babel)             Reported on input line 94.
+Package scrbase Info: activating english \ptxcd_byname on input line 94.
+Package scrbase Info: activating english \ptxcd_fromname on input line 94.
+Package scrbase Info: activating english \ptxcd_departmentprefix: on input line 94.
+Package scrbase Info: activating english \ptxcd_reviewname on input line 94.
+Package scrbase Info: activating english \ptxcd_examdatename on input line 94.
+Package scrbase Info: activating english \ptxcd_submissiondatename on input line 94.
+Package scrbase Info: activating english \ptxcd_studentIDname on input line 94.
+Package scrbase Info: activating english \ptxcd_thesisType on input line 94.
+Package scrbase Info: activating english \g__ptxcd_cc_attr_by: on input line 94.
+Package scrbase Info: activating english \g__ptxcd_cc_attr_nc: on input line 94.
+Package scrbase Info: activating english \g__ptxcd_cc_attr_sa: on input line 94.
+Package scrbase Info: activating english \g__ptxcd_cc_attr_nd: on input line 94.
+Package scrbase Info: activating english \g__ptxcd_cc_intro: on input line 94.
+Package scrbase Info: activating english \g__ptxcd_cc_sep: on input line 94.
+Package scrbase Info: activating english \researchgroupname on input line 94.
+Package scrbase Info: activating english \institutename on input line 94.
+Package scrbase Info: activating english \authorandname on input line 94.
+Package scrbase Info: activating english \ptxcd_datename on input line 94.
+LaTeX Info: Redefining \microtypecontext on input line 94.
+Package microtype Info: Applying patch `item' on input line 94.
+Package microtype Info: Applying patch `toc' on input line 94.
+Package microtype Info: Applying patch `eqnum' on input line 94.
+Package microtype Info: Applying patch `footnote' on input line 94.
+Package microtype Info: Applying patch `verbatim' on input line 94.
+LaTeX Info: Redefining \microtypesetup on input line 94.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -2707,21 +2947,29 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'student_thesis.bbl' found.
  (./student_thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 66.
-Package biblatex Info: Reference segment=0 on input line 66.
+Package biblatex Info: Reference section=0 on input line 94.
+Package biblatex Info: Reference segment=0 on input line 94.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 66.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 94.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-dictionary-german.trsl
 File: translations-basic-dictionary-german.trsl (german translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `german'. on input line 66.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `german'. on input line 94.
+\c@lstlisting=\count593
+Package tocbasic Info: setting babel extension for `lol' on input line 94.
+\scr@dte@lstlisting@maxnumwidth=\skip135
 
+Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 66.
-
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: longtable package is loaded.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: supertabular package is loaded.
+Package caption Info: End \AtBeginDocument code.
 \g__cctab_next_cctab=\catcodetable18
 
 Package tudapub/thesis Info: You submitted examdate data for title
@@ -2729,39 +2977,39 @@ Package tudapub/thesis Info: You submitted examdate data for title
 (tudapub/thesis)             This field is only used for type=dr/drfinal.
 (tudapub/thesis)             It will be ignored.
 
-Package scrbase Info: activating english \ptxcd_department: on input line 88.
-Package scrbase Info: activating english \departmentname on input line 88.
-Package scrbase Info: activating english \departmentfullname on input line 88.
-Package scrbase Info: activating english \ptxcd_departmentprefix: on input line 88.
-Package scrbase Info: activating english \ptxcd_in_department on input line 88.
+Package scrbase Info: activating english \ptxcd_department: on input line 116.
+Package scrbase Info: activating english \departmentname on input line 116.
+Package scrbase Info: activating english \departmentfullname on input line 116.
+Package scrbase Info: activating english \ptxcd_departmentprefix: on input line 116.
+Package scrbase Info: activating english \ptxcd_in_department on input line 116.
 LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 88.
+(Font)              scaled to size 10.95pt on input line 116.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Roboto' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
-(Font)              scaled to size 10.95pt on input line 88.
+(Font)              scaled to size 10.95pt on input line 116.
 LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
-(Font)              scaled to size 36.0pt on input line 88.
+(Font)              scaled to size 36.0pt on input line 116.
 LaTeX Font Info:    Font shape `TU/Roboto(9)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 88.
+(Font)              scaled to size 10.95pt on input line 116.
 LaTeX Font Info:    Font shape `TU/Roboto(9)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 88.
+(Font)              scaled to size 12.0pt on input line 116.
 LaTeX Font Info:    Font shape `TU/Roboto(9)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 88.
+(Font)              scaled to size 12.0pt on input line 116.
 <tuda_logo.pdf, id=7, 156.48964pt x 62.59586pt>
 File: tuda_logo.pdf Graphic file (type pdf)
 <use tuda_logo.pdf>
-Package luatex.def Info: tuda_logo.pdf  used on input line 88.
+Package luatex.def Info: tuda_logo.pdf  used on input line 116.
 (luatex.def)             Requested size: 156.49402pt x 62.59605pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 88.
-(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Trying to load font information for U+msa on input line 116.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 116.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -2770,11 +3018,11 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
 LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 88.
+(Font)              scaled to size 10.0pt on input line 116.
 <images/ce_logo_black.pdf, id=8, 463.50967pt x 427.13577pt>
 File: images/ce_logo_black.pdf Graphic file (type pdf)
 <use images/ce_logo_black.pdf>
-Package luatex.def Info: images/ce_logo_black.pdf  used on input line 88.
+Package luatex.def Info: images/ce_logo_black.pdf  used on input line 116.
 (luatex.def)             Requested size: 110.87926pt x 102.17577pt.
  [1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -2830,7 +3078,7 @@ Package fontspec Info:
 
 ]
 LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 91.
+(Font)              scaled to size 12.0pt on input line 119.
  [1
 
 
@@ -2841,6 +3089,12 @@ LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
  (./chapters/zusammenfassung.tex
 LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
 (Font)              scaled to size 14.4pt on input line 3.
+LaTeX Font Info:    Font shape `TU/RobotoMono(0)/m/n' will be
+(Font)              scaled to size 10.95pt on input line 21.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `RobotoMono' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 )
 warning  (pdf backend): ignoring duplicate destination with the name 'page.'
 [2
@@ -2848,8 +3102,8 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.'
 
 ]
 LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
-(Font)              scaled to size 20.74pt on input line 101.
-Package tocbasic Info: character protrusion at toc deactivated on input line 101.
+(Font)              scaled to size 20.74pt on input line 129.
+Package tocbasic Info: character protrusion at toc deactivated on input line 129.
  (./student_thesis.toc)
 \tf@toc=\write5
 
@@ -2868,20 +3122,32 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.'
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 137--137
+[]|[]\TU/XCharter(0)/m/n/10.95 6[],
+ []
+
+
+warning  (pdf backend): ignoring duplicate destination with the name 'page.'
+[5
+
+
+]
+warning  (pdf backend): ignoring duplicate destination with the name 'page.'
+[6
+
+
+]
 \openout2 = chapters/einleitung.aux
  (./chapters/einleitung.tex
 chapter 1.
-
-LaTeX Warning: Reference `sec:coupling-scheme' on page 1 undefined on input line 32.
-
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1
 
 
-]
+])
 warning  (pdf backend): ignoring duplicate destination with the name 'page.2'
-[2]) [3]
+[2] [3]
 \openout2 = chapters/theorie.aux
  (./chapters/theorie.tex
 chapter 2.
@@ -2890,29 +3156,84 @@ chapter 2.
 
 
 
-] [5]) [6]
+] [5] [6] [7] [8]) [9]
+\openout2 = chapters/interface.aux
+ (./chapters/interface.tex
+chapter 3.
+[10
+
+
+
+
+]) [11]
 \openout2 = chapters/xyce.aux
  (./chapters/xyce.tex
-chapter 3.
-) [7
+chapter 4.
+LaTeX Font Info:    Font shape `TU/RobotoMono(0)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 13.
+[12
 
 
 
 
-]
+] [13] [14] [15]) [16]
 \openout2 = chapters/numerik.aux
  (./chapters/numerik.tex
-chapter 4.
-) [8
+chapter 5.
+<examples/circuit2.pdf, id=589, 253.14474pt x 214.87177pt>
+File: examples/circuit2.pdf Graphic file (type pdf)
+<use examples/circuit2.pdf>
+Package luatex.def Info: examples/circuit2.pdf  used on input line 11.
+(luatex.def)             Requested size: 245.82962pt x 208.66469pt.
+<examples/circuit.pdf, id=590, 211.25424pt x 122.04195pt>
+File: examples/circuit.pdf Graphic file (type pdf)
+<use examples/circuit.pdf>
+Package luatex.def Info: examples/circuit.pdf  used on input line 18.
+(luatex.def)             Requested size: 245.82962pt x 142.01752pt.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 22.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 22.
+[17
 
 
 
 
-]
+<./examples/circuit2.pdf><./examples/circuit.pdf>] (./examples/interface_voltage_cir1.tex)
+Overfull \hbox (0.91396pt too wide) in paragraph at lines 596--38
+ [][] 
+ []
+
+(./examples/wr_convergence_cir1.tex
+Package pgfplots info on input line 49: Using 'lua backend=false' for axis: ymode=log unsupported (yet).
+
+
+Package pgfplots Warning: Axis range for axis y is approximately empty; enlarging it (it is [2.0000000000:2.0000000000]) on input line 98.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+)
+Overfull \hbox (30.62885pt too wide) in paragraph at lines 99--47
+ [][] 
+ []
+
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/sc' will be
+(Font)              scaled to size 10.95pt on input line 50.
+<examples/circuit3.pdf, id=626, 276.91354pt x 223.70276pt>
+File: examples/circuit3.pdf Graphic file (type pdf)
+<use examples/circuit3.pdf>
+Package luatex.def Info: examples/circuit3.pdf  used on input line 56.
+(luatex.def)             Requested size: 276.91286pt x 223.7022pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(./examples/interface_voltage_cir3.tex)
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/sc' will be
+(Font)              scaled to size 10.0pt on input line 70.
+ (./examples/interface_voltage_cir3_acc.tex)) [18] [19] [20<./examples/circuit3.pdf>] [21]
 \openout2 = chapters/application.aux
  (./chapters/application.tex
-chapter 5.
-) [9
+chapter 6.
+) [22
 
 
 
@@ -2920,38 +3241,33 @@ chapter 5.
 ]
 \openout2 = chapters/fazit.aux
  (./chapters/fazit.tex
-chapter 6.
-) [10
+chapter 7.
+) [23
 
 
 
 
 ]
-Package tocbasic Info: character protrusion at lof deactivated on input line 128.
+Package tocbasic Info: character protrusion at lof deactivated on input line 166.
  (./student_thesis.lof)
 \tf@lof=\write6
 
 \openout6 = student_thesis.lof
- [11
+ [24
 
 
 
 ]
-Package tocbasic Info: character protrusion at lot deactivated on input line 129.
+Package tocbasic Info: character protrusion at lot deactivated on input line 167.
  (./student_thesis.lot)
 \tf@lot=\write7
 
 \openout7 = student_thesis.lot
- [12
+ [25
+
+] [26
 
 ]
-LaTeX Font Info:    Font shape `TU/RobotoMono(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 134.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `RobotoMono' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
 
 Package tudapub Warning: You did not provide a Label for key introduction.
 (tudapub)                Either you need to recompile your document or add a
@@ -2972,36 +3288,30 @@ Package tudapub Warning: You did not provide a Label for key discussion.
 (tudapub)                Either you need to recompile your document or add a
 (tudapub)                label using \IMRADlabel.
 
-[13
-
-] (./student_thesis.aux (./chapters/zusammenfassung.aux) (./chapters/einleitung.aux) (./chapters/theorie.aux) (./chapters/xyce.aux) (./chapters/numerik.aux) (./chapters/application.aux) (./chapters/fazit.aux))
+[27] (./student_thesis.aux (./chapters/zusammenfassung.aux) (./chapters/einleitung.aux) (./chapters/theorie.aux) (./chapters/interface.aux) (./chapters/xyce.aux) (./chapters/numerik.aux) (./chapters/application.aux) (./chapters/fazit.aux))
  ***********
 LaTeX2e <2025-11-01>
-L3 programming layer <2026-01-19>
+L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package logreq Info: Writing requests to 'student_thesis.run.xml'.
 
 \openout1 = student_thesis.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 60189 strings out of 476076
- 125005,2848258 words of node,token memory allocated
- 7137 words of node memory still in use:
-   86 hlist, 9 vlist, 15 rule, 39 disc, 20 local_par, 6 math, 162 glue, 26 kern, 33 penalty, 3 margin_kern, 350 glyph, 333 attribute, 95 glue_spec, 172 attribute_list, 2 write, 6 pdf_action, 30 pdf_colorstack, 2 pdf_setmatrix, 2 pdf_save, 2 pdf_restore nodes
-   avail lists: 1:5,2:1780,3:547,4:143,5:1345,6:129,7:9846,8:96,9:940,10:24,11:760,12:2
- 81174 multiletter control sequences out of 65536+600000
- 147 fonts using 20967455 bytes
- 122i,21n,135p,11269b,2170s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/opentype/google/roboto/RobotoMono-Regular.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/xcharter/XCharter-Bold.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/xcharter/XCharter-Italic.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/xcharter/XCharter-Roman.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/google/roboto/Roboto-Bold.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/google/roboto/Roboto-Regular.otf></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on student_thesis.pdf (19 pages, 700921 bytes).
+ 80107 strings out of 476076
+ 305229,4101490 words of node,token memory allocated
+ 7550 words of node memory still in use:
+   86 hlist, 9 vlist, 15 rule, 39 disc, 20 local_par, 6 math, 168 glue, 25 kern, 33 penalty, 3 margin_kern, 354 glyph, 413 attribute, 107 glue_spec, 212 attribute_list, 2 write, 14 pdf_action, 30 pdf_colorstack, 2 pdf_setmatrix, 2 pdf_save, 2 pdf_restore nodes
+   avail lists: 1:12,2:49888,3:20044,4:213,5:1435,6:172,7:9906,8:129,9:1804,10:32,11:770,12:1
+ 100763 multiletter control sequences out of 65536+600000
+ 162 fonts using 23124895 bytes
+ 122i,21n,135p,11269b,2933s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2026/texmf-dist/fonts/opentype/public/xcharter/XCharter-Bold.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/google/roboto/RobotoMono-Regular.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/xcharter/XCharter-Italic.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/xcharter/XCharter-Roman.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/google/roboto/Roboto-Bold.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/google/roboto/Roboto-Regular.otf></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on student_thesis.pdf (35 pages, 989421 bytes).
 
-PDF statistics: 386 PDF objects out of 1000 (max. 8388607)
- 330 compressed objects within 4 object streams
- 69 named destinations out of 1000 (max. 1048576)
- 184 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 922 PDF objects out of 1000 (max. 8388607)
+ 813 compressed objects within 9 object streams
+ 153 named destinations out of 1000 (max. 1048576)
+ 216 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -3,44 +3,164 @@
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}Fundamentals}{4}{chapter.2}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lol}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
 \newlabel{ch:fundamentals}{{2}{4}{Fundamentals}{chapter.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Modified Nodal Analysis}{4}{section.2.1}\protected@file@percent }
-\newlabel{eq:mna}{{2.1}{4}{Modified Nodal Analysis}{equation.2.1}{}}
-\newlabel{eq:mna-base}{{2.1a}{4}{Modified Nodal Analysis}{equation.2.1a}{}}
-\newlabel{eq:mna-circuit-port-operator}{{2.1b}{4}{Modified Nodal Analysis}{equation.2.1b}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Dynamic Iteration}{4}{section.2.2}\protected@file@percent }
+\glsxtr@record{Mmna}{}{page}{glsnumberformat}{4}
+\glsxtr@record{Kmna}{}{page}{glsnumberformat}{4}
+\newlabel{eq:mna-base}{{2.1}{4}{Modified Nodal Analysis}{section.2.1}{}}
+\glsxtr@record{vC}{}{page}{glsnumberformat}{4}
+\glsxtr@record{iC}{}{page}{glsnumberformat}{4}
+\newlabel{eq:mna-circuit-port-operator}{{2.1}{4}{Modified Nodal Analysis}{section.2.1}{}}
+\glsxtr@record{vC}{}{page}{glsnumberformat}{4}
+\glsxtr@record{iC}{}{page}{glsnumberformat}{4}
+\glsxtr@record{tn}{}{page}{glsnumberformat}{5}
+\glsxtr@record{tn}{}{page}{glsnumberformat}{5}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Dynamic iteration. The two subsystems (field/circuit) are evaluated on their own time grids, with different step sizes (solid teal and blue arrows). A window is the time span between synchronisation points \gls {tn} (purple dots). Only at a synchronisation point are the state vectors updated, in this case according to a Gauss--Seidel scheme. The solution is computed iteratively on a window and uses rollback (dashed purple arrow).}}{5}{figure.caption.5}\protected@file@percent }
+\glsxtr@record{tn}{}{page}{glsnumberformat}{5}
+\newlabel{fig:dynamic-iteration}{{2.1}{5}{Dynamic iteration. The two subsystems (field/circuit) are evaluated on their own time grids, with different step sizes (solid teal and blue arrows). A window is the time span between synchronisation points \gls {tn} (purple dots). Only at a synchronisation point are the state vectors updated, in this case according to a Gauss--Seidel scheme. The solution is computed iteratively on a window and uses rollback (dashed purple arrow)}{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Dynamic Iteration}{5}{section.2.2}\protected@file@percent }
+\newlabel{sec:dynamic-iteration}{{2.2}{5}{Dynamic Iteration}{section.2.2}{}}
+\glsxtr@record{tn}{}{page}{glsnumberformat}{5}
+\glsxtr@record{Hn}{}{page}{glsnumberformat}{5}
+\glsxtr@record{tn}{}{page}{glsnumberformat}{5}
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Coupling Scheme}{5}{section.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Coupling Direction}{5}{paragraph*.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Transmission Conditions}{5}{paragraph*.3}\protected@file@percent }
-\newlabel{eq:classical-wr}{{2.3}{5}{Transmission Conditions}{equation.2.3}{}}
-\newlabel{eq:tc-gs-plain}{{2.4}{5}{Transmission Conditions}{equation.2.4}{}}
-\newlabel{eq:tc-gs-plain-voltage}{{2.4a}{5}{Transmission Conditions}{equation.2.4a}{}}
-\newlabel{eq:tc-gs-plain-current}{{2.4b}{5}{Transmission Conditions}{equation.2.4b}{}}
-\newlabel{eq:tc-gs-robin}{{2.5}{5}{Transmission Conditions}{equation.2.5}{}}
-\newlabel{eq:tc-optimal-voltage-driven}{{2.6}{6}{Transmission Conditions}{equation.2.6}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Note on Algorithms}{6}{paragraph*.4}\protected@file@percent }
+\newlabel{sec:coupling-scheme}{{2.3}{5}{Coupling Scheme}{section.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Coupling Direction}{6}{subsection.2.3.1}\protected@file@percent }
+\glsxtr@record{iF}{}{page}{glsnumberformat}{6}
+\glsxtr@record{iC}{}{page}{glsnumberformat}{6}
+\glsxtr@record{vF}{}{page}{glsnumberformat}{6}
+\glsxtr@record{vF}{}{page}{glsnumberformat}{6}
+\glsxtr@record{Lport}{}{page}{glsnumberformat}{6}
+\glsxtr@record{iF}{}{page}{glsnumberformat}{6}
+\glsxtr@record{iF}{}{page}{glsnumberformat}{6}
+\glsxtr@record{iF}{}{page}{glsnumberformat}{6}
+\glsxtr@record{Lport}{}{page}{glsnumberformat}{6}
+\glsxtr@record{vF}{}{page}{glsnumberformat}{6}
+\glsxtr@record{vF}{}{page}{glsnumberformat}{6}
+\glsxtr@record{vC}{}{page}{glsnumberformat}{6}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Coupling Conditions}{6}{subsection.2.3.2}\protected@file@percent }
+\glsxtr@record{vF}{}{page}{glsnumberformat}{6}
+\glsxtr@record{vC}{}{page}{glsnumberformat}{6}
+\glsxtr@record{iC}{}{page}{glsnumberformat}{6}
+\glsxtr@record{iF}{}{page}{glsnumberformat}{6}
+\newlabel{eq:classical-wr}{{2.1}{6}{Coupling Conditions}{equation.2.1}{}}
+\glsxtr@record{vC}{}{page}{glsnumberformat}{6}
+\glsxtr@record{iF}{}{page}{glsnumberformat}{6}
+\newlabel{eq:tc-gs-plain}{{2.2}{7}{Coupling Conditions}{equation.2.2}{}}
+\newlabel{eq:tc-gs-plain-voltage}{{2.2a}{7}{Coupling Conditions}{equation.2.2a}{}}
+\newlabel{eq:tc-gs-plain-current}{{2.2b}{7}{Coupling Conditions}{equation.2.2b}{}}
+\glsxtr@record{beta}{}{page}{glsnumberformat}{7}
+\glsxtr@record{beta}{}{page}{glsnumberformat}{7}
+\newlabel{eq:tc-gs-robin}{{2.3}{7}{Coupling Conditions}{equation.2.3}{}}
+\glsxtr@record{beta}{}{page}{glsnumberformat}{7}
+\glsxtr@record{vC}{}{page}{glsnumberformat}{7}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{7}
+\glsxtr@record{Mmna}{}{page}{glsnumberformat}{7}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{7}
+\glsxtr@record{Kmna}{}{page}{glsnumberformat}{7}
+\glsxtr@record{Mmna}{}{page}{glsnumberformat}{7}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{7}
+\glsxtr@record{Kmna}{}{page}{glsnumberformat}{7}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{7}
+\glsxtr@record{iF}{}{page}{glsnumberformat}{7}
+\glsxtr@record{Yport}{}{page}{glsnumberformat}{7}
+\glsxtr@record{vF}{}{page}{glsnumberformat}{7}
+\glsxtr@record{Yport}{}{page}{glsnumberformat}{7}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{7}
+\glsxtr@record{Zport}{}{page}{glsnumberformat}{7}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{7}
+\glsxtr@record{Zport}{}{page}{glsnumberformat}{7}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{7}
+\glsxtr@record{rho}{}{page}{glsnumberformat}{7}
+\glsxtr@record{beta}{}{page}{glsnumberformat}{7}
+\glsxtr@record{rho}{}{page}{glsnumberformat}{7}
+\glsxtr@record{beta}{}{page}{glsnumberformat}{7}
+\glsxtr@record{beta}{}{page}{glsnumberformat}{7}
+\glsxtr@record{beta}{}{page}{glsnumberformat}{7}
+\glsxtr@record{Yport}{}{page}{glsnumberformat}{7}
+\glsxtr@record{rho}{}{page}{glsnumberformat}{7}
+\glsxtr@record{beta}{}{page}{glsnumberformat}{7}
+\glsxtr@record{rho}{}{page}{glsnumberformat}{7}
+\glsxtr@record{beta}{}{page}{glsnumberformat}{7}
+\glsxtr@record{beta}{}{page}{glsnumberformat}{7}
+\glsxtr@record{Yport}{}{page}{glsnumberformat}{7}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{7}
+\glsxtr@record{Yport}{}{page}{glsnumberformat}{7}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{7}
+\glsxtr@record{Yport}{}{page}{glsnumberformat}{7}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{7}
+\newlabel{eq:tc-optimal-voltage-driven}{{2.4}{7}{Coupling Conditions}{equation.2.4}{}}
+\glsxtr@record{Zport}{}{page}{glsnumberformat}{7}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{7}
+\glsxtr@record{Zport}{}{page}{glsnumberformat}{7}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{7}
+\newlabel{eq:tc-optimal-current-driven}{{2.5}{7}{Coupling Conditions}{equation.2.5}{}}
+\glsxtr@record{vC}{}{page}{glsnumberformat}{7}
+\glsxtr@record{iC}{}{page}{glsnumberformat}{7}
+\glsxtr@record{Zport}{}{page}{glsnumberformat}{7}
+\glsxtr@record{Yport}{}{page}{glsnumberformat}{7}
+\glsxtr@record{rho}{}{page}{glsnumberformat}{7}
+\glsxtr@record{Lport}{}{page}{glsnumberformat}{8}
+\glsxtr@record{Rport}{}{page}{glsnumberformat}{8}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Schematic representation of the $k+1$-th Gauss--Seidel iteration for the field-circuit subsystems, using an approximation of the optimal transmission coupling condition.}}{8}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:coupling-gs-rom}{{2.2}{8}{Schematic representation of the $k+1$-th Gauss--Seidel iteration for the field-circuit subsystems, using an approximation of the optimal transmission coupling condition}{figure.caption.6}{}}
+\glsxtr@record{Zport}{}{page}{glsnumberformat}{8}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{8}
+\glsxtr@record{Lport}{}{page}{glsnumberformat}{8}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{8}
+\glsxtr@record{Yport}{}{page}{glsnumberformat}{8}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{8}
+\glsxtr@record{Lport}{}{page}{glsnumberformat}{8}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{8}
+\glsxtr@record{iF}{}{page}{glsnumberformat}{8}
+\glsxtr@record{Lport}{}{page}{glsnumberformat}{8}
+\glsxtr@record{vF}{}{page}{glsnumberformat}{8}
+\glsxtr@record{vF}{}{page}{glsnumberformat}{8}
+\glsxtr@record{Lport}{}{page}{glsnumberformat}{8}
+\glsxtr@record{iF}{}{page}{glsnumberformat}{8}
+\glsxtr@record{Lport}{}{page}{glsnumberformat}{8}
+\glsxtr@record{Yport}{}{page}{glsnumberformat}{8}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{8}
+\glsxtr@record{Zport}{}{page}{glsnumberformat}{8}
+\glsxtr@record{omega}{}{page}{glsnumberformat}{8}
+\glsxtr@record{Rport}{}{page}{glsnumberformat}{8}
+\glsxtr@record{Rport}{}{page}{glsnumberformat}{8}
+\glsxtr@record{Lport}{}{page}{glsnumberformat}{8}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Algorithm}{8}{paragraph*.7}\protected@file@percent }
+\glsxtr@record{Mmna}{}{page}{glsnumberformat}{8}
+\glsxtr@record{Kmna}{}{page}{glsnumberformat}{8}
+\newlabel{eq:algorithm-1}{{2.6}{8}{Algorithm}{equation.2.6}{}}
+\glsxtr@record{Rport}{}{page}{glsnumberformat}{9}
+\glsxtr@record{Lport}{}{page}{glsnumberformat}{9}
+\newlabel{eq:tc-optim-time}{{2.8}{9}{Algorithm}{equation.2.8}{}}
+\glsxtr@record{Rport}{}{page}{glsnumberformat}{9}
+\glsxtr@record{Lport}{}{page}{glsnumberformat}{9}
+\newlabel{eq:tc-optim-time-corr}{{2.9}{9}{Algorithm}{equation.2.9}{}}
+\glsxtr@record{Lport}{}{page}{glsnumberformat}{9}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Note on Solving the DAEs}{9}{paragraph*.8}\protected@file@percent }
 \@setckpt{chapters/theorie}{
-\setcounter{page}{7}
-\setcounter{equation}{6}
+\setcounter{page}{10}
+\setcounter{equation}{9}
 \setcounter{enumi}{3}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
 \setcounter{enumiv}{0}
-\setcounter{footnote}{0}
+\setcounter{footnote}{2}
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{2}
 \setcounter{section}{3}
-\setcounter{subsection}{0}
+\setcounter{subsection}{2}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{0}
+\setcounter{figure}{2}
 \setcounter{table}{0}
 \setcounter{section@level}{0}
 \setcounter{Item}{3}
-\setcounter{Hfootnote}{0}
+\setcounter{Hfootnote}{2}
 \setcounter{bookmark@seq@number}{0}
 \setcounter{tabx@nest}{0}
 \setcounter{listtotal}{0}
@@ -51,7 +171,7 @@
 \setcounter{citetotal}{0}
 \setcounter{multicitecount}{0}
 \setcounter{multicitetotal}{0}
-\setcounter{instcount}{25}
+\setcounter{instcount}{31}
 \setcounter{maxnames}{3}
 \setcounter{minnames}{1}
 \setcounter{maxitems}{3}
@@ -156,11 +276,16 @@
 \setcounter{smartand}{1}
 \setcounter{bbx:relatedcount}{0}
 \setcounter{bbx:relatedtotal}{0}
-\setcounter{parentequation}{4}
+\setcounter{parentequation}{2}
 \setcounter{AlgoLine}{0}
 \setcounter{algocfline}{0}
 \setcounter{algocfproc}{0}
 \setcounter{algocf}{0}
+\setcounter{lstnumber}{1}
+\setcounter{caption@flags}{2}
+\setcounter{continuedfloat}{0}
+\setcounter{subfigure}{0}
+\setcounter{subtable}{0}
 \setcounter{blindtext}{1}
 \setcounter{Blindtext}{5}
 \setcounter{blind@countparstart}{0}
@@ -173,4 +298,9 @@
 \setcounter{blind@randommax}{0}
 \setcounter{blind@pangramcount}{0}
 \setcounter{blind@pangrammax}{0}
+\setcounter{LT@tables}{1}
+\setcounter{LT@chunks}{2}
+\setcounter{corollary}{1}
+\setcounter{example}{1}
+\setcounter{lstlisting}{0}
 }

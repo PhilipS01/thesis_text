@@ -1,0 +1,64 @@
+%!TEX root = ../student_thesis.tex
+
+\chapter{Interface Discretisation}\label{ch:interface-discretisation}
+The interface condition from Chapter~\ref{ch:fundamentals} is time-continuous. Coupling black-box tools means each solver discretises the condition with its own integrator, so the two discrete operators may differ. In this chapter we analyse the discretisation error and show how an accumulated-derivative formulation removes part of it at the synchronisation points.
+
+If the Scheme~\eqref{eq:algorithm-1}--\eqref{eq:tc-optim-time-corr} converges, i.e., 
+\begin{equation*}
+    \gls{vC}(t) = \gls{vF}(t)
+    , \quad
+    \gls{iC}(t) = \gls{iF}(t)
+    \quad \text{and} \quad
+    \mathbf{v}_{\text{C}}^{(k+1)}(t) = \mathbf{v}_{\text{C}}^{(k)}(t)
+    , \quad
+    \mathbf{i}_{\text{F}}^{(k+1)}(t) = \mathbf{i}_{\text{F}}^{(k)}(t)
+\end{equation*}
+the terms in the time-continuous formulation of the interface condition~\eqref{eq:tc-optim-time}--\eqref{eq:tc-optim-time-corr} cancel out:
+\begin{equation*}
+    \mathbf{v}_{\text{C}}^{(k+1)}(t) = \cancel{(\mathbf{R} + \mathbf{L} \, \mathrm{d}_t)\, \mathbf{i}_{\text{C}}^{(k+1)}(t)} + \mathbf{v}_{\text{F}}^{(k)}(t) - \cancel{(\mathbf{R} + \mathbf{L} \, \mathrm{d}_t)\, \mathbf{i}_{\text{F}}^{(k)}(t)},
+\end{equation*}
+whereby the equations are solved consistently. Consistency cannot be guaranteed, however, when the transmission condition is discretised in time.
+
+For a given window $I_j = [t_0, t_0 + H_j]$ with $t_0 = \gls{tn}$, the different solvers start from the same initial value, but may integrate on different time grids thereafter; see Figure~\ref{fig:dynamic-iteration}.
+\begin{align*}
+    \text{circuit:} \qquad &t_0 < t_1^{\text{C}} < t_2^{\text{C}} < \dots < t_0 + H_j, \qquad h_{\text{C}} := t_p^{\text{C}} - t_{p-1}^{\text{C}}, \\
+    \text{field:} \qquad &t_0 < t_1^{\text{F}} < t_2^{\text{F}} < \dots < t_0 + H_j, \qquad h_{\text{F}} := t_r^{\text{F}} - t_{r-1}^{\text{F}}.
+\end{align*}
+Hence, applying backward \textsc{Euler} yields
+\begin{align*}
+    \mathbf{v}_{\text{C}}^{(k+1)}(t_{p}^{\text{C}}) &= \gls{Rport} \, \mathbf{i}_{\text{C}}^{(k+1)}(t_{p}^{\text{C}}) + \gls{Lport} \, \frac{\mathbf{i}_{\text{C}}^{(k+1)}(t_{p}^{\text{C}}) - \mathbf{i}_{\text{C}}^{(k+1)}(t_{p-1}^{\text{C}})}{h_{\text{C}}} + \Delta \mathbf{v}_{\text{F}}^{(k)}(t_{p}^{\text{C}}), \\
+    \Delta \mathbf{v}_{\text{F}}^{(k)}(t_{r}^{\text{F}}) &= \mathbf{v}_{\text{F}}^{(k)}(t_{r}^{\text{F}}) - \gls{Rport} \, \mathbf{i}_{\text{F}}^{(k)}(t_{r}^{\text{F}}) - \gls{Lport} \, \frac{\mathbf{i}_{\text{F}}^{(k)}(t_{r}^{\text{F}}) - \mathbf{i}_{\text{F}}^{(k)}(t_{r-1}^{\text{F}})}{h_{\text{F}}}.
+\end{align*}
+The circuit needs $\Delta \mathbf{v}_{\text{F}}^{(k)}(t_p^{\text{C}})$, but $t_p^{\text{C}}$ is a circuit node and is (in general) not a field node. Hence, an interpolation of the two field samples that bracket the circuit node is needed. A linear interpolation yields
+\begin{equation*}
+    \Delta \mathbf{v}_{\text{F}}^{(k)}(t_p^{\text{C}}) = \Delta \mathbf{v}_{\text{F}}^{(k)}(t_{r-1}^{\text{F}}) + \frac{t_{p}^{\text{C}} - t_{r-1}^{\text{F}}}{t_{r}^{\text{F}} - t_{r-1}^{\text{F}}} \big( \Delta \mathbf{v}_{\text{F}}^{(k)}(t_{r}^{\text{F}}) - \Delta \mathbf{v}_{\text{F}}^{(k)}(t_{r-1}^{\text{F}}) \big), \qquad t_{r-1}^{\text{F}} \leq t_{p}^{\text{C}} \leq t_{r}^{\text{F}}.
+\end{equation*}
+Then, if the scheme converges, i.e., $\gls{vC}(t_p^{\text{C}}) = \gls{vF}(t_p^{\text{C}})$ and $\gls{iC}(t_p^{\text{C}}) = \gls{iF}(t_p^{\text{C}})$ and with no iteration change, the terms cancel and consistency is guaranteed.
+
+\begin{corollary} \label{corollary:naive-error}
+    A \textquote{naive} discretisation of the field-circuit transmission coupling condition \eqref{eq:tc-optim-time}--\eqref{eq:tc-optim-time-corr}, evaluated on the circuit, requires interpolation of the field quantities whenever the subsystems do not share a common grid. Provided the scheme converges, the equations are then solved consistently up to the discretisation error of the underlying method---in our case $\mathcal{O}(h_{\text{C}}) + \mathcal{O}(h_{\text{F}})$ for backward Euler.
+\end{corollary}
+
+Since both subsystems restart from the same initial current at $t_0$, using $\mathbf{i}_{\text{C}}^{(k+1)}(t_0) = \mathbf{i}_{\text{F}}^{(k)}(t_0), \, \forall k$ we propose a different formulation of the interface condition \eqref{eq:tc-optim-time}--\eqref{eq:tc-optim-time-corr}, by taking the \textit{accumulated} derivative
+\begin{equation} \label{eq:acc-residual}
+    \Delta \mathrm{d}_{t} \mathbf{i}(t) = \frac{\mathbf{i}_{\text{C}}^{(k+1)}(t) - \mathbf{i}_{\text{C}}^{(k+1)}(t_0)}{t-t_0} - \frac{\mathbf{i}_{\text{F}}^{(k)}(t) - \mathbf{i}_{\text{F}}^{(k)}(t_0)}{t-t_0} = \frac{\mathbf{i}_{\text{C}}^{(k+1)}(t) - \mathbf{i}_{\text{F}}^{(k)}(t)}{t-t_0}, \quad t \in [t_0, t_0 + H_j],
+\end{equation}
+in both subsystems. Equation~\eqref{eq:acc-residual} is a global (window) secant, anchored at $t_0$.
+
+\begin{corollary} \label{corollary:acc-condition}
+    Using the accumulated (secant) derivative \eqref{eq:acc-residual} in the interface condition \eqref{eq:tc-optim-time}--\eqref{eq:tc-optim-time-corr} and interpolating the lagged field correction $\Delta \mathbf{v}_{\text{F}}^{(k)}$, the discrete residual $\Delta \mathrm{d}_{t} \mathbf{i}(t)$ vanishes at convergence. Because of the anchored denominator $t-t_0$, there is a roll-off as $t$ increases for a given window.
+\end{corollary}
+
+Both methods can be used to discretise the interface condition, as we will see later. Because of their different behaviour, however, especially regarding the time between synchronisation points, it seems advisable to use different convergence criteria. While the backward \textsc{Euler} condition permits many different criteria, such as the relative iteration change
+\begin{equation} \label{eq:L1-criterion}
+    \frac{\int_{\gls{tn}}^{T_{n+1}} \lvert \mathbf{i}_{\text{F}}^{(k)} - \mathbf{i}_{\text{F}}^{(k-1)} \rvert \, \mathrm{d}t}{\int_{\gls{tn}}^{T_{n+1}} \lvert \mathbf{i}_{\text{F}}^{(k)} \rvert \, \mathrm{d}t} \, \leq \text{Tol},
+\end{equation}
+cf. \cite{Garcia2017}, we found the accumulated condition is only usable with a terminal criterion, which evaluates the exchanged variables at the synchronisation points $\gls{tn}$, i.e.,
+\begin{equation*}
+    \lvert \mathbf{i}_{\text{C}}^{(k+1)}(\gls{tn}) - \mathbf{i}_{\text{C}}^{(k)}(\gls{tn}) \rvert + \lvert \mathbf{v}_{\text{C}}^{(k+1)}(\gls{tn}) - \mathbf{v}_{\text{C}}^{(k)}(\gls{tn}) \rvert \leq \text{Tol} \quad \text{and} \begin{cases}
+        \lvert \mathbf{i}_{\text{C}}^{(k+1)}(\gls{tn}) - \mathbf{i}_{\text{F}}^{(k+1)}(\gls{tn}) \rvert \leq \text{Tol}      & \text{voltage-driven}, \\
+        \lvert \mathbf{v}_{\text{C}}^{(k+1)}(\gls{tn}) - \mathbf{v}_{\text{F}}^{(k+1)}(\gls{tn}) \rvert \leq \text{Tol}       & \text{current-driven}.
+    \end{cases}
+\end{equation*}
+
+The accumulated derivative is an anchored secant of the current state change from the window start. It does not approximate the instantaneous derivative in the window interior. Besides the discretisation error, Equation~\eqref{eq:acc-residual} also makes it easy to see that any errors or noise in the current are amplified near the window start as $t \rightarrow t_0$. Using the terminal criterion then causes a relatively large error between field and circuit currents at the window starts, which manifests as voltage \textquote{spikes} (sometimes also ramps) in our simulations. In our experience however, even a global cirterion such as \eqref{eq:L1-criterion} will result in such spikes, provided a small enough step by the circuit's integrator.

@@ -1,28 +1,118 @@
 %!TEX root = ../student_thesis.tex
 
-\chapter{Coupling with Xyce\texttrademark}
-\label{ch:xyce}
-To successfully implement dynamic iteration, which is a fixed-point iteration technique, a rollback to repeat the co-simulation step with corrected inputs is required. 
+\chapter{Coupling with Xyce\texttrademark} \label{ch:xyce}
+This chapter discusses the implementation of the dynamic iteration scheme presented in Chapters~\ref{ch:fundamentals} and \ref{ch:interface-discretisation}. At this point in the thesis, one may rightfully ask \textit{Why Xyce\texttrademark?} The answer is that we do not specifically need it: although Xyce\texttrademark \ was used here as the solver for the circuit subsystem, one can define general requirements that allow it to be replaced by other solvers.
 
-\section{Requirements on the Circuit Solver (Why Xyce?)}
-\label{sec:xyce-why}
-
-\section{Field Dummy Solver}
-\label{sec:xyce-field}
+\section{Requirements on the Circuit Solver} \label{sec:xyce-why}
+To implement dynamic iteration, which is a fixed-point iteration technique, a rollback that repeats the co-simulation step with corrected inputs is required \cite{Gomes2017}. In Xyce\texttrademark, this rollback is called \textit{restarting} and is accomplished by \textit{checkpointing}, whereby the completed simulation state is saved periodically \cite{Keiter2025UG}. The second requirement on the solver is what Xyce\texttrademark \ aptly calls \textit{Analog Behavioural Modeling} (ABM), which allows a circuit element to be described by a mathematical relationship \cite{Keiter2025UG}. This feature is needed to implement one of the interface conditions derived in Chapter~\ref{ch:interface-discretisation}.
 
 
-\section{Coupling via the Xyce Binary}
-\label{sec:xyce-coupling}
+\section{Field Dummy Solver} \label{sec:xyce-field}
+For the field subsystem, we decided that the extensive capabilities of an established solver were not necessary. One of the goals defined in Section~\ref{sec:objective-contributions} was to implement the co-simulation in a manner that is agnostic to the choice of solver. We therefore opted for a simplistic \textquote{dummy} solver that emulates a device with plausible physical behaviour.
 
-\subsection{Restarts and Checkpointing}
-\label{sec:xyce-restarts}
+We assigned the subsystem its own inductance and resistance values -- treated as the \textit{true} values for our purposes -- which may differ from those the interface condition uses as the ROM. There are two solver-methods, one for each coupling direction, and the \lstinline{C++} coupling driver calls them from the same file. Xyce's output is first resampled onto a uniform grid of \lstinline{N_field_eval_intervals} points, on which the field solver computes either the current or the voltage, depending on the drive direction. In the voltage-driven case, the method \lstinline{FEM_solver_voltage_driven_waveform} computes the current via
+\begin{lstlisting}
+    double dt = V_eval.t[j] - V_eval.t[j - 1];
+    double V_p = V_eval.y[j];   // voltage at the j-th sample
+    double I_field = (V_p + L_FEM * I_ref / dt) / (R_FEM + L_FEM / dt);
+\end{lstlisting}
+at each point of the resampled waveform. In other words, this yields the new current for the given terminal voltage using a backward \textsc{Euler} discretisation of the current derivative. Analogously, the current-driven solver returns the field voltage according to
+\begin{lstlisting}
+    double dt = I_eval.t[j] - I_eval.t[j - 1];
+    double dl_dt = L_FEM * (Ib - Ia) / dt;  // differentiated flux (backward euler)
+    double V_field = R_FEM * I_eval.y[j] + dl_dt;
+\end{lstlisting}
 
-\subsection{Interface Condition via Behavioural Source}
-\label{sec:xyce-interface-condition}
+This approach has the obvious advantage of being very fast to compute, at the cost of leaving the implementation untested against a full 3D field solver.
 
-\subsection{Coupling Direction}
-\label{sec:xyce-coupling-direction}
+% TODO perhaps mention the rudimentary saturation property
 
+\section{Coupling via the Xyce Binary} \label{sec:xyce-coupling}
+With the requirements from Section~\ref{sec:xyce-why}, coupling to Xyce\texttrademark \ can be obtained purely through netlists and without the need to modify and build from the source code.\footnote{While we built it from source, the developers of Xyce\texttrademark, Sandia National Laboratories, also provide executables for MacOS, Microsoft Windows, and RedHat Enterprise. Note that, as of the writing of this thesis, the developers publish executables based on the "XyceNF" version of the code, rather than the open-source version, and they may stop doing so entirely in the future.} This section explores how Xyce\texttrademark \ implements the requirements from above.
 
-\section{General External Interface and Its Limitations}
-\label{sec:xyce-genext}
+\subsection{Restarts and Checkpointing} \label{sec:xyce-restarts}
+When \textquote{checkpointing} is used, Xyce periodically saves its completed simulation state. The saved state can be used to restart Xyce\texttrademark \ from one of these \textquote{checkpoints}. This feature, originally intended as a backup for long running simulations, can be used to implement our rollback requirement.
+Xyce uses the \lstinline|.OPTIONS RESTART| netlist command to control all checkpoint output and restarting \cite{Keiter2025UG}. We use
+\begin{lstlisting}
+    .OPTIONS RESTART PACK=0 JOB=ckpt_out INITIAL_INTERVAL={dt_window}
+\end{lstlisting}
+as the restart directive on the first window. \lstinline|PACK=0| indicates that restart data files contain ASCII data, instead of binary (\lstinline|PACK=1|). \lstinline|JOB| determines the suffix of the file name the data is saved in and \lstinline|INITIAL_INTERVAL| identifies the save interval (we only need the window end).
+Naturally, we use the transient directive
+\begin{lstlisting}
+    .tran {dt_print} {t_stop} {t_abs_start} UIC
+\end{lstlisting}
+to simulate the circuit on the first window, where \lstinline|dt_print| is the minimum interval in which Xyce\texttrademark \ must output its solution, \lstinline|t_stop| is the time at the window end, \lstinline|t_abs_start| is the starting time ($t=0$ on the first window) and \lstinline|UIC| is only used on the first window and tells the solver to use any initial conditions provided in the netlist.
+
+On any other window after the first, we use
+\begin{lstlisting}
+    .OPTIONS RESTART FILE={comitted_file} JOB=ckpt_out INITIAL_INTERVAL={dt_window}
+    .tran {dt_print} {t_stop} {t_abs_start}
+\end{lstlisting}
+as directives, where \lstinline|FILE| specifies the name of the file from which to restart from (rollback to).
+
+\subsection{Interface Condition via Behavioural Source} \label{sec:xyce-interface-condition}
+To implement the interface condition, we use the ABM capability of Xyce\texttrademark. ABM devices (\lstinline|B| devices) are specified in a netlist the same way as other devices. They can serve as either a voltage or current source, meaning an interface condition can be expressed as $\mathbf{v}_{\text{C}}^{(k+1)}$ or $\mathbf{i}_{\text{C}}^{(k+1)}$ from our \textsc{Gauss--Seidel} scheme. We customise the operational behaviour of the \lstinline|B| device via
+\begin{lstlisting}
+    VFprev vfprev 0 PWL FILE "vf_prev_k.pwl"
+    VIprev iprev  0 PWL FILE "i_prev_k.pwl"
+    Vmeas p nx 0
+    Bfield nx 0 V = { V(vfprev) + (Rrom + Lrom/(time - t_abs_start)) * (I(Vmeas) - V(iprev)) }
+\end{lstlisting}
+to represent the accumulated interface condition derived in Chapter~\eqref{ch:interface-discretisation}, where \lstinline|Bfield| equates with $\mathbf{v}_{\text{C}}^{(k+1)}$. Here, \lstinline|time| is a keyword reserved by Xyce\texttrademark \ and used by the solver's integrator to evaluate the current time in the simulation \cite{Keiter2025UG}. \lstinline|I(Vmeas)| is equivalent to $\mathbf{i}_{\text{C}}^{k+1}$ and acts as an ideal amperemeter (no voltage or resistance) in series with the interface. \lstinline|V(vfprev)| and \lstinline|V(iprev)| are the piecewise linear (PWL) sources that contain the field solution of the previous iteration. They are encoded as voltage sources \lstinline|VFprev|, \lstinline|VIprev| and not connected to any other nodes of the circuit. This is standard SPICE idiom, because a voltage source allows a direct lookup, \lstinline|V(node)|, as apposed to encoding them in an isolated current source, which would yield a singular KCL row in the MNA system. \lstinline|Lrom| and \lstinline|Rrom| are the inductance and resistance values used for the ROM. 
+
+We also implemented the \textquote{naive} backward \textsc{Euler} discretisation of the interface, where \lstinline|Lrom| and \lstinline|Rrom| are ideal circuit elements in the netlist and are no longer present in the \lstinline|B| source. We modelled the interface via
+\begin{lstlisting}
+    Vdidtf vdidtf 0 PWL FILE "didt_field_k.pwl"
+    Rromc nx nrc {Rrom}
+    Lromc nrc nlc {Lrom} IC={I0}
+    Bfield nlc 0 V = { V(vfprev) - Rrom*V(iprev) - Lrom*V(vdidtf) }
+\end{lstlisting}
+where \lstinline|V(vfprev)| and \lstinline|V(iprev)| remain the same as before. \lstinline|Vdidtf| introduces the backward \textsc{Euler} discretisation of the field subsystem and is calculated by the dummy-solver, interpolated as PWL. Here, we only dictate $\Delta \mathbf{v}_{\text{F}}^{(k)}$ and Xyce\texttrademark \ handles the computation of
+\begin{equation*}
+    \gls{Rport} \, \mathbf{i}_{\text{C}}^{(k+1)}(t_{p}^{\text{C}}) + \gls{Lport} \, \textrm{d}_{t} \mathbf{i}_{\text{C}}^{(k+1)}
+\end{equation*}
+on its own grid. Besides backward \textsc{Euler} (first-order trapezoidal method), Xyce\texttrademark \ actually allows users to specify the time integration method with an \lstinline|.OPTIONS| line in the netlist to methods of higher order \cite{Keiter2025UG}.
+
+Furthermore, to determine \lstinline|VFprev|, \lstinline|VIprev|, and \lstinline|Vdidtf|, we used linear extrapolation at the first iteration of a given window. The slope of that linear ramp is determined by the last two points of the converged solution of the previous window.
+
+\subsection{Coupling Direction} \label{sec:xyce-coupling-direction}
+As explained in Section~\ref{sec:coupling-scheme}, the circuit subsystem can impose either a voltage or a current on the terminals of the field subsystem. A current-driven formulation, i.e., $\mathbf{i}_{\text{F}}^{(k+1)}(t) = \mathbf{i}_{\text{C}}^{(k+1)}(t)$, changes the meaning of the PWL sources \lstinline|VFprev|, \lstinline|VIprev| and \lstinline|Vdidtf| from Subsection~\ref{sec:xyce-interface-condition}\footnote{Note that the coupling direction has nothing to do with the source type that a given interface condition is expressed in on the circuit-side.}. The variables are compared in Table~\ref{tab:coupling-dir-comparison}.
+
+\begin{table}[htb]
+  \centering
+  \caption{Comparison of interface condition variables depending on coupling direction.}
+  \label{tab:coupling-dir-comparison}
+  \begin{tabular}{lccc}
+    \toprule
+     & voltage-driven & current-driven \\
+    \midrule
+    \lstinline|VFprev|      & $\mathbf{v}_{\text{F}}^{(k)}(t) = \mathbf{v}_{\text{C}}^{(k)}(t)$ & $\mathbf{v}_{\text{F}}^{(k)}(t)$   \\
+    \lstinline|VIprev|      & $\mathbf{i}_{\text{F}}^{(k)}(t)$ & $\mathbf{i}_{\text{F}}^{(k)}(t) = \mathbf{i}_{\text{C}}^{(k)}(t)$   \\
+    \lstinline|Vdidtf|      & $\textrm{d}_{t}\mathbf{i}_{\text{F}}^{(k)}(t)$ & $\textrm{d}_{t}\mathbf{i}_{\text{F}}^{(k)}(t) = \textrm{d}_{t}\mathbf{i}_{\text{C}}^{(k)}(t)$ \\
+    \bottomrule
+  \end{tabular}
+  \par\smallskip
+\end{table}
+% TODO should probably change the variable names throughout the document, especially rename VFprev and Vdidtf
+
+As was previously established, voltage-driven field formulations result in a lower-index system and thereby offer better numerical stability than the current-driven alternative. It is worth noting however, that a current-driven formulation also impacts the meaning of the time derivatives in the interface conditions we derived. A current-driven model, where $\mathbf{i}_{\text{F}}^{(k)}(t) = \mathbf{i}_{\text{C}}^{(k)}(t)$, results in an iteration-difference of the same derivative, i.e.,
+\begin{equation*}
+    \Delta \mathrm{d}_t \mathbf{i}(t) = \mathrm{d}_t \mathbf{i}_{\text{C}}^{(k+1)}(t) - \mathrm{d}_t  \mathbf{i}_{\text{C}}^{(k)}(t),
+\end{equation*}
+instead of a cross-solver difference
+\begin{equation*}
+    \Delta \mathrm{d}_t \mathbf{i}(t) = \mathrm{d}_t \mathbf{i}_{\text{C}}^{(k+1)}(t) - \mathrm{d}_t  \mathbf{i}_{\text{F}}^{(k)}(t),
+\end{equation*}
+from the familiar voltage-driven model. While this may have little impact on a converged solution using a global cirterion, e.g. the L1 norm from Equation~\eqref{eq:L1-criterion}, this more severly impacts the window interiors of the accumulated interface condition using the terminal criterion. There, the cross-solver difference may be much larger than any iterative difference near the window start. Hence, when current-driven modelling is viable, this may reduce the previously mentioned (voltage) spikes.
+
+\section{General External Interface and Its Limitations} \label{sec:xyce-genext}
+
+The General External Interface is an API developed by Xyce\texttrademark \ to couple a circuit to a specialised domain simulation run by another code. This allows users to construct a circuit netlist that includes both real circuit elements and special general external devices (GENEXT devices for short) which serve as opaque coupling devices that invoke the vector compute interfaces provided by an external code. GENEXT devices can have up to one thousand external connecting nodes, simplifying multiport coupling implementation \cite{Russo2018GenExt}.
+
+According to \cite{Russo2018GenExt}, Xyce\texttrademark \ calls upon every device (including the GENEXT device) to load the DAE vectors on every Newton step of every nonlinear solve. \cite{Russo2018GenExt} therefore recommends using the GENEXT coupling method for external problems that are already linear, can be easily linearised over short time scales, or for which a simplified surrogate can be derived that is valid over short time scales. Although our ROM satisfies this condition, two aspects nonetheless make the interface unattractive here.
+
+To our knowledge, the API has no documented restart or checkpointing mechanism. While there is a \lstinline|simulateUntil| method that could be used to stop the simulation at a given synchronisation point \gls{tn}, it is not possible to \textquote{rewind} it through the API. We could still obtain a successful implementation through the file-based restarting capability discussed in Section~\ref{sec:xyce-restarts} by re-initialising the driver from a checkpoint. This workaround reintroduces the very I/O the approach was meant to avoid, however.
+
+The second aspect an implementation using the GENEXT interface is unattractive is the interface condition. Therein, the field's correction of the \textit{previous} iteration $\Delta \mathrm{v}_{\text{F}}^{(k)}$ or $\Delta \mathrm{i}_{\text{F}}^{(k)}$ is replayed. Hence, one would have to employ the GENEXT device as a lagged source, which forgoes the tight monolithic coupling the interface exists to provide, leaving no advantage over the behavioural-source scheme.
+
+We therefore did not implement the co-simulation using the GENEXT API.

@@ -1,0 +1,17 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{circuitikz}
+\usepackage{textcomp}
+\begin{document}
+\begin{circuitikz}
+\draw (1.50,0.00) -- (0.00,0.00) -- (0.00,1.00);
+\draw (0.00,1.00) to[sI, l={1A/50Hz}] (0.00,2.00);
+\draw (0.00,2.00) -- (0.00,3.00);
+\draw (0.00,3.00) -- (1.00,3.00);
+\draw (1.00,3.00) to[rmeter, t=A] (2.00,3.00);
+\draw (2.00,3.00) -- (3.00,3.00);
+\draw (3.00,3.00) -- (3.00,2.00);
+\draw (3.00,2.00) to[sV, l={field ROM}] (3.00,1.00);
+\draw (3.00,1.00) -- (3.00,0.00) -- (1.50,0.00);
+\draw (1.50,0.00) node[ground]{};
+\end{circuitikz}
+\end{document}

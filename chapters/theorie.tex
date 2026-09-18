@@ -1,113 +1,285 @@
 %!TEX root = ../student_thesis.tex
 
-\chapter{Fundamentals}
-\label{ch:fundamentals}
-One of the most significant ideas that improved simulation speed by up to two orders of magnitude is decomposing large systems into coupled subsystems that can be integrated independently~\cite{Gomes2017}. To implement the coupling of the field and circuit domains via dynamic iteration, the underlying concepts need to be explained first.
+\chapter{Fundamentals} \label{ch:fundamentals}
+Decomposing large systems into coupled subsystems that can be integrated independently is a key strategy that can improve simulation speed by up to two orders of magnitude~\cite{Gomes2017}. This approach, known as \textit{domain decomposition}, follows the principle of \textit{divide et impera} (Latin for \textquote{divide and conquer}). Before the coupling between the field and circuit domains can be realised through dynamic iteration, the underlying concepts must first be introduced.
 
 \section{Modified Nodal Analysis}
-The equations that govern the behaviour of the circuit subsystem can be written in abstract form as
-\begin{subequations}\label{eq:mna}
-\begin{align}
-    \textbf{M} \frac{\textrm{d}}{\textrm{d}t} \textbf{x}(t) + \textbf{K} \textbf{x}(t) = \textbf{r}(t) \label{eq:mna-base} \\
-    \textbf{v}_C(t) = \textbf{P}^\top \textbf{x}(t) \label{eq:mna-circuit-port-operator}
-\end{align}
-\end{subequations}
-where, in case of MNA, $\textbf{x}$ denotes the unknown functions of node potentials and the voltage-source and inductor branch currents
+The circuit subsystem can be modelled as a directed graph with an incidence matrix $\mathbf{A}$ that dictates the layout of the lumped circuit elements. \textsc{Kirchhoff}'s circuit laws form the foundation of lumped-element network analysis. In matrix form, they are written as
 \begin{equation*}
-    \textbf{x}^\top(t) = \lbrack \textbf{\varphi}^\top(t) \quad \textbf{i}_L^\top(t) \quad \textbf{i}_V^\top(t) \rbrack.
+    \mathbf{A} \mathbf{i}(t) = 0 \quad \text{and} \quad \mathbf{u}(t) = \mathbf{A}^\top \mathbf{\varphi}(t),
 \end{equation*}
-And $\textbf{v}_C$ is the voltage at the field-circuit interface and $\textbf{P}$ is the according port-operator.
+where $\mathbf{i}$ is the vector of branch currents and $\mathbf{\varphi}$ is the vector of node potentials.
+Based on these rules, a system of DAEs that governs the behaviour of the circuit subsystem can be written in abstract form\footnote{Throughout this document, we retain generic vector/matrix notation even where the two-terminal (single port) scenarios reduce the port quantities to scalars. This is done in anticipation of multiport generalisation.} as
 
-\section{Dynamic Iteration}
-The subsystems are integrated independently for a period of time $T_n \rightarrow T_{n+1}$, where $T_n = [t_n, t_{n+1}]$, using the outputs of neighbouring subsystems as inputs. This is the essence of dynamic iteration~\cite{Gomes2017}. It is a fixed-point iteration technique, i.e., the iteration
 \begin{equation*}
-	x^{k+1} = \varphi(x^k), \quad k=0,1,2,\dots
+    \gls{Mmna} \frac{\textrm{d}}{\textrm{d}t} \mathbf{x}(t) + \gls{Kmna} \mathbf{x}(t) = \mathbf{r}(t) \label{eq:mna-base}
 \end{equation*}
-converges to a fixed point, where $x^* = \varphi(x^*)$.
+where, in the case of MNA, $\mathbf{x}$ denotes the unknown functions of node potentials and the voltage-source and inductor branch currents
+\begin{equation*}
+    \mathbf{x}^\top(t) = \lbrack \mathbf{\varphi}^\top(t) \quad \mathbf{i}_L^\top(t) \quad \mathbf{i}_V^\top(t) \rbrack.
+\end{equation*}
+Moreover, we introduce
+\begin{equation*}
+    \gls{vC}(t) = \mathbf{P}^\top \mathbf{x}(t) \label{eq:mna-circuit-port-operator} \quad \text{and} \quad \mathbf{P}\gls{iC}(t),
+\end{equation*}
+where \gls{vC} is the voltage and \gls{iC} the current at the field-circuit interface, and $\mathbf{P}$ is the corresponding port operator.
+Using this notation, the (black box) field subsystem may be abstractly written as
+\begin{equation*}
+    \frac{\mathrm{d}}{\mathrm{d}t}\mathbf{x} = f(\mathbf{x},t,\mathbf{i}_{\text{C}}).
+\end{equation*}
 
-In the case of a field-circuit coupling, the vector of unknowns $x$ contains the voltage (node potentials) and (branch) current across the interface ports. The fixed point is reached if the voltages and currents of both subsystems converge, i.e.,
-\begin{equation}
+\section{Dynamic Iteration} \label{sec:dynamic-iteration}
+The subsystems are integrated independently for a period of time $\mathcal{T}_n \rightarrow \mathcal{T}_{n+1}$, where $\mathcal{T}_n = [\gls{tn}, T_{n+1}]$ with window size $\gls{Hn} := T_{n+1} - \gls{tn}$, using the outputs of neighbouring subsystems as inputs; see Figure~\ref{fig:dynamic-iteration}. This is the essence of dynamic iteration~\cite{Gomes2017}. It is a fixed-point iteration technique, i.e., given a function $\phi: \mathbb{R}^n \to \mathbb{R}^n$, the iteration
+\begin{equation*}
+	\mathbf{x}^{(k+1)} = \mathbf{\phi}(\mathbf{x}^{(k)}), \quad k=0,1,2,\dots
+\end{equation*}
+converges to a fixed point, where $\mathbf{x}^* = \mathbf{\phi}(\mathbf{x}^*)$, \cite{Dahmen2008}.
+
+In the case of a field-circuit coupling, the vector of unknowns $\mathbf{x}$ contains the voltage (node potentials) and (branch) current across the interface ports. The fixed point is reached if the voltages and currents of both subsystems converge, i.e.,
+\begin{equation*}
     \underbrace{
         \begin{aligned}
-            \textbf{v}_C^{k+1} &= \textbf{v}_C^{k} \\
-            \textbf{i}_C^{k+1} &= \textbf{i}_C^{k}
+            \mathbf{v}_{\text{C}}^{(k+1)} &= \mathbf{v}_{\text{C}}^{(k)} \\
+            \mathbf{i}_{\text{C}}^{(k+1)} &= \mathbf{i}_{\text{C}}^{(k)}
         \end{aligned}
     }_{\text{circuit}}
     \qquad
     \underbrace{
         \begin{aligned}
-            \textbf{v}_F^{k+1} &= \textbf{v}_F^{k} \\
-            \textbf{i}_F^{k+1} &= \textbf{i}_F^{k}
+            \mathbf{v}_{\text{F}}^{(k+1)} &= \mathbf{v}_{\text{F}}^{(k)} \\
+            \mathbf{i}_{\text{F}}^{(k+1)} &= \mathbf{i}_{\text{F}}^{(k)}
         \end{aligned}
     }_{\text{field}}
-\end{equation}
-where $V_C$ and $I_C$ are the port voltage and current of the circuit-side, and $V_F$ and $I_F$ are the port voltage and current of the field-side. dd
-
-\section{Coupling Scheme}
-Transmission between the subsystems is handled at the ports, i.e., the inputs and outputs of a subsystem. Two independent factors determine the coupling of the field and circuit: the coupling direction and the transmission condition itself.
-
-\paragraph{Coupling Direction} The direction of coupling stipulates which variable from one subsystem (output) is prescribed on another (input) during iteration. For our field/circuit co-simulation, it answers the question: \textit{"Does the field ingest a current or a voltage as its (plain) input?"}. This consideration directly impacts the index of the resulting DAE. It has been shown that voltage-driven field formulations ($\textrm{A}^*$ and $\textrm{T-\Omega}$) result in a lower index system (index-1) and thereby offer better numerical stability than the current-driven alternative (index-2)~\cite{Garcia2020}. Hence, a voltage-driven coupling
-\begin{equation*}
-    v_F \leftarrow v_C
 \end{equation*}
-is likely the preferred choice for this work's implementation, see Section~\ref{ch:xyce}, though under some scopes the current-driven approach may be considered, cf. e.g.~\cite{Garcia2017}.
+where $\mathbf{v}_{\text{C}}$ and $\mathbf{i}_{\text{C}}$ are the port voltage and current of the circuit-side, and $\mathbf{v}_{\text{F}}$ and $\mathbf{i}_{\text{F}}$ are the port voltage and current of the field-side.
+\begin{figure}
+    \centering
+\begin{tikzpicture}[scale=1.8]
+  \draw[arrows=-{Stealth[length=4mm]}, semithick] (-0.4,3.6) -- (7.8,3.6);
+  \node (node2) at (-0.4,2.3) {$\gls{tn}$};
+  \node at (-0.4,3.95) {$\gls{tn}$};
+  \node[minimum width=11pt] at (0.55,2.3) {$t_{1,n}^{\text{C}}$};
+  \node[minimum width=11pt] at (1.49,3.95) {$t_{1,n}^{\text{F}}$};
+  \node at (1.49,2.3) {$t_{2,n}^{\text{C}}$};
+  \node at (2.45,2.3) {$t_{3,n}^{\text{C}}$};
+  \node (node3) at (3.4,2.3) {$T_{n+1}$};
+  \node at (3.4,4) {$T_{n+1}$};
+  \fill[teal] (1.5,3.6) circle (0.05cm);
+  \node[minimum width=11pt] at (5.3,4) {$t_{1,n+1}^{\text{F}}$};
+  \node at (4.35,2.3) {$t_{1,n+1}^{\text{C}}$};
+  \node at (5.3,2.31) {$t_{2,n+1}^{\text{C}}$};
+  \node at (6.25,2.31) {$t_{3,n+1}^{\text{C}}$};
+  \node (node4) at (7.2,2.31) {$T_{n+2}$};
+  \node (node1) at (7.2,4) {$T_{n+2}$};
+  \node[draw=none, node font=\small] at (-1.15,3.6) {field};
+  \node[draw=none, node font=\small] at (-1.3,2.71) {circuit};
+  \draw[arrows=-{Stealth[length=4mm]}, semithick] (-0.4,2.69) -- (7.8,2.69);
+  \node[node font=\footnotesize, text=violet, inner sep=1.53pt, minimum height=0.6pt, minimum width=0.6pt] at (1.5,3.11) {$k \leftarrow k+1$};
+  \draw[arrows=-{Stealth[length=4mm]}, teal, thick] (-0.4,3.6) .. controls (0.23,3.95) and (0.87,3.95) .. (1.5,3.6);
+  \draw[arrows=-{Stealth[length=4mm]}, teal, thick] (1.5,3.6) .. controls (2.13,3.95) and (2.77,3.95) .. (3.4,3.6);
+  \draw[arrows=-{Stealth[length=4mm]}, teal, thick] (3.4,3.6) .. controls (4.03,3.95) and (4.67,3.95) .. (5.3,3.6);
+  \draw[arrows=-{Stealth[length=4mm]}, teal, thick] (5.3,3.6) .. controls (5.93,3.94) and (6.57,3.94) .. (7.2,3.6);
+  \fill[violet] (7.2,3.6) circle (0.05cm);
+  \fill[violet] (-0.4,3.6) circle (0.05cm);
+  \fill[violet] (3.4,3.6) circle (0.05cm);
+  \fill[teal] (5.3,3.6) circle (0.05cm);
+  \draw[blue, arrows=-{Stealth[length=4mm]}, thick] (-0.4,2.69) .. controls (-0.08,2.36) and (0.23,2.36) .. (0.55,2.69);
+  \fill[blue] (0.55,2.69) circle (0.05cm);
+  \draw[blue, arrows=-{Stealth[length=4mm]}, thick] (0.55,2.69) .. controls (0.87,2.38) and (1.18,2.38) .. (1.5,2.69);
+  \fill[blue] (1.5,2.69) circle (0.05cm);
+  \draw[blue, arrows=-{Stealth[length=4mm]}, thick] (1.5,2.69) .. controls (1.82,2.38) and (2.13,2.38) .. (2.45,2.69);
+  \fill[blue] (2.45,2.69) circle (0.05cm);
+  \draw[blue, arrows=-{Stealth[length=4mm]}, thick] (2.45,2.69) .. controls (2.77,2.38) and (3.08,2.38) .. (3.4,2.69);
+  \draw[blue, arrows=-{Stealth[length=4mm]}, thick] (3.4,2.69) .. controls (3.72,2.37) and (4.03,2.37) .. (4.35,2.69);
+  \fill[blue] (4.35,2.69) circle (0.05cm);
+  \draw[blue, arrows=-{Stealth[length=4mm]}, thick] (4.35,2.69) .. controls (4.67,2.38) and (4.98,2.38) .. (5.3,2.69);
+  \fill[blue] (5.3,2.69) circle (0.05cm);
+  \draw[blue, arrows=-{Stealth[length=4mm]}, thick] (5.3,2.69) .. controls (5.62,2.38) and (5.93,2.38) .. (6.25,2.69);
+  \fill[blue] (6.25,2.69) circle (0.05cm);
+  \draw[blue, arrows=-{Stealth[length=4mm]}, thick] (6.25,2.69) .. controls (6.57,2.38) and (6.88,2.38) .. (7.2,2.69);
+  \fill[violet] (3.4,2.69) circle (0.05cm);
+  \fill[violet] (7.2,2.69) circle (0.05cm);
+  \draw[thin, <-] (3.46,3.51) -- (3.46,2.78);
+  \node[node font=\footnotesize] at (3.8,3.35) {$\mathbf{x}_{\text{C}}^{(k+1)}$};
+  \node[node font=\footnotesize] (node5) at (3.1,2.94) {$\mathbf{x}_{\text{F}}^{(k)}$};
+  \draw[yscale=-1, thin, <-] (3.34,-2.78) -- (3.34,-3.51);
+  \draw[dashed, violet, arrows={-Stealth[length=4mm]}, yscale=-1] (3.4,-3.13) .. controls (2.13,-3.36) and (0.87,-3.36) .. (-0.4,-3.13);
+  \fill[violet] (-0.4,2.69) circle (0.05cm);
+\end{tikzpicture}
+    \caption{Dynamic iteration. The two subsystems (field/circuit) are evaluated on their own time grids, with different step sizes (solid teal and blue arrows). A window is the time span between synchronisation points \gls{tn} (purple dots). Only at a synchronisation point are the state vectors updated, in this case according to a Gauss--Seidel scheme. The solution is computed iteratively on a window and uses rollback (dashed purple arrow).}
+    \label{fig:dynamic-iteration}
+\end{figure}
 
-\paragraph{Transmission Conditions} The transmission conditions, also called interface conditions, specify \textit{how} the exchanged variables enter each subsystem as inputs and leave it as outputs. For a voltage-driven coupling, the plain (zero-order) conditions of the field/circuit problem read
+\section{Coupling Scheme} \label{sec:coupling-scheme}
+Transmission between the subsystems is handled at the ports, i.e., the inputs and outputs of a subsystem. Two independent factors determine field-circuit coupling: the coupling direction and the coupling conditions themselves.
+
+\subsection{Coupling Direction} The direction of coupling stipulates which variable from one subsystem (output) is prescribed on another (input) during iteration. For our field-circuit co-simulation, it answers the question: \textit{"Does the field ingest a current or a voltage as its (plain) input?"} This consideration directly impacts the index of the resulting DAE.
+
+Roughly speaking, the index of a DAE corresponds to the highest derivative of an input function that enters the subproblem \cite{SchoepsDiss}.
+
+\begin{example}[DAE index]
+    Take the current-driven case, where the circuit's port-current $\gls{iF}(t) = \gls{iC}(t)$ is prescribed as the input function on the field subsystem, thereby \textit{driving} it: The variable to solve for is the field's port-voltage \gls{vF}, which, in a predominantly inductive problem is given by
+\begin{equation*}
+    \gls{vF}(t) \approx \gls{Lport} \frac{\mathrm{d}}{\mathrm{d}t} \gls{iF}(t).
+\end{equation*}
+The input function requires one differentiation here. If we look at the voltage-driven case on the other hand, the field solves for
+\begin{equation*}
+    \gls{iF}(t) \approx \gls{iF}_{,0} + \gls{Lport}^{-1} \int_{0}^{t} \gls{vF}(\tau) \mathrm{d}\tau,
+\end{equation*}
+requiring no differentiation, but an integration instead, which actually has a smoothing property.
+Based on this simplistic example, one might easily understand that a lower-index system is desirable, since numerical differentiation amplifies noise and discretisation error.
+\end{example}
+
+The example above ignores the algebraic constraints of the full coupled DAE. In the case of more general systems, it has been shown that voltage-driven field formulations result in a lower-index system (index-1) and thereby offer better numerical stability than the current-driven alternative (index-2)~\cite{Garcia2020}. Hence, a voltage-driven coupling
+\begin{equation*}
+    \gls{vF} \leftarrow \gls{vC}
+\end{equation*}
+is likely the preferred choice for this work's implementation; see Chapter~\ref{ch:xyce}, though under some scopes the current-driven approach may be considered, cf. e.g.~\cite{Garcia2017}.
+
+\subsection{Coupling Conditions} The coupling conditions, also called transmission conditions in the context of \textsc{Schwarz} coupling, specify \textit{how} the exchanged variables enter each subsystem as inputs and leave it as outputs, see e.g. \cite{Gander2004}. For a voltage-driven coupling, the plain (zero-order) conditions of the field-circuit problem read
 \begin{equation}
 \label{eq:classical-wr}
-	v_F \leftarrow v_C \quad \text{and} \quad i_C \leftarrow i_F,
+	\gls{vF} \leftarrow \gls{vC} \quad \text{and} \quad \gls{iC} \leftarrow \gls{iF},
 \end{equation}
-that is, the field is prescribed the voltage and returns the current. The exchanged quantities are waveforms, $v_C = v_C(t)$ and $i_F = i_F(t)$, which gives the method its name.
+that is, the field is prescribed the voltage and returns the current. The exchanged quantities are waveforms, $\gls{vC} = \mathbf{v}_{\text{C}}(t)$ and $\gls{iF} = \mathbf{i}_{\text{F}}(t)$, which gives the method its name.
 
-Extracting a reduced-order model (ROM) of the field domain improves the coupling, and the better the ROM, the larger the admissible time windows~\cite{Schoeps2010,SchoepsDiss}. Because the spatially discretised magnetoquasistatic field behaves as an inductance-like element~\cite{Garcia2020}, the resulting ROM is itself inductive. Later work established that this inductance is precisely the first-order term of a Neumann-series expansion of the optimal transmission condition~\cite{Garcia2017}.
+Extracting a reduced-order model (ROM) of the field domain improves the coupling, and the better the ROM, the larger the admissible time windows~\cite{Schoeps2010,SchoepsDiss}. Because the spatially discretised magnetoquasistatic field behaves as an inductance-like element, the resulting ROM is itself inductive~\cite{Garcia2020}. Later work established that this inductance is precisely the first-order term of a Neumann-series expansion of the optimal transmission condition~\cite{Garcia2017}.
 
 Following the suggestion of \cite{Garcia2017} to excite the field by voltages rather than currents, the optimal transmission condition follows by an analogous derivation.
 
-Let the field problem be voltage driven within a \textsc{Gauss--Seidel} scheme. The zero-order Dirichlet conditions read
+Let the field problem be voltage-driven within a \textsc{Gauss--Seidel} scheme. The zero-order Dirichlet conditions read
 \begin{subequations}\label{eq:tc-gs-plain}
 \begin{align}
-    v_F^{k+1} &= v_C^{k+1}, \label{eq:tc-gs-plain-voltage} \\
-    i_C^{k+1} &= i_F^{k}.   \label{eq:tc-gs-plain-current}
+    \mathbf{v}_{\text{F}}^{(k+1)} &= \mathbf{v}_{\text{C}}^{(k+1)}, \label{eq:tc-gs-plain-voltage} \\
+    \mathbf{i}_{\text{C}}^{(k+1)} &= \mathbf{i}_{\text{F}}^{(k)}.   \label{eq:tc-gs-plain-current}
 \end{align}
 \end{subequations}
 
-The circuit-side condition \eqref{eq:tc-gs-plain-current} is generalised to a linear combination of current and voltage,
+The circuit's input condition \eqref{eq:tc-gs-plain-current} is generalised to a linear combination of current and voltage,
 \begin{equation}\label{eq:tc-gs-robin}
-	i_C^{k+1} - \beta\, v_C^{k+1} = i_F^{k} - \beta\, v_F^{k},
+	\mathbf{i}_{\text{C}}^{(k+1)} - \gls{beta} \, \mathbf{v}_{\text{C}}^{(k+1)} = \mathbf{i}_{\text{F}}^{(k)} - \gls{beta} \, \mathbf{v}_{\text{F}}^{(k)},
 \end{equation}
-where $\beta$ is the weighting factor.
-It is worth noting, that the field's input condition~\eqref{eq:tc-gs-plain-voltage} is left plain: unlike the field, an arbitrary circuit does not admit an easily extractable impedance, so its optimisation is cumbersome, cf.~\cite{Garcia2017}.
+where \gls{beta} is a weighting factor.
+Only the circuit's input condition is generalised. The field's condition~\eqref{eq:tc-gs-plain-voltage} is left plain. The field admits an easily extractable impedance, but an arbitrary circuit does not, so optimising the field-side condition analogously is cumbersome \cite{Garcia2017}.
 
-Eliminating the internal degrees of freedom from the frequency-domain circuit equations yields the port relation $V_C = g_c - \mathbf{x}_P I_C$, with transfer impedance $\mathbf{x}_P(\omega) = \mathbf{P}^\top(\mathbf{A}_c\, j\omega + \mathbf{B}_c)^{-1}\mathbf{P}$ and projected source term $g_c = P^\top(\mathbf{A}_c\, j\omega + \mathbf{B}_c)^{-1} g(\omega)$.
-The voltage-driven field returns $I_F = \mathbf{Y} V_F$, where the admittance $\mathbf{Y}(\omega) = \mathbf{Z}^{-1}(\omega)$ is the inverse of the port impedance $\mathbf{Z}(\omega)$ of the MQS problem~\cite{Garcia2017}. Inserting the field response and the plain condition \eqref{eq:tc-gs-plain-voltage} into \eqref{eq:tc-gs-robin} and eliminating $V_C^{k+1}$ gives the error propagation
+Eliminating the internal degrees of freedom from the frequency-domain circuit equations yields the port relation $\gls{vC} = \mathbf{r}_{\text{C}} - \mathbf{x}_{\text{P}} \mathbf{i}_{\text{C}}$, with transfer impedance $\mathbf{x}_{\text{P}}(\gls{omega}) = \mathbf{P}^\top(\gls{Mmna}\, j\gls{omega} + \gls{Kmna})^{-1}\mathbf{P}$ and projected source term $\mathbf{r}_{\text{C}} = \mathbf{P}^\top(\gls{Mmna}\, j\gls{omega} + \gls{Kmna})^{-1} \mathbf{r}(\gls{omega})$.
+The voltage-driven field returns $\gls{iF} = \gls{Yport}\,\gls{vF}$, where the admittance $\gls{Yport}(\gls{omega}) = \gls{Zport}^{-1}(\gls{omega})$ is the inverse of the port impedance $\gls{Zport}(\gls{omega})$ of the MQS problem~\cite{Garcia2017}. Inserting the field response and the plain condition \eqref{eq:tc-gs-plain-voltage} into \eqref{eq:tc-gs-robin} and eliminating $\mathbf{v}_{\text{C}}^{(k+1)}$ gives the error propagation
 \begin{equation*}
-    i_C^{k+1} - i_C^{k}
-      = \rho(\beta)\,\big(i_C^{k} - i_C^{k-1}\big),
+    \mathbf{i}_{\text{C}}^{(k+1)} - \mathbf{i}_{\text{C}}^{(k)}
+      = \gls{rho}(\gls{beta})\,\big(\mathbf{i}_{\text{C}}^{(k)} - \mathbf{i}_{\text{C}}^{(k-1)}\big),
     \qquad
-    \rho(\beta) = \big(\mathbf{I} + \beta\,\mathbf{x}_P\big)^{-1}
-                  \big(\beta - \mathbf{Y}\big)\,\mathbf{x}_P .
+    \gls{rho}(\gls{beta}) = \big(\mathbf{I} + \gls{beta}\,\mathbf{x}_P\big)^{-1}
+                  \big(\gls{beta} - \gls{Yport}\big)\,\mathbf{x}_P ,
 \end{equation*}
+where $\mathbf{I}$ is the identity matrix.
 
-In order for the fixed point iteration to converge, the error across iterations has to contract, i.e., $\lvert\rho(\beta)\rvert < 1$. Since $\mathbf{x}_P$ is invertible, optimal convergence $\rho(\beta) = 0$ is attained for
+In order for the fixed point iteration to converge, the error across iterations has to contract, i.e., $\lvert\gls{rho}(\gls{beta})\rvert < 1$. Assuming $\mathbf{x}_P$ is invertible, optimal convergence $\gls{rho}(\gls{beta}) = 0$ is attained for
 \begin{equation*}
-    \beta = \mathbf{Y}(\omega),
+    \gls{beta} = \gls{Yport}(\gls{omega}),
 \end{equation*}
 so that the optimised circuit-side transmission condition reads
 \begin{equation}\label{eq:tc-optimal-voltage-driven}
-    i_C^{k+1} - \mathbf{Y}(\omega)\, v_C^{k+1}
-      = i_F^{k} - \mathbf{Y}(\omega)\, v_F^{k}.
+    \mathbf{i}_{\text{C}}^{(k+1)} - \gls{Yport}(\gls{omega})\, \mathbf{v}_{\text{C}}^{(k+1)}
+      = \mathbf{i}_{\text{F}}^{(k)} - \gls{Yport}(\gls{omega})\, \mathbf{v}_{\text{F}}^{(k)},
 \end{equation}
+which is equivalent to the transmission condition
+\begin{equation}\label{eq:tc-optimal-current-driven}
+    \mathbf{v}_{\text{C}}^{(k+1)} = \gls{Zport}(\gls{omega})\, \mathbf{i}_{\text{C}}^{(k+1)} + \mathbf{v}_{\text{F}}^{(k)} - \gls{Zport}(\gls{omega})\, \mathbf{i}_{\text{F}}^{(k)}
+\end{equation}
+derived from the current-driven setting in \cite{Garcia2017}. This leads to the following result.
+\begin{corollary}
+    The optimisation of the circuit-side transmission condition is impartial to the input function of the field subsystem, i.e., imposing \gls{vC} results in the same optimal transmission condition~\eqref{eq:tc-optimal-current-driven} as imposing \gls{iC}.
+\end{corollary}
+They can be viewed as Thévenin and Norton equivalents, cf. \cite{Nshimiyimana2016}.
+This is expected, as both port variables appear on each side of either optimised transmission condition, tied together by the exact port operator (\gls{Zport} or \gls{Yport}). That operator reproduces the field's response exactly and, trivially, would guarantee convergence of the scheme in one iteration ($\gls{rho} = 0$).
 
-Since $\mathbf{Z} \approx j\omega\mathbf{L}$ is the low-frequency approximation of the exact port impedance (leading term of the Neumann series, corresponding to the magnetostatic inductance), the admittance inherits $\mathbf{Y} \approx (j\omega\mathbf{L})^{-1}$ in the same regime.
-As in the current-driven case, this frequency-domain expression must be approximated in our time-domain implementation, where $j\omega$ corresponds to a differentiation in time~\cite{Garcia2017}.
-The resulting condition,
+Since $\gls{Zport} \approx j\gls{omega}\gls{Lport}$ is the low-frequency ($\gls{omega} \tau \ll 1$) approximation of the exact port impedance (the leading term of the Neumann series, corresponding to the magnetostatic inductance; see \cite{Garcia2017}), the admittance inherits $\gls{Yport} \approx (j\gls{omega}\gls{Lport})^{-1}$ in the same regime.
+As in the current-driven case, we must approximate this frequency-domain expression in our time-domain implementation, where $j\gls{omega}$ corresponds to a differentiation in time~\cite{Garcia2017}.
+The resulting condition
 \begin{equation*}
-    i_F(t) \approx \textbf{L}^{-1} \int v_F(t) \, \textrm{d}t
+    \gls{iF}(t) \approx \gls{Lport}^{-1} \int \gls{vF}(t) \, \textrm{d}t
+\end{equation*} % TODO should it be called differential inductance/admittance like in Garcia2017?
+represents the dual of the flux-linkage condition
+\begin{equation*}
+    \gls{vF}(t) \approx \gls{Lport} \frac{\mathrm{d}}{\mathrm{d}t} \gls{iF}(t)
 \end{equation*}
-represents the dual of the flux-linkage condition of the current-driven scheme.
-Since the underlying inductance is relatively cheap to extract (a single magnetostatic solve), it could be re-evaluated at successive working points throughout the transient to track the magnetic saturation effect of the field subsystem, at the cost of repeated extraction; this is not implemented in this work. Eddy-current effects are not covered in this first-order approximation of the inductance -- those dynamics are compensated by the lagged correction term $\Delta i_F^{k} := i_F^{k} - \mathbf{Y}(\omega)\, v_F^{k}$ in Equation~\eqref{eq:tc-optimal-voltage-driven}
+of the current-driven scheme, where \gls{Lport} is constant.
+Since the underlying inductance is relatively cheap to extract (a single magnetostatic solve), it could be re-evaluated at successive working points throughout the transient to track the magnetic saturation effect of the field subsystem, at the cost of repeated extraction; this is not implemented in this work. Eddy-current effects are not covered in this first-order approximation of the inductance; those dynamics are compensated by the lagged correction term $\Delta \mathbf{i}_{\text{F}}^{(k)} := \mathbf{i}_{\text{F}}^{(k)} - \gls{Yport}(\gls{omega})\, \mathbf{v}_{\text{F}}^{(k)}$ in Equation~\eqref{eq:tc-optimal-voltage-driven} or $\Delta \mathbf{v}_{\text{F}}^{(k)} := \mathbf{v}_{\text{F}}^{(k)} - \gls{Zport}(\gls{omega})\, \mathbf{i}_{\text{F}}^{(k)}$ in Equation~\eqref{eq:tc-optimal-current-driven}, respectively.
 
-\paragraph{Note on Algorithms} Though we used a \textsc{Gauss--Seidel} scheme (Einzelschrittverfahren) to obtain a solution of the DAEs in this implementation, other algorithms such as \textsc{Gauss--Jacobi} (Gesamtschrittverfahren) are common, too. While the former offers faster convergence, the latter has better parallelizability~\cite{Bartel2013}.
+The impedance of our ROM is complemented by a resistance \gls{Rport}, which may also be extracted by a port measurement of the subsystem\footnote{The resistance can be calculated according to \textsc{Ohm}'s law, e.g., by imposing a DC current of \qty{1}{\ampere} at the terminals and measuring the resulting potential difference.}. Hence, expanding the low-frequency approximation of transmission condition~\eqref{eq:tc-optimal-current-driven} to
+\begin{equation*}
+    \mathbf{v}_{\text{C}}^{(k+1)} = \mathbf{v}_{\text{F}}^{(k)} + \bigg( \gls{Rport} + \gls{Lport} \frac{\mathrm{d}}{\mathrm{d}t} \bigg)\, \big( \mathbf{i}_{\text{C}}^{(k+1)} - \mathbf{i}_{\text{F}}^{(k)} \big)
+\end{equation*}
+in the time domain, see Figure~\ref{fig:coupling-gs-rom}.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[scale=1.3]
+  \draw[semithick] (0,2.2) rectangle (2.2,4.8);
+  \node[draw=none] at (1.1,3.5) {circuit};
+  \draw[semithick] (6.2,2.2) rectangle (8.4,4.8);
+  \node[draw=none] at (7.3,3.5) {field};
+  \draw (2.2,4.6) -- (2.96,4.6);
+  \draw (5.44,4.6) -- (6.2,4.6);
+  \draw (5.44,2.4) -- (6.2,2.4);
+  \draw (3,4.6) circle (0.04cm);
+  \draw (5.4,4.6) circle (0.04cm);
+  \draw (2.2,2.4) -- (2.96,2.4);
+  \draw (3,2.4) circle (0.04cm);
+
+  \draw (3,3.91) -- (3,3.7);
+  \draw[fill=black] (2.9,3.28) rectangle (3.1,3.7);
+  \draw (3,3.28) -- (3,3.07);
+  \draw (3,2.65) -- (3,2.44);
+  \draw (2.9,2.65) rectangle (3.1,3.07);
+  \draw (3,4.13) circle (0.22cm);
+
+  \draw (2.9,4.13) .. controls (2.93,4.18) and (2.97,4.18) .. (3,4.13) .. controls (3.03,4.08) and (3.07,4.08) .. (3.1,4.13);
+  \node[inner sep=3.13pt] at (3.66,4.13) {$\Delta \mathbf{v}_{\text{F}}^{(k)}$};
+  \node at (3.36,3.49) {\gls{Lport}};
+  \node at (3.38,2.86) {\gls{Rport}};
+  \draw[->] (5.4,4.51) -- (5.4,2.5);
+  \node[draw=none] at (4.96,3.5) {$\mathbf{v}_\text{C}^{(k+1)}$};
+
+  \draw (3,4.56) -- (3,4.35);
+
+  \draw (5.4,2.4) circle (0.04cm);
+  \draw[arrows=-Latex] (2.45,4.6) -- (2.71,4.6);
+  \node at (2.75,4.9) {$\mathbf{i}_{\text{C}}^{(k+1)}$};
+\end{tikzpicture}
+    \caption{Schematic representation of the $k+1$-th Gauss--Seidel iteration for the field-circuit subsystems, using an approximation of the optimal transmission coupling condition.}
+    \label{fig:coupling-gs-rom}
+\end{figure}
+
+\paragraph{Algorithm} With this information, an algorithm in the time domain can be written as follows.
+% --- System 1: circuit, given input Delta v_{\text{F}}^{(k)} ---
+\begin{align} \label{eq:algorithm-1}
+  \gls{Mmna} \frac{\mathrm{d}}{\mathrm{d}t} \mathbf{x}^{(k+1)}
+    + \gls{Kmna}\, \mathbf{x}^{(k+1)} + \mathbf{P}\, \mathbf{i}_{\text{C}}^{(k+1)} &= \mathbf{r}(t) \\
+  \mathbf{v}_{\text{C}}^{(k+1)} &= \mathbf{P}^{\top} \mathbf{x}^{(k+1)}
+\end{align}
+with the coupling condition
+\begin{align}
+    \mathbf{v}_{\text{C}}^{(k+1)}(t) &= (\gls{Rport} + \gls{Lport} \, \mathrm{d}_t)\, \mathbf{i}_{\text{C}}^{(k+1)}(t)
+    + \Delta \mathbf{v}_{\text{F}}^{(k)}(t) \label{eq:tc-optim-time} \\
+    \Delta \mathbf{v}_{\text{F}}^{(k)}(t) &:= \mathbf{v}_{\text{F}}^{(k)}(t)
+        - (\gls{Rport} + \gls{Lport} \, \mathrm{d}_t)\, \mathbf{i}_{\text{F}}^{(k)}(t) \label{eq:tc-optim-time-corr}
+\end{align}
 
 
-%A fixed point iteration technique that makes use of rollback to repeat the co-simulation step with corrected inputs is called dynamic iteration, waveform iteration, and strong or onion coupling \cite{Gomes2017}.
+\begin{description}
+  \item[Step 0.] Set $k = 0$ and $\Delta \mathbf{v}_{\text{F}}^{(0)}(t) = \Delta \mathbf{v}_{\text{F},0}(t)$,
+    and extract \gls{Lport}.
+  \item[Step 1.] Solve the circuit system with condition \eqref{eq:tc-optim-time}
+    for the given input $\Delta \mathbf{v}_{\text{F}}^{(k)}(t)$ to obtain the output
+    $\mathbf{v}_{\text{C}}^{(k+1)}(t)$.
+  \item[Step 2.] Solve the field system for the given input
+     $\mathbf{v}_{\text{C}}^{(k+1)}(t)$ to obtain $\mathbf{i}_{\text{F}}^{(k+1)}(t)$, and update the correction
+    $\Delta \mathbf{v}_{\text{F}}^{(k+1)}(t)$ according to \eqref{eq:tc-optim-time-corr}.
+  \item[Step 3.] If not converged, set $k = k+1$ and go to Step~1.       
+    Otherwise proceed with
+    $\Delta \mathbf{v}_{\text{F}}^{(0)}(t) = \Delta \mathbf{v}_{\text{F}}^{(k+1)}(t_{n+1})$
+    for $t \in T_{n+1}$, set $n = n+1$ and go to Step~1.
+\end{description}
+
+\paragraph{Note on Solving the DAEs} Though we used a \textsc{Gauss--Seidel} scheme (Einzelschrittverfahren) to obtain a solution of the DAEs in this implementation, other algorithms such as \textsc{Gauss--Jacobi} (Gesamtschrittverfahren) are common, too. While the former offers faster convergence, the latter is more parallelisable~\cite{Bartel2013}.

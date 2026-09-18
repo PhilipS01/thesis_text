@@ -3,8 +3,15 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Dynamic iteration. The two subsystems (field/circuit) are evaluated on their own time grids, with different step sizes (solid teal and blue arrows). A window is the time span between synchronisation points \gls {tn} (purple dots). Only at a synchronisation point are the state vectors updated, in this case according to a Gauss--Seidel scheme. The solution is computed iteratively on a window and uses rollback (dashed purple arrow).}}{5}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Schematic representation of the $k+1$-th Gauss--Seidel iteration for the field-circuit subsystems, using an approximation of the optimal transmission coupling condition.}}{8}{figure.caption.6}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Circuit schematics of the first two presets featuring low frequency sinusoidal sources. The ammeter measures the interface current \gls {iC}. They are schematics of the accumulated interface. If the naive interface is used, $\mathrm {field\,ROM}$ is comprised of only the lagged correction term and the ROM is inserted as circuit elements \lstinline |Rrom|, \lstinline |Lrom| in the netlist, see Chapter~\ref {sec:xyce-interface-condition}.}}{17}{figure.caption.10}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Plots of the converged solution to the first preset using the \textquote {naive} backward \textsc {Euler} interface discretisation with true field values $L=\qty {1.68}{\milli \henry }$, $R=\qty {0.5}{\milli \ohm }$ and ROM values $L_{\text {ROM}}=\qty {1}{\milli \henry }$, $R_{\text {ROM}}=\qty {0.4}{\milli \ohm }$. The \qty {20}{\milli \second } time span is divided into 50 windows and Xyce's solution was resampled to 200 points per window. The voltage-driven field was evaluated 10 times each window.}}{19}{figure.caption.11}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Circuit schematic of the third preset. The RLC circuit is being driven by a \qty {1}{\volt }/\qty {20}{\kilo \hertz } source that gets switched off (shorted over \qty {1}{\milli \ohm }) at \qty {1}{\milli \second }. Here depicted with the accumulated interface.}}{20}{figure.caption.12}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Plots of the converged interface voltage to the third preset using the different interface discretisations with true field values $L=\qty {168}{\nano \henry }$, $R=\qty {0.5}{\milli \ohm }$ and ROM values $L_{\text {ROM}}=\qty {150}{\nano \henry }$, $R_{\text {ROM}}=\qty {0.4}{\milli \ohm }$. The \qty {1.6}{\milli \second } time span is divided into 100 windows. Voltage-driven field.}}{21}{figure.caption.13}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

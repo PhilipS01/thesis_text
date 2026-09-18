@@ -1,0 +1,58 @@
+bib2gls 4.7 (2025-11-13)
+Default encoding: UTF-8
+Current working directory: /Users/philipsimon/thesis
+Reading student_thesis.log
+Encoding: not set
+Detected package fontspec
+Detected package glossaries-extra 2026/03/06
+Detected package glossaries 2026/03/06
+Detected package mfirstuc 2025/04/03
+No sentence case protection required now
+Default setting --no-mfirstuc-protection now applied, use --mfirstuc-protection to revert
+Default setting --no-mfirstuc-math-protection now applied, use --mfirstuc-math-protection to revert
+Reading student_thesis.aux
+Encoding: UTF-8
+Reading chapters/zusammenfassung.aux
+Encoding: UTF-8
+Reading chapters/einleitung.aux
+Encoding: UTF-8
+Reading chapters/theorie.aux
+Encoding: UTF-8
+Reading chapters/interface.aux
+Encoding: UTF-8
+Reading chapters/xyce.aux
+Encoding: UTF-8
+Reading chapters/numerik.aux
+Encoding: UTF-8
+Reading chapters/application.aux
+Encoding: UTF-8
+Reading chapters/fazit.aux
+Encoding: UTF-8
+TeX character encoding: UTF-8
+Initialising resource student_thesis.glstex.
+Parsing bib files for resource student_thesis.glstex.
+Default encoding: not set
+Assuming encoding: UTF-8
+Reading symbols.bib
+Encoding: UTF-8
+Cross-resource references allowed.
+Processing resource student_thesis.glstex.
+Selecting entries for resource student_thesis.glstex.
+Writing /Users/philipsimon/thesis/./student_thesis.glstex
+Encoding: UTF-8
+vC
+vF
+iC
+iF
+Mmna
+Kmna
+Zport
+Yport
+Lport
+Rport
+tn
+Hn
+rho
+beta
+omega
+15 entries written to /Users/philipsimon/thesis/./student_thesis.glstex.

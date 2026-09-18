@@ -4,3 +4,7 @@
 \label{ch:conclusions}
 
 Zusammenfassung der Ergebnisse, Schlussfolgerung und Ausblick. Keine neuen Informationen mehr.
+\section{Limitations}
+% also talk about what is/isn't being considered, e.g. only transient, no ROM/inductance update, etc.
+The coupling scheme developed in this work makes no assumption about how the field model is formulated or discretised internally, at the cost of not demonstrating the method on an industrial machine model. The latter is left to future work.
+Considering anything other than two-terminal distributed field devices would require substantial changes to the codebase. The ROM values are constant across the simulation, such that changes of state in the distributed device, e.g. by saturation, are not accurately modelled by the ROM. The implementation only covers transient simulation. % TODO not sure if that last bit should be included here, since the reader may not understand the (in-) significance of that

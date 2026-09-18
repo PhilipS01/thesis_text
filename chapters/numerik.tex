@@ -1,6 +1,87 @@
 %!TEX root = ../student_thesis.tex
 
-\chapter{Benchmark and Verification}
-\label{ch:benchmark}
+\chapter{Benchmark and Verification} \label{ch:benchmark}
 
-Test Suite.
+We tested our implementation against many problems. Six of them are stored as presets in the simulation suite and will be discussed in this chapter. We verified the solutions against a monolithic Xyce\texttrademark{} solve, where the \textquote{real} parameters of our dummy field subsystem, \lstinline|L_FEM| and \lstinline|R_FEM|, replaced the interface ROM plus correction source.
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{examples/circuit2.pdf}
+    \caption{Schematic of the first preset.}
+    \label{fig:preset1-schematic}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{examples/circuit.pdf}
+    \caption{Schematic of the second preset.}
+    \label{fig:preset2-schematic}
+  \end{subfigure}
+  \caption{Circuit schematics of the first two presets featuring low frequency sinusoidal sources. The ammeter measures the interface current \gls{iC}. They are schematics of the accumulated interface. If the naive interface is used, $\mathrm{field\,ROM}$ is comprised of only the lagged correction term and the ROM is inserted as circuit elements \lstinline|Rrom|, \lstinline|Lrom| in the netlist, see Chapter~\ref{sec:xyce-interface-condition}.}
+  \label{fig:example-1-schematics}
+\end{figure}
+\begin{example}[LF sources] % low frequency sources with (and without) series circuit elements
+    In this example, we connected a low frequency (LF) source directly at the terminals of the field-circuit interface, see. Figure~\ref{fig:example-1-schematics}. Though they do require different simulation parameters, both interface conditions were able to produce converged solutions that were accurate with respect to the reference (monolithic solution). Figure~\ref{fig:example-1-plots} shows a converged solution to the first preset, see Figure~\ref{fig:preset1-schematic}.
+    
+    For large enough sample sizes of \lstinline|V_p| and/or many \lstinline|N_field_eval_intervals|, the accumulated interface condition will not converge, while the opposite is true for the naive interface condition, which will not converge if the sampling and/or number of field solves is too small. This is a pattern we saw throughout all test cases. We propose an explanation in Chapter~\ref{ch:application}.
+    
+    In the edge case of no series circuit components, i.e. $R_s = 0$, $L_s = 0$, see Figure~\ref{fig:preset2-schematic}, the current-driven coupling showed faster convergence and a smaller error in the convergence criterion than the voltage-driven alternative. This is expected, as imposing the current of an ideal current source on the interface is natural.
+\end{example}
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.7\textwidth}
+    \centering
+    \input{examples/interface_voltage_cir1.tex}
+    \caption{Interface voltage of the converged solution. V(p) is the reconstructed circuit port voltage, containing 201 points per window here. V(field) is the reconstructed field port voltage, containing 11 points per window here.}
+    \label{fig:example-1-plot-voltage}
+  \end{subfigure}
+
+  \vspace{1em}
+
+  \begin{subfigure}[b]{0.7\textwidth}
+    \centering
+    \input{examples/wr_convergence_cir1.tex}
+    \caption{WR iterations and relative error for each window.}
+    \label{fig:example-1-plot-convergence}
+  \end{subfigure}
+  \caption{Plots of the converged solution to the first preset using the \textquote{naive} backward \textsc{Euler} interface discretisation with true field values $L=\qty{1.68}{\milli\henry}$, $R=\qty{0.5}{\milli\ohm}$ and ROM values $L_{\text{ROM}}=\qty{1}{\milli\henry}$, $R_{\text{ROM}}=\qty{0.4}{\milli\ohm}$. The \qty{20}{\milli\second} time span is divided into 50 windows and Xyce's solution was resampled to 200 points per window. The voltage-driven field was evaluated 10 times each window.}
+  \label{fig:example-1-plots}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics{examples/circuit3.pdf}
+  \caption{Circuit schematic of the third preset. The RLC circuit is being driven by a \qty{1}{\volt}/\qty{20}{\kilo\hertz} source that gets switched off (shorted over \qty{1}{\milli\ohm}) at \qty{1}{\milli\second}. Here depicted with the accumulated interface.}
+\end{figure}
+\begin{example}[Higher frequency switching sources] % low frequency sources with (and without) series circuit elements
+  We then tested our implementation against higher frequency problems with switching events. Here, the WR iteration is most likely to fail at the time of the switching event, where the dynamics are strongest. While the backward \textsc{Euler} discretisation of the interface continues to deliver reliable runs on a large set of parameters, the accumulated discretisation converges only on a small set of parameters.
+  
+  We were able to find suitable parameters, where both discretisations converged and only the convergence metric was different. Figures~\ref{fig:example-2-plot-voltage}~and~\ref{fig:example-2-plot-voltage-acc} show these converged solutions of the interface voltage. The solution of the accumulated interface discretisation is clearly less accurate than the naive discretisation when compared to the monolithic reference. Though one may speculate, that the amplitude of the oscillation and therefore the solution's accuracy would improve with smaller window sizes (more windows), this was not the case and resulted in divergence in our experiments.
+\end{example}
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.7\textwidth}
+    \centering
+    \input{examples/interface_voltage_cir3.tex}
+    \caption{Interface discretised with backward \textsc{Euler}. Xyce's solution was resampled to 200 points per window. The voltage-driven field was evaluated 10 times each window}
+    \label{fig:example-2-plot-voltage}
+  \end{subfigure}
+
+  \vspace{1em}
+
+  \begin{subfigure}[b]{0.7\textwidth}
+    \centering
+    \input{examples/interface_voltage_cir3_acc.tex}
+    \caption{Interface discretised with the accumulated method. Xyce's solution was resampled to one point per window. The voltage-driven field was evaluated once each window.}
+    \label{fig:example-2-plot-voltage-acc}
+  \end{subfigure}
+  \caption{Plots of the converged interface voltage to the third preset using the different interface discretisations with true field values $L=\qty{168}{\nano\henry}$, $R=\qty{0.5}{\milli\ohm}$ and ROM values $L_{\text{ROM}}=\qty{150}{\nano\henry}$, $R_{\text{ROM}}=\qty{0.4}{\milli\ohm}$. The \qty{1.6}{\milli\second} time span is divided into 100 windows. Voltage-driven field.}
+  \label{fig:example-2-plots}
+\end{figure}
+
+
+% TODO Piecewise linear sources in Xyce apply time integration breakpoints at every point in the dataset. For large datasets with finely spaced timepoints, Xycemay take a lot of very small time steps

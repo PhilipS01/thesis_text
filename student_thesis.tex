@@ -45,23 +45,51 @@
 % Paketvorschläge Mathematik
 %%%%%%%%%%%%%%%%%%%
 \usepackage{mathtools} % erweiterte Fassung von amsmath
+\usepackage{amsthm}    % \theoremstyle, styled theorem environments
 \usepackage{amssymb}   % erweiterter Zeichensatz
 \usepackage{siunitx}   % Einheiten
+\usepackage{cancel}
 
 %%%%%%%%%%%%%%%%%%%
-% Pseudocode
+% Pseudocode und Code
 %%%%%%%%%%%%%%%%%%%
 \usepackage[linesnumbered,lined,boxruled]{algorithm2e} % Package für Pseudocode
+\usepackage{listings}
+\usepackage{xcolor}
 
 %%%%%%%%%%%%%%%%%%%
 % Plotting und Grafik
 %%%%%%%%%%%%%%%%%%%
 \usepackage{tuda-pgfplots} % Package für Plotting with TUDa mods
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,decorations.pathreplacing}
+\usepackage{subcaption}
 
 %%%%%%%%%%%%%%%%%%%
 % Sonstiges
 %%%%%%%%%%%%%%%%%%%
 \usepackage{blindtext} % Package für Blindtext
+\usepackage[record,symbols]{glossaries-extra} % record = bib2gls mode; symbols = creates a dedicated "symbols" glossary
+
+\GlsXtrLoadResources[
+	src={symbols},    	% reads symbols.bib
+	type=symbols,     	% puts all entries into the symbols glossary
+	sort={integer},   	% sort by the numeric sort field below
+	selection={all}		% only symbols you actually reference; see note
+]
+
+\makeatletter
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\lst@ifdisplaystyle\color{blue}\fi,
+    commentstyle=\color{gray}
+}
+\makeatother
+
+\newtheorem{corollary}{Result}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
 
 \begin{document}
 	\title{Field-Circuit Coupling Using Black-Box Simulation Tools}
@@ -99,6 +127,14 @@
 	%%%%%%%%%%%%%%%%%%%
 	\cleardoublepage
 	\tableofcontents % Erstellte ein Inhaltsverzeichnis
+	\cleardoublepage
+
+	\printunsrtglossary[
+		type=symbols,
+		style=long3colheader,
+		title={List of Symbols},
+		preamble={\noindent Bold symbols denote vectors or matrices, shown in vector notation even where the two-terminal case reduces them to scalars.\bigbreak}
+	] % Symbolverzeichnis
 	
 	\cleardoublepage
 	\pagenumbering{arabic} % Seitenzahlen angezeigt, startet ab dem Inhaltsverzeichnis
@@ -111,6 +147,8 @@
 	\include{chapters/einleitung.tex}
 	
 	\include{chapters/theorie.tex}
+
+	\include{chapters/interface.tex}
 	
 	\include{chapters/xyce.tex}
 	

@@ -1,12 +1,33 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Benchmark and Verification}{8}{chapter.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Benchmark and Verification}{17}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lol}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{ch:benchmark}{{4}{8}{Benchmark and Verification}{chapter.4}{}}
+\newlabel{ch:benchmark}{{5}{17}{Benchmark and Verification}{chapter.5}{}}
+\newlabel{fig:preset1-schematic}{{5.1a}{17}{Schematic of the first preset}{figure.caption.10}{}}
+\newlabel{sub@fig:preset1-schematic}{{a}{17}{Schematic of the first preset}{figure.caption.10}{}}
+\newlabel{fig:preset2-schematic}{{5.1b}{17}{Schematic of the second preset}{figure.caption.10}{}}
+\newlabel{sub@fig:preset2-schematic}{{b}{17}{Schematic of the second preset}{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Circuit schematics of the first two presets featuring low frequency sinusoidal sources. The ammeter measures the interface current \gls {iC}. They are schematics of the accumulated interface. If the naive interface is used, $\mathrm  {field\,ROM}$ is comprised of only the lagged correction term and the ROM is inserted as circuit elements \lstinline |Rrom|, \lstinline |Lrom| in the netlist, see Chapter~\ref {sec:xyce-interface-condition}.}}{17}{figure.caption.10}\protected@file@percent }
+\glsxtr@record{iC}{}{page}{glsnumberformat}{17}
+\newlabel{fig:example-1-schematics}{{5.1}{17}{Circuit schematics of the first two presets featuring low frequency sinusoidal sources. The ammeter measures the interface current \gls {iC}. They are schematics of the accumulated interface. If the naive interface is used, $\mathrm {field\,ROM}$ is comprised of only the lagged correction term and the ROM is inserted as circuit elements \lstinline |Rrom|, \lstinline |Lrom| in the netlist, see Chapter~\ref {sec:xyce-interface-condition}}{figure.caption.10}{}}
+\newlabel{fig:example-1-plot-voltage}{{5.2a}{19}{Interface voltage of the converged solution. V(p) is the reconstructed circuit port voltage, containing 201 points per window here. V(field) is the reconstructed field port voltage, containing 11 points per window here}{figure.caption.11}{}}
+\newlabel{sub@fig:example-1-plot-voltage}{{a}{19}{Interface voltage of the converged solution. V(p) is the reconstructed circuit port voltage, containing 201 points per window here. V(field) is the reconstructed field port voltage, containing 11 points per window here}{figure.caption.11}{}}
+\newlabel{fig:example-1-plot-convergence}{{5.2b}{19}{WR iterations and relative error for each window}{figure.caption.11}{}}
+\newlabel{sub@fig:example-1-plot-convergence}{{b}{19}{WR iterations and relative error for each window}{figure.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Plots of the converged solution to the first preset using the \textquote {naive} backward \textsc  {Euler} interface discretisation with true field values $L=\qty {1.68}{\milli \henry }$, $R=\qty {0.5}{\milli \ohm }$ and ROM values $L_{\text  {ROM}}=\qty {1}{\milli \henry }$, $R_{\text  {ROM}}=\qty {0.4}{\milli \ohm }$. The \qty {20}{\milli \second } time span is divided into 50 windows and Xyce's solution was resampled to 200 points per window. The voltage-driven field was evaluated 10 times each window.}}{19}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:example-1-plots}{{5.2}{19}{Plots of the converged solution to the first preset using the \textquote {naive} backward \textsc {Euler} interface discretisation with true field values $L=\qty {1.68}{\milli \henry }$, $R=\qty {0.5}{\milli \ohm }$ and ROM values $L_{\text {ROM}}=\qty {1}{\milli \henry }$, $R_{\text {ROM}}=\qty {0.4}{\milli \ohm }$. The \qty {20}{\milli \second } time span is divided into 50 windows and Xyce's solution was resampled to 200 points per window. The voltage-driven field was evaluated 10 times each window}{figure.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Circuit schematic of the third preset. The RLC circuit is being driven by a \qty {1}{\volt }/\qty {20}{\kilo \hertz } source that gets switched off (shorted over \qty {1}{\milli \ohm }) at \qty {1}{\milli \second }. Here depicted with the accumulated interface.}}{20}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:example-2-plot-voltage}{{5.4a}{21}{Interface discretised with backward \textsc {Euler}. Xyce's solution was resampled to 200 points per window. The voltage-driven field was evaluated 10 times each window}{figure.caption.13}{}}
+\newlabel{sub@fig:example-2-plot-voltage}{{a}{21}{Interface discretised with backward \textsc {Euler}. Xyce's solution was resampled to 200 points per window. The voltage-driven field was evaluated 10 times each window}{figure.caption.13}{}}
+\newlabel{fig:example-2-plot-voltage-acc}{{5.4b}{21}{Interface discretised with the accumulated method. Xyce's solution was resampled to one point per window. The voltage-driven field was evaluated once each window}{figure.caption.13}{}}
+\newlabel{sub@fig:example-2-plot-voltage-acc}{{b}{21}{Interface discretised with the accumulated method. Xyce's solution was resampled to one point per window. The voltage-driven field was evaluated once each window}{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Plots of the converged interface voltage to the third preset using the different interface discretisations with true field values $L=\qty {168}{\nano \henry }$, $R=\qty {0.5}{\milli \ohm }$ and ROM values $L_{\text  {ROM}}=\qty {150}{\nano \henry }$, $R_{\text  {ROM}}=\qty {0.4}{\milli \ohm }$. The \qty {1.6}{\milli \second } time span is divided into 100 windows. Voltage-driven field.}}{21}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:example-2-plots}{{5.4}{21}{Plots of the converged interface voltage to the third preset using the different interface discretisations with true field values $L=\qty {168}{\nano \henry }$, $R=\qty {0.5}{\milli \ohm }$ and ROM values $L_{\text {ROM}}=\qty {150}{\nano \henry }$, $R_{\text {ROM}}=\qty {0.4}{\milli \ohm }$. The \qty {1.6}{\milli \second } time span is divided into 100 windows. Voltage-driven field}{figure.caption.13}{}}
 \@setckpt{chapters/numerik}{
-\setcounter{page}{9}
+\setcounter{page}{22}
 \setcounter{equation}{0}
 \setcounter{enumi}{3}
 \setcounter{enumii}{0}
@@ -15,17 +36,17 @@
 \setcounter{footnote}{0}
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
-\setcounter{chapter}{4}
+\setcounter{chapter}{5}
 \setcounter{section}{0}
 \setcounter{subsection}{0}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{0}
+\setcounter{figure}{4}
 \setcounter{table}{0}
 \setcounter{section@level}{0}
 \setcounter{Item}{3}
-\setcounter{Hfootnote}{0}
+\setcounter{Hfootnote}{4}
 \setcounter{bookmark@seq@number}{0}
 \setcounter{tabx@nest}{0}
 \setcounter{listtotal}{0}
@@ -36,7 +57,7 @@
 \setcounter{citetotal}{0}
 \setcounter{multicitecount}{0}
 \setcounter{multicitetotal}{0}
-\setcounter{instcount}{25}
+\setcounter{instcount}{41}
 \setcounter{maxnames}{3}
 \setcounter{minnames}{1}
 \setcounter{maxitems}{3}
@@ -141,11 +162,16 @@
 \setcounter{smartand}{1}
 \setcounter{bbx:relatedcount}{0}
 \setcounter{bbx:relatedtotal}{0}
-\setcounter{parentequation}{4}
+\setcounter{parentequation}{2}
 \setcounter{AlgoLine}{0}
 \setcounter{algocfline}{0}
 \setcounter{algocfproc}{0}
 \setcounter{algocf}{0}
+\setcounter{lstnumber}{1}
+\setcounter{caption@flags}{6}
+\setcounter{continuedfloat}{0}
+\setcounter{subfigure}{2}
+\setcounter{subtable}{0}
 \setcounter{blindtext}{1}
 \setcounter{Blindtext}{5}
 \setcounter{blind@countparstart}{0}
@@ -158,4 +184,9 @@
 \setcounter{blind@randommax}{0}
 \setcounter{blind@pangramcount}{0}
 \setcounter{blind@pangrammax}{0}
+\setcounter{LT@tables}{1}
+\setcounter{LT@chunks}{2}
+\setcounter{corollary}{0}
+\setcounter{example}{2}
+\setcounter{lstlisting}{0}
 }
