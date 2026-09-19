@@ -13,21 +13,19 @@
 \draw (2,6.4) to[sV, l_={\qty{1}{\volt}/\qty{20}{\kilo\hertz}}] (2,5.0);
 \draw (2,5.0) to[R, l_={\qty{1}{\milli\ohm}}] (2,3.6);
 % parallel branch: 1 mOhm (auto-centred over the taller span)
-\draw (4,6.4) to[R, l={\qty{1}{\milli\ohm}}] (4,3.6);
+\draw (4,6.4) to[R, l={\qty{10}{\kilo\ohm}}] (4,3.6);
 % two-way (changeover) switch: common at bottom, throws up to each branch
 \node[spdt, rotate=90] (Sw) at (3,2.9) {};
 \draw (Sw.out 1) |- (2,3.6);
 \draw (Sw.out 2) |- (4,3.6);
-\draw (Sw.in) -- (3,2.0);                           % common down to the capacitor (shortened)
-% ===== DC-link capacitor (vertical, below the switch) =====
-\draw (3,2.0) to[C, l_={\qty{0.37}{\milli\farad}}] (3,0.6);
+\draw (Sw.in) -- (3,2.0);                           % common down to the rail
 % ===== right branch: ammeter + field ROM (stacked) =====
 \draw (7,6.4) to[rmeter, t=A] (7,5.0);
 \draw (7,5.0) -- (7,4.6);
 \draw (7,4.6) to[sV, l={field ROM}] (7,3.2);
-\draw (7,3.2) -- (7,0.6);                           % field ROM down to rail (shortened)
-% ===== bottom rail: right branch -> ground -> capacitor =====
-\draw (7,0.6) -- (3,0.6);
-\draw (5,0.6) node[ground]{};
+\draw (7,3.2) -- (7,2.0);
+% ===== bottom rail: right branch -> ground =====
+\draw (7,2.0) -- (3,2.0);
+\draw (5,2.0) node[ground]{};
 \end{circuitikz}
 \end{document}

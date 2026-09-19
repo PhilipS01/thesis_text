@@ -271,6 +271,43 @@
       \endverb
       \keyw{Mathematical model;Convergence;Iron;Couplings;Integrated circuit modeling;Indexes;Magnetic circuits;co-simulation;optimized waveform relaxation;electrical converters;finite element}
     \endentry
+    \entry{Gander2004}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=ef49df8ada38bfaeb00258ef8069aa69}{%
+           family={Gander},
+           familyi={G\bibinitperiod},
+           given={M.J.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=40f09fa4f1e8cfcdac6bbd6a36b8a619}{%
+           family={Ruehli},
+           familyi={R\bibinitperiod},
+           given={A.E.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d000b447d8fa5a4933791fa719fb4f79}
+      \strng{fullhash}{d000b447d8fa5a4933791fa719fb4f79}
+      \strng{fullhashraw}{d000b447d8fa5a4933791fa719fb4f79}
+      \strng{bibnamehash}{d000b447d8fa5a4933791fa719fb4f79}
+      \strng{authorbibnamehash}{d000b447d8fa5a4933791fa719fb4f79}
+      \strng{authornamehash}{d000b447d8fa5a4933791fa719fb4f79}
+      \strng{authorfullhash}{d000b447d8fa5a4933791fa719fb4f79}
+      \strng{authorfullhashraw}{d000b447d8fa5a4933791fa719fb4f79}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Circuits and Systems I: Regular Papers}
+      \field{number}{4}
+      \field{title}{Optimized waveform relaxation methods for RC type circuits}
+      \field{volume}{51}
+      \field{year}{2004}
+      \field{pages}{755\bibrangedash 768}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1109/TCSI.2004.826193
+      \endverb
+      \keyw{Optimization methods;Relaxation methods;Partitioning algorithms;Convergence;Partial differential equations;Voltage;Circuit analysis;Circuit theory;Differential equations;Acceleration}
+    \endentry
     \entry{Gomes2017}{misc}{}{}
       \name{author}{5}{}{%
         {{hash=412dc08bf47d6e09117ad6a5774c0000}{%
@@ -558,6 +595,49 @@
       \range{pages}{27}
       \verb{doi}
       \verb 10.1109/ACCESS.2022.3210348
+      \endverb
+    \endentry
+    \entry{Russo2018GenExt}{report}{}{}
+      \name{author}{2}{}{%
+        {{hash=5474126f2d17ccafc164a87c95a764f7}{%
+           family={Russo},
+           familyi={R\bibinitperiod},
+           given={Thomas\bibnamedelima V.},
+           giveni={T\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=4a4e4c002a87a3d21ea4a5fb1dd5cf20}{%
+           family={Hooper},
+           familyi={H\bibinitperiod},
+           given={Russell},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Sandia National Laboratories}%
+      }
+      \list{location}{1}{%
+        {Albuquerque, NM, USA}%
+      }
+      \strng{namehash}{eeab3ba2e06018e4c80f66756d9d7aea}
+      \strng{fullhash}{eeab3ba2e06018e4c80f66756d9d7aea}
+      \strng{fullhashraw}{eeab3ba2e06018e4c80f66756d9d7aea}
+      \strng{bibnamehash}{eeab3ba2e06018e4c80f66756d9d7aea}
+      \strng{authorbibnamehash}{eeab3ba2e06018e4c80f66756d9d7aea}
+      \strng{authornamehash}{eeab3ba2e06018e4c80f66756d9d7aea}
+      \strng{authorfullhash}{eeab3ba2e06018e4c80f66756d9d7aea}
+      \strng{authorfullhashraw}{eeab3ba2e06018e4c80f66756d9d7aea}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{number}{SAND2018-12275}
+      \field{title}{Application Note: Coupled Simulation with the Xyce General External Interface}
+      \field{type}{techreport}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://xyce.sandia.gov/files/xyce/documentation/AppNote-GenExt.pdf
+      \endverb
+      \verb{url}
+      \verb https://xyce.sandia.gov/files/xyce/documentation/AppNote-GenExt.pdf
       \endverb
     \endentry
     \entry{SchoepsDiss}{thesis}{}{}

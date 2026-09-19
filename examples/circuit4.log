@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.4.12)  18 SEP 2026 21:35
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.4.12)  18 SEP 2026 21:39
  restricted system commands enabled.
  file:line:error style messages enabled.
-**/Users/philipsimon/thesis/examples/circuit3.tex
-(/Users/philipsimon/thesis/examples/circuit3.tex
+**/Users/philipsimon/thesis/examples/circuit4.tex
+(/Users/philipsimon/thesis/examples/circuit4.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
@@ -403,8 +403,8 @@ Package translations Info: No language package found. I am going to use `english
  (/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
 File: l3backend-luatex.def 2025-10-09 L3 backend support: PDF output (LuaTeX)
 \l__color_backend_stack_int=\count325
-Inserting `l3color' in `luaotfload.parse_color'.) (./circuit3.aux)
-\openout1 = circuit3.aux
+Inserting `l3color' in `luaotfload.parse_color'.) (./circuit4.aux)
+\openout1 = circuit4.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
@@ -451,7 +451,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 
-Non-PDF special ignored!{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./circuit3.aux)
+Non-PDF special ignored!{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./circuit4.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -459,19 +459,19 @@ L3 programming layer <2026-01-19>
 )
 
 Here is how much of LuaTeX's memory you used:
- 36627 strings out of 476076
+ 36590 strings out of 476076
  100000,1648299 words of node,token memory allocated
- 12226 words of node memory still in use:
-   168 hlist, 1 vlist, 6 rule, 20 math, 660 glue, 10 kern, 5 penalty, 31 glyph, 944 attribute, 49 glue_spec, 944 attribute_list, 2 write, 500 pdf_literal, 4 pdf_colorstack nodes
-   avail lists: 2:36,3:1015,4:18,5:32,6:2,7:1442,8:4,9:364
- 58542 multiletter control sequences out of 65536+600000
+ 10845 words of node memory still in use:
+   149 hlist, 1 vlist, 5 rule, 16 math, 576 glue, 9 kern, 4 penalty, 26 glyph, 843 attribute, 49 glue_spec, 843 attribute_list, 2 write, 454 pdf_literal, 4 pdf_colorstack nodes
+   avail lists: 2:36,3:921,4:18,5:30,6:2,7:1256,8:4,9:324
+ 58505 multiletter control sequences out of 65536+600000
  25 fonts using 1345055 bytes
  117i,7n,114p,465b,1232s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on circuit3.pdf (1 page, 24161 bytes).
+</usr/local/texlive/2026/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on circuit4.pdf (1 page, 16363 bytes).
 
-PDF statistics: 26 PDF objects out of 1000 (max. 8388607)
- 17 compressed objects within 1 object stream
+PDF statistics: 22 PDF objects out of 1000 (max. 8388607)
+ 14 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 1048576)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -1,0 +1,1687 @@
+Rc files read (in order):
+  ./.latexmkrc
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'lualatex'...
+Rule 'lualatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'lualatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'lualatex'
+------------
+------------
+Running 'lualatex  -recorder  "student_thesis.tex"'
+------------
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026) 
+ restricted system commands enabled.
+(./student_thesis.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/tuda-ci/tudapub.cls
+Document Class: tudapub 2025-11-13 v4.05 Publications using TU Darmstadt's Corp
+orate Design (TUDa-CI)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/urcls/URspecialopts.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-luatex.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrreprt.cls
+Document Class: scrreprt 2026/02/02 v3.49.2 KOMA-Script document class (report)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrkbase.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrbase.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlogo.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/tocbasic.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrsize11pt.clo)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/typearea.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tuda-ci/tudafonts.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xcharter/XCharter.fontspec)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/roboto/roboto.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifxetex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifluatex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/roboto/roboto-mono.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tuda-ci/tudacolors.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/luatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tuda-ci/tudacolors.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlayer.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hluatex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bookmark.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bkm-pdftex.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tuda-ci/tudarules.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/adjustbox/trimclip.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/collectbox/collectbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/adjustbox/adjcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/adjustbox/tc-luatex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/adjustbox/tc-pdftex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tuda-ci/tuda-a4paper.clo)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tuda-ci/tudathesis.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/luababel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/luababel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/de/babel-german.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex) (/usr/local/texlive/2026/texmf-dist/tex/generic/babel-german/german.ldf
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-german/babel-german.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-de-
+1901.tex UTF-8 German hyphenation patterns (traditional orthography)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-de-
+1901.tex
+German Hyphenation Patterns (Traditional Orthography) `dehypht-x' 2024-02-28 (W
+L)))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-luatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathtools/mhsetup.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xpatch/xpatch.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/cancel/cancel.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/xspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/relsize/relsize.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg))
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tuda-ci/tuda-pgfplots.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.d
+ef
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
+.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_loader.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_pgfutil-common-lists.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/luamath/pgflibrar
+yluamath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code
+.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructure.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructureext.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+array.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+matrix.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
+shared.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+deque.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.co
+de.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.da
+ta.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
+s.surfshading.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
+.surfshading.pgfsys-luatex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.
+code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.cod
+e.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.c
+ode.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandle
+r.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.
+code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessin
+g.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathmorphing.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathmorphing.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathreplacing.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathreplacing.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
+ts.contourlua.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryplotmarks.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmar
+ks.code.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/blindtext/blindtext.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries-extra/glossaries-extra
+.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries/base/glossaries.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xfor/xfor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tracklang/tracklang.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/tracklang/tracklang.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries-german/glossaries-germ
+an.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries-english/glossaries-eng
+lish.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/datatool/datatool-base.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/datatool/datatool-lua.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/datatool/datatool-utf8.ldf)
+
+Package tracklang Warning: No `datatool' support for dialect `german'  on input
+ line 9924.
+
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/datatool-english/datatool-english
+.ldf
+(/usr/local/texlive/2026/texmf-dist/tex/latex/datatool-english/datatool-english
+-utf8.ldf)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-hypern
+av.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-list.s
+ty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-long.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-super.
+sty (/usr/local/texlive/2026/texmf-dist/tex/latex/supertabular/supertabular.sty
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-tree.s
+ty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries-extra/glossaries-extra
+-bib2gls.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/glossaries-extra/glossaries-extra
+-abbrstyles.def))
+
+Package glossaries-extra Warning: No file `student_thesis.glstex' on input line
+ 79.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/de/babel-german.te
+x) (./student_thesis.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: luatex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/german.lbx)
+No file student_thesis.bbl.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-german.trsl)
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg) [1{/usr/loc
+al/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}</Users/philipsimo
+n/Library/texmf/tex/latex/tuda-ci-logos/tuda_logo.pdf><./images/ce_logo_black.p
+df>] [2]
+(/usr/local/texlive/2026/texmf-dist/tex/generic/dehyph-exptl/dehyphn-x-2024-02-
+28.tex dehyph-exptl: using a TeX engine with native UTF-8 support.
+(/usr/local/texlive/2026/texmf-dist/tex/generic/dehyph-exptl/dehyphn-x-2024-02-
+28.pat
+German Hyphenation Patterns (Reformed Orthography, 2006) `dehyphn-x' 2024-02-28
+ (WL))) [1] (./chapters/zusammenfassung.tex
+
+LaTeX Warning: Reference `ch:introduction' on page  undefined on input line 16.
+
+
+
+LaTeX Warning: Reference `ch:fundamentals' on page  undefined on input line 17.
+
+
+
+LaTeX Warning: Reference `ch:interface-discretisation' on page  undefined on in
+put line 17.
+
+
+LaTeX Warning: Reference `ch:interface-discretisation' on page  undefined on in
+put line 17.
+
+)
+warning  (pdf backend): ignoring duplicate destination with the name 'page.'
+[2]
+No file student_thesis.toc.
+
+warning  (pdf backend): ignoring duplicate destination with the name 'page.'
+[3]
+warning  (pdf backend): ignoring duplicate destination with the name 'page.'
+[4]
+
+Package glossaries-extra Warning: No entries defined in glossary `symbols' on i
+nput line 137.
+
+
+warning  (pdf backend): ignoring duplicate destination with the name 'page.'
+[5]
+warning  (pdf backend): ignoring duplicate destination with the name 'page.'
+[6] (./chapters/einleitung.tex
+chapter 1.
+
+LaTeX Warning: Citation 'Simonyi1979' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Citation 'Chung-Wen1975' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Citation 'Monk2003' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Citation 'Garcia2020' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Citation 'Schoeps2010' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Reference `tab:doe-targets' on page 1 undefined on input line 7.
+
+
+
+LaTeX Warning: Citation 'SchoepsDiss' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Citation 'Pels2019' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Citation 'Petri2022' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Citation 'Gomes2017' on page 1 undefined on input line 9.
+
+
+LaTeX Warning: Citation 'USDRIVE_EDTT' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Reference `sec:dynamic-iteration' on page 1 undefined on input l
+ine 31.
+
+
+LaTeX Warning: Reference `sec:motivation' on page 1 undefined on input line 31.
+
+
+
+LaTeX Warning: Citation 'SchoepsDiss' on page 1 undefined on input line 31.
+
+
+LaTeX Warning: Citation 'Bartel2013' on page 1 undefined on input line 31.
+
+
+LaTeX Warning: Reference `ch:benchmark' on page 1 undefined on input line 32.
+
+
+LaTeX Warning: Reference `ch:interface-discretisation' on page 1 undefined on i
+nput line 32.
+
+
+LaTeX Warning: Reference `sec:xyce-genext' on page 1 undefined on input line 33
+.
+
+
+warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
+[1]
+
+LaTeX Warning: Reference `sec:xyce-why' on page 2 undefined on input line 43.
+
+
+LaTeX Warning: Reference `ch:fundamentals' on page 2 undefined on input line 47
+.
+
+
+LaTeX Warning: Reference `ch:interface-discretisation' on page 2 undefined on i
+nput line 47.
+
+
+LaTeX Warning: Reference `ch:xyce' on page 2 undefined on input line 47.
+
+
+LaTeX Warning: Reference `ch:benchmark' on page 2 undefined on input line 47.
+
+
+LaTeX Warning: Reference `ch:application' on page 2 undefined on input line 47.
+
+
+
+LaTeX Warning: Reference `ch:conclusions' on page 2 undefined on input line 47.
+
+
+)
+warning  (pdf backend): ignoring duplicate destination with the name 'page.2'
+[2] [3] (./chapters/theorie.tex
+chapter 2.
+
+LaTeX Warning: Citation 'Gomes2017' on page 4 undefined on input line 4.
+
+
+Package glossaries-extra Warning: Glossary entry `Mmna' has not been defined on
+ input line 15.
+
+
+Package glossaries-extra Warning: Glossary entry `Kmna' has not been defined on
+ input line 15.
+
+
+Package glossaries-extra Warning: Glossary entry `vC' has not been defined on i
+nput line 23.
+
+
+Package glossaries-extra Warning: Glossary entry `iC' has not been defined on i
+nput line 23.
+
+
+Package glossaries-extra Warning: Glossary entry `vC' has not been defined on i
+nput line 25.
+
+
+Package glossaries-extra Warning: Glossary entry `iC' has not been defined on i
+nput line 25.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 32.
+
+
+Package glossaries-extra Warning: Glossary entry `Hn' has not been defined on i
+nput line 32.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 32.
+
+
+LaTeX Warning: Reference `fig:dynamic-iteration' on page 4 undefined on input l
+ine 32.
+
+
+LaTeX Warning: Citation 'Gomes2017' on page 4 undefined on input line 32.
+
+[4]
+
+LaTeX Warning: Citation 'Dahmen2008' on page 5 undefined on input line 36.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 59.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 60.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 109.
+
+[5]
+
+LaTeX Warning: Citation 'SchoepsDiss' on page 6 undefined on input line 118.
+
+
+Package glossaries-extra Warning: Glossary entry `iF' has not been defined on i
+nput line 121.
+
+
+Package glossaries-extra Warning: Glossary entry `iC' has not been defined on i
+nput line 121.
+
+
+Package glossaries-extra Warning: Glossary entry `vF' has not been defined on i
+nput line 121.
+
+
+Package glossaries-extra Warning: Glossary entry `vF' has not been defined on i
+nput line 123.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 123.
+
+
+Package glossaries-extra Warning: Glossary entry `iF' has not been defined on i
+nput line 123.
+
+
+Package glossaries-extra Warning: Glossary entry `iF' has not been defined on i
+nput line 127.
+
+
+Package glossaries-extra Warning: Glossary entry `iF' has not been defined on i
+nput line 127.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 127.
+
+
+Package glossaries-extra Warning: Glossary entry `vF' has not been defined on i
+nput line 127.
+
+
+LaTeX Warning: Citation 'Garcia2020' on page 6 undefined on input line 133.
+
+
+Package glossaries-extra Warning: Glossary entry `vF' has not been defined on i
+nput line 135.
+
+
+Package glossaries-extra Warning: Glossary entry `vC' has not been defined on i
+nput line 135.
+
+
+LaTeX Warning: Reference `ch:xyce' on page 6 undefined on input line 137.
+
+
+LaTeX Warning: Citation 'Garcia2017' on page 6 undefined on input line 137.
+
+
+LaTeX Warning: Citation 'Gander2004' on page 6 undefined on input line 139.
+
+
+Package glossaries-extra Warning: Glossary entry `vF' has not been defined on i
+nput line 142.
+
+
+Package glossaries-extra Warning: Glossary entry `vC' has not been defined on i
+nput line 142.
+
+
+Package glossaries-extra Warning: Glossary entry `iC' has not been defined on i
+nput line 142.
+
+
+Package glossaries-extra Warning: Glossary entry `iF' has not been defined on i
+nput line 142.
+
+
+Package glossaries-extra Warning: Glossary entry `vC' has not been defined on i
+nput line 144.
+
+
+Package glossaries-extra Warning: Glossary entry `iF' has not been defined on i
+nput line 144.
+
+
+LaTeX Warning: Citation 'Schoeps2010' on page 6 undefined on input line 146.
+
+
+LaTeX Warning: Citation 'SchoepsDiss' on page 6 undefined on input line 146.
+
+
+LaTeX Warning: Citation 'Garcia2020' on page 6 undefined on input line 146.
+
+
+LaTeX Warning: Citation 'Garcia2017' on page 6 undefined on input line 146.
+
+
+LaTeX Warning: Citation 'Garcia2017' on page 6 undefined on input line 148.
+
+[6]
+
+LaTeX Warning: Reference `eq:tc-gs-plain-current' on page 7 undefined on input 
+line 158.
+
+
+Package glossaries-extra Warning: Glossary entry `beta' has not been defined on
+ input line 160.
+
+
+Package glossaries-extra Warning: Glossary entry `beta' has not been defined on
+ input line 160.
+
+
+Package glossaries-extra Warning: Glossary entry `beta' has not been defined on
+ input line 162.
+
+
+LaTeX Warning: Reference `eq:tc-gs-plain-voltage' on page 7 undefined on input 
+line 163.
+
+
+LaTeX Warning: Citation 'Garcia2017' on page 7 undefined on input line 163.
+
+
+Package glossaries-extra Warning: Glossary entry `vC' has not been defined on i
+nput line 165.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 165.
+
+
+Package glossaries-extra Warning: Glossary entry `Mmna' has not been defined on
+ input line 165.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 165.
+
+
+Package glossaries-extra Warning: Glossary entry `Kmna' has not been defined on
+ input line 165.
+
+
+Package glossaries-extra Warning: Glossary entry `Mmna' has not been defined on
+ input line 165.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 165.
+
+
+Package glossaries-extra Warning: Glossary entry `Kmna' has not been defined on
+ input line 165.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 165.
+
+
+Package glossaries-extra Warning: Glossary entry `iF' has not been defined on i
+nput line 166.
+
+
+Package glossaries-extra Warning: Glossary entry `Yport' has not been defined o
+n input line 166.
+
+
+Package glossaries-extra Warning: Glossary entry `vF' has not been defined on i
+nput line 166.
+
+
+Package glossaries-extra Warning: Glossary entry `Yport' has not been defined o
+n input line 166.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 166.
+
+
+Package glossaries-extra Warning: Glossary entry `Zport' has not been defined o
+n input line 166.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 166.
+
+
+Package glossaries-extra Warning: Glossary entry `Zport' has not been defined o
+n input line 166.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 166.
+
+
+LaTeX Warning: Citation 'Garcia2017' on page 7 undefined on input line 166.
+
+
+LaTeX Warning: Reference `eq:tc-gs-plain-voltage' on page 7 undefined on input 
+line 166.
+
+
+LaTeX Warning: Reference `eq:tc-gs-robin' on page 7 undefined on input line 166
+.
+
+
+Package glossaries-extra Warning: Glossary entry `rho' has not been defined on 
+input line 169.
+
+
+Package glossaries-extra Warning: Glossary entry `beta' has not been defined on
+ input line 169.
+
+
+Package glossaries-extra Warning: Glossary entry `rho' has not been defined on 
+input line 171.
+
+
+Package glossaries-extra Warning: Glossary entry `beta' has not been defined on
+ input line 171.
+
+
+Package glossaries-extra Warning: Glossary entry `beta' has not been defined on
+ input line 171.
+
+
+Package glossaries-extra Warning: Glossary entry `beta' has not been defined on
+ input line 172.
+
+
+Package glossaries-extra Warning: Glossary entry `Yport' has not been defined o
+n input line 172.
+
+
+Package glossaries-extra Warning: Glossary entry `rho' has not been defined on 
+input line 176.
+
+
+Package glossaries-extra Warning: Glossary entry `beta' has not been defined on
+ input line 176.
+
+
+Package glossaries-extra Warning: Glossary entry `rho' has not been defined on 
+input line 176.
+
+
+Package glossaries-extra Warning: Glossary entry `beta' has not been defined on
+ input line 176.
+
+
+Package glossaries-extra Warning: Glossary entry `beta' has not been defined on
+ input line 178.
+
+
+Package glossaries-extra Warning: Glossary entry `Yport' has not been defined o
+n input line 178.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 178.
+
+
+Package glossaries-extra Warning: Glossary entry `Yport' has not been defined o
+n input line 182.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 182.
+
+
+Package glossaries-extra Warning: Glossary entry `Yport' has not been defined o
+n input line 183.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 183.
+
+
+Package glossaries-extra Warning: Glossary entry `Zport' has not been defined o
+n input line 187.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 187.
+
+
+Package glossaries-extra Warning: Glossary entry `Zport' has not been defined o
+n input line 187.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 187.
+
+
+LaTeX Warning: Citation 'Garcia2017' on page 7 undefined on input line 189.
+
+
+Package glossaries-extra Warning: Glossary entry `vC' has not been defined on i
+nput line 191.
+
+
+LaTeX Warning: Reference `eq:tc-optimal-current-driven' on page 7 undefined on 
+input line 191.
+
+
+Package glossaries-extra Warning: Glossary entry `iC' has not been defined on i
+nput line 191.
+
+
+LaTeX Warning: Citation 'Nshimiyimana2016' on page 7 undefined on input line 19
+3.
+
+
+Package glossaries-extra Warning: Glossary entry `Zport' has not been defined o
+n input line 194.
+
+
+Package glossaries-extra Warning: Glossary entry `Yport' has not been defined o
+n input line 194.
+
+
+Package glossaries-extra Warning: Glossary entry `rho' has not been defined on 
+input line 194.
+
+
+Package glossaries-extra Warning: Glossary entry `Zport' has not been defined o
+n input line 196.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 196.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 196.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 196.
+
+
+LaTeX Warning: Citation 'Garcia2017' on page 7 undefined on input line 196.
+
+
+Package glossaries-extra Warning: Glossary entry `Yport' has not been defined o
+n input line 196.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 196.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 196.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 197.
+
+
+LaTeX Warning: Citation 'Garcia2017' on page 7 undefined on input line 197.
+
+
+Package glossaries-extra Warning: Glossary entry `iF' has not been defined on i
+nput line 200.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 200.
+
+
+Package glossaries-extra Warning: Glossary entry `vF' has not been defined on i
+nput line 200.
+
+[7]
+
+Package glossaries-extra Warning: Glossary entry `vF' has not been defined on i
+nput line 204.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 204.
+
+
+Package glossaries-extra Warning: Glossary entry `iF' has not been defined on i
+nput line 204.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 206.
+
+
+Package glossaries-extra Warning: Glossary entry `Yport' has not been defined o
+n input line 207.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 207.
+
+
+LaTeX Warning: Reference `eq:tc-optimal-voltage-driven' on page 8 undefined on 
+input line 207.
+
+
+Package glossaries-extra Warning: Glossary entry `Zport' has not been defined o
+n input line 207.
+
+
+Package glossaries-extra Warning: Glossary entry `omega' has not been defined o
+n input line 207.
+
+
+LaTeX Warning: Reference `eq:tc-optimal-current-driven' on page 8 undefined on 
+input line 207.
+
+
+Package glossaries-extra Warning: Glossary entry `Rport' has not been defined o
+n input line 209.
+
+
+LaTeX Warning: Reference `eq:tc-optimal-current-driven' on page 8 undefined on 
+input line 209.
+
+
+Package glossaries-extra Warning: Glossary entry `Rport' has not been defined o
+n input line 211.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 211.
+
+
+LaTeX Warning: Reference `fig:coupling-gs-rom' on page 8 undefined on input lin
+e 213.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 239.
+
+
+Package glossaries-extra Warning: Glossary entry `Rport' has not been defined o
+n input line 240.
+
+
+Package glossaries-extra Warning: Glossary entry `Mmna' has not been defined on
+ input line 260.
+
+
+Package glossaries-extra Warning: Glossary entry `Kmna' has not been defined on
+ input line 260.
+
+
+Package glossaries-extra Warning: Glossary entry `Mmna' has not been defined on
+ input line 260.
+
+
+Package glossaries-extra Warning: Glossary entry `Kmna' has not been defined on
+ input line 260.
+
+
+Package glossaries-extra Warning: Glossary entry `Rport' has not been defined o
+n input line 267.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 267.
+
+
+Package glossaries-extra Warning: Glossary entry `Rport' has not been defined o
+n input line 267.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 267.
+
+
+Package glossaries-extra Warning: Glossary entry `Rport' has not been defined o
+n input line 267.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 267.
+
+
+Package glossaries-extra Warning: Glossary entry `Rport' has not been defined o
+n input line 267.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 267.
+
+[8]
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 272.
+
+
+LaTeX Warning: Reference `eq:tc-optim-time' on page 9 undefined on input line 2
+73.
+
+
+LaTeX Warning: Reference `eq:tc-optim-time-corr' on page 9 undefined on input l
+ine 278.
+
+
+LaTeX Warning: Citation 'Bartel2013' on page 9 undefined on input line 285.
+
+) [9] (./chapters/interface.tex
+chapter 3.
+
+LaTeX Warning: Reference `ch:fundamentals' on page 10 undefined on input line 4
+.
+
+
+LaTeX Warning: Reference `eq:algorithm-1' on page 10 undefined on input line 6.
+
+
+
+LaTeX Warning: Reference `eq:tc-optim-time-corr' on page 10 undefined on input 
+line 6.
+
+
+Package glossaries-extra Warning: Glossary entry `vC' has not been defined on i
+nput line 8.
+
+
+Package glossaries-extra Warning: Glossary entry `vF' has not been defined on i
+nput line 8.
+
+
+Package glossaries-extra Warning: Glossary entry `iC' has not been defined on i
+nput line 10.
+
+
+Package glossaries-extra Warning: Glossary entry `iF' has not been defined on i
+nput line 10.
+
+
+LaTeX Warning: Reference `eq:tc-optim-time' on page 10 undefined on input line 
+16.
+
+
+LaTeX Warning: Reference `eq:tc-optim-time-corr' on page 10 undefined on input 
+line 16.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 22.
+
+
+LaTeX Warning: Reference `fig:dynamic-iteration' on page 10 undefined on input 
+line 22.
+
+
+Package glossaries-extra Warning: Glossary entry `Rport' has not been defined o
+n input line 31.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 31.
+
+
+Package glossaries-extra Warning: Glossary entry `Rport' has not been defined o
+n input line 31.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 31.
+
+
+Package glossaries-extra Warning: Glossary entry `Rport' has not been defined o
+n input line 31.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 31.
+
+
+Package glossaries-extra Warning: Glossary entry `Rport' has not been defined o
+n input line 31.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 31.
+
+
+Package glossaries-extra Warning: Glossary entry `vC' has not been defined on i
+nput line 36.
+
+
+Package glossaries-extra Warning: Glossary entry `vF' has not been defined on i
+nput line 36.
+
+
+Package glossaries-extra Warning: Glossary entry `iC' has not been defined on i
+nput line 36.
+
+
+Package glossaries-extra Warning: Glossary entry `iF' has not been defined on i
+nput line 36.
+
+
+LaTeX Warning: Reference `eq:tc-optim-time' on page 10 undefined on input line 
+39.
+
+
+LaTeX Warning: Reference `eq:tc-optim-time-corr' on page 10 undefined on input 
+line 39.
+
+
+LaTeX Warning: Reference `eq:tc-optim-time' on page 10 undefined on input line 
+42.
+
+
+LaTeX Warning: Reference `eq:tc-optim-time-corr' on page 10 undefined on input 
+line 42.
+
+[10]
+
+LaTeX Warning: Reference `eq:acc-residual' on page 11 undefined on input line 4
+6.
+
+
+LaTeX Warning: Reference `eq:acc-residual' on page 11 undefined on input line 4
+9.
+
+
+LaTeX Warning: Reference `eq:tc-optim-time' on page 11 undefined on input line 
+49.
+
+
+LaTeX Warning: Reference `eq:tc-optim-time-corr' on page 11 undefined on input 
+line 49.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 54.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 54.
+
+
+LaTeX Warning: Citation 'Garcia2017' on page 11 undefined on input line 56.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 56.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 58.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 58.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 58.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 58.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 59.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 59.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 60.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 60.
+
+
+LaTeX Warning: Reference `eq:acc-residual' on page 11 undefined on input line 6
+4.
+
+
+LaTeX Warning: Reference `eq:L1-criterion' on page 11 undefined on input line 6
+4.
+
+) [11] (./chapters/xyce.tex
+chapter 4.
+
+LaTeX Warning: Reference `ch:fundamentals' on page 12 undefined on input line 4
+.
+
+
+LaTeX Warning: Reference `ch:interface-discretisation' on page 12 undefined on 
+input line 4.
+
+
+LaTeX Warning: Citation 'Gomes2017' on page 12 undefined on input line 7.
+
+
+LaTeX Warning: Citation 'Keiter2025UG' on page 12 undefined on input line 7.
+
+
+LaTeX Warning: Citation 'Keiter2025UG' on page 12 undefined on input line 7.
+
+
+LaTeX Warning: Reference `ch:interface-discretisation' on page 12 undefined on 
+input line 7.
+
+
+LaTeX Warning: Reference `sec:objective-contributions' on page 12 undefined on 
+input line 11.
+
+[12]
+
+LaTeX Warning: Reference `sec:xyce-why' on page 13 undefined on input line 31.
+
+
+LaTeX Warning: Citation 'Keiter2025UG' on page 13 undefined on input line 35.
+
+[13]
+
+LaTeX Warning: Reference `ch:interface-discretisation' on page 14 undefined on 
+input line 61.
+
+
+LaTeX Warning: Citation 'Keiter2025UG' on page 14 undefined on input line 61.
+
+
+Package glossaries-extra Warning: Glossary entry `Rport' has not been defined o
+n input line 72.
+
+
+Package glossaries-extra Warning: Glossary entry `Lport' has not been defined o
+n input line 72.
+
+
+LaTeX Warning: Citation 'Keiter2025UG' on page 14 undefined on input line 74.
+
+
+LaTeX Warning: Reference `sec:coupling-scheme' on page 14 undefined on input li
+ne 79.
+
+
+LaTeX Warning: Reference `sec:xyce-interface-condition' on page 14 undefined on
+ input line 79.
+
+
+LaTeX Warning: Reference `tab:coupling-dir-comparison' on page 14 undefined on 
+input line 79.
+
+[14]
+
+LaTeX Warning: Reference `eq:L1-criterion' on page 15 undefined on input line 1
+06.
+
+
+LaTeX Warning: Citation 'Russo2018GenExt' on page 15 undefined on input line 11
+0.
+
+
+LaTeX Warning: Citation 'Russo2018GenExt' on page 15 undefined on input line 11
+2.
+
+
+LaTeX Warning: Citation 'Russo2018GenExt' on page 15 undefined on input line 11
+2.
+
+
+Package glossaries-extra Warning: Glossary entry `tn' has not been defined on i
+nput line 114.
+
+
+LaTeX Warning: Reference `sec:xyce-restarts' on page 15 undefined on input line
+ 114.
+
+[15]) [16] (./chapters/numerik.tex
+chapter 5.
+
+Package glossaries-extra Warning: Glossary entry `iC' has not been defined on i
+nput line 22.
+
+
+LaTeX Warning: Reference `sec:xyce-interface-condition' on page 17 undefined on
+ input line 22.
+
+
+LaTeX Warning: Reference `fig:example-1-schematics' on page 17 undefined on inp
+ut line 26.
+
+
+LaTeX Warning: Reference `fig:example-1-plots' on page 17 undefined on input li
+ne 26.
+
+
+LaTeX Warning: Reference `fig:preset1-schematic' on page 17 undefined on input 
+line 26.
+
+
+LaTeX Warning: Reference `ch:application' on page 17 undefined on input line 28
+.
+
+
+LaTeX Warning: Reference `fig:preset2-schematic' on page 17 undefined on input 
+line 30.
+
+[17<./examples/circuit2.pdf><./examples/circuit.pdf>]
+(./examples/interface_voltage_cir1.tex)
+Overfull \hbox (0.91396pt too wide) in paragraph at lines 596--38
+ [][] 
+(./examples/wr_convergence_cir1.tex
+
+Package pgfplots Warning: Axis range for axis y is approximately empty; enlargi
+ng it (it is [2.0000000000:2.0000000000]) on input line 98.
+
+)
+Overfull \hbox (30.62885pt too wide) in paragraph at lines 99--47
+ [][] 
+
+LaTeX Warning: Reference `fig:example-2-schematic' on page 18 undefined on inpu
+t line 61.
+
+
+LaTeX Warning: Reference `fig:example-2-plot-voltage' on page 18 undefined on i
+nput line 63.
+
+
+LaTeX Warning: Reference `fig:example-2-plots-voltage-acc' on page 18 undefined
+ on input line 63.
+
+
+LaTeX Warning: Reference `ch:interface-discretisation' on page 18 undefined on 
+input line 65.
+
+(./examples/interface_voltage_cir4_acc2.tex)
+(./examples/interface_voltage_cir4_acc.tex)
+
+LaTeX Warning: Reference `fig:example-3-schematic' on page 18 undefined on inpu
+t line 96.
+
+
+LaTeX Warning: Reference `fig:example-3-plots' on page 18 undefined on input li
+ne 104.
+
+
+LaTeX Warning: Reference `fig:example-3-plot-voltage-acc-better' on page 18 und
+efined on input line 107.
+
+(./examples/interface_voltage_cir3.tex)
+(./examples/interface_voltage_cir3_acc.tex)) [18] [19] [20<./examples/circuit4.
+pdf>] [21<./examples/circuit3.pdf>] [22] (./chapters/application.tex
+chapter 6.
+) [23] (./chapters/fazit.tex
+chapter 7.
+) [24] (./chapters/appendix.tex
+chapter A.
+(./examples/interface_voltage_cir4.tex)
+
+LaTeX Warning: Reference `fig:example-2-plots-voltage-acc' on page 25 undefined
+ on input line 8.
+
+(./examples/interface_voltage_cir3_acc_better.tex)
+
+LaTeX Warning: Reference `fig:example-3-plot-voltage-acc' on page 25 undefined 
+on input line 15.
+
+) [25]
+No file student_thesis.lof.
+[26]
+No file student_thesis.lot.
+
+LaTeX Warning: Empty bibliography on input line 176.
+
+
+Package tudapub Warning: You did not provide a Label for key introduction.
+(tudapub)                Either you need to recompile your document or add a
+(tudapub)                label using \IMRADlabel.
+
+
+Package tudapub Warning: You did not provide a Label for key methods.
+(tudapub)                Either you need to recompile your document or add a
+(tudapub)                label using \IMRADlabel.
+
+
+Package tudapub Warning: You did not provide a Label for key results.
+(tudapub)                Either you need to recompile your document or add a
+(tudapub)                label using \IMRADlabel.
+
+
+Package tudapub Warning: You did not provide a Label for key discussion.
+(tudapub)                Either you need to recompile your document or add a
+(tudapub)                label using \IMRADlabel.
+
+[27] (./student_thesis.aux (./chapters/zusammenfassung.aux)
+(./chapters/einleitung.aux) (./chapters/theorie.aux) (./chapters/interface.aux)
+ (./chapters/xyce.aux) (./chapters/numerik.aux) (./chapters/application.aux)
+(./chapters/fazit.aux) (./chapters/appendix.aux))
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                student_thesis
+(biblatex)                and rerun LaTeX afterwards.
+
+)
+(see the transcript file for additional information)
+ 7348 words of node memory still in use:
+   86 hlist, 9 vlist, 15 rule, 39 disc, 20 local_par, 6 math, 168 glue, 25 kern
+, 33 penalty, 3 margin_kern, 354 glyph, 387 attribute, 99 glue_spec, 199 attrib
+ute_list, 2 write, 30 pdf_colorstack, 2 pdf_setmatrix, 2 pdf_save, 2 pdf_restor
+e nodes
+   avail lists: 1:11,2:69142,3:25617,4:267,5:1416,6:109,7:13521,8:127,9:2182,10
+:30,11:801,12:1
+</usr/local/texlive/2026/texmf-dist/fonts/opentype/google/roboto/RobotoMono-Reg
+ular.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/xcharter/XCh
+arter-Bold.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/xchart
+er/XCharter-Italic.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/publi
+c/xcharter/XCharter-Roman.otf></usr/local/texlive/2026/texmf-dist/fonts/opentyp
+e/google/roboto/Roboto-Bold.otf></usr/local/texlive/2026/texmf-dist/fonts/opent
+ype/google/roboto/Roboto-Regular.otf></usr/local/texlive/2026/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/latx
+font/line10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msbm10.pfb>
+Output written on student_thesis.pdf (35 pages, 1103460 bytes).
+Transcript written on student_thesis.log.
+Latexmk: Getting log file 'student_thesis.log'
+Latexmk: Examining 'student_thesis.fls'
+Latexmk: Examining 'student_thesis.log'
+Latexmk: Missing input file 'student_thesis.glstex' message in .log file:
+  Package glossaries-extra Warning: No file `student_thesis.glstex' on input line
+Latexmk: Missing input file 'student_thesis.glstex' message in .log file:
+  Package glossaries-extra Warning: No file `student_thesis.glstex' on input line 79.
+Latexmk: Missing bbl file 'student_thesis.bbl' in following:
+ No file student_thesis.bbl.
+Latexmk: Missing input file 'student_thesis.toc' message in .log file:
+  No file student_thesis.toc.
+Latexmk: Missing input file 'student_thesis.lof' message in .log file:
+  No file student_thesis.lof.
+Latexmk: Missing input file 'student_thesis.lot' message in .log file:
+  No file student_thesis.lot.
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: Log file says output to 'student_thesis.pdf'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  literature.bib
+Sources for biber
+  literature.bib
+  student_thesis.bcf
+Latexmk: applying rule 'cusdep aux glstex student_thesis'...
+Rule 'cusdep aux glstex student_thesis':  Reasons for rerun
+Changed files or newly in use/created:
+  student_thesis.aux
+Category 'no_dest':
+  cusdep aux glstex student_thesis
+
+------------
+Run number 1 of rule 'cusdep aux glstex student_thesis'
+------------
+bib2gls version 4.7 (2025-11-13)
+Reading student_thesis.aux
+Encoding: UTF-8
+Reading chapters/zusammenfassung.aux
+Encoding: UTF-8
+Reading chapters/einleitung.aux
+Encoding: UTF-8
+Reading chapters/theorie.aux
+Encoding: UTF-8
+Reading chapters/interface.aux
+Encoding: UTF-8
+Reading chapters/xyce.aux
+Encoding: UTF-8
+Reading chapters/numerik.aux
+Encoding: UTF-8
+Reading chapters/application.aux
+Encoding: UTF-8
+Reading chapters/fazit.aux
+Encoding: UTF-8
+Reading chapters/appendix.aux
+Encoding: UTF-8
+Reading symbols.bib
+Encoding: UTF-8
+Writing /Users/philipsimon/thesis/./student_thesis.glstex
+15 entries written to /Users/philipsimon/thesis/./student_thesis.glstex.
+Transcript written to student_thesis.glg.
+Latexmk: applying rule 'biber student_thesis'...
+Rule 'biber student_thesis':  Reasons for rerun
+Category 'other':
+  Rerun of 'biber student_thesis' forced or previously required:
+    Reason or flag: 'Initial set up of rule'
+
+------------
+Run number 1 of rule 'biber student_thesis'
+------------
+------------
+Running 'biber  "student_thesis.bcf"'
+------------
+INFO - This is Biber 2.21
+INFO - Logfile is 'student_thesis.blg'
+INFO - Reading 'student_thesis.bcf'
+INFO - Found 17 citekeys in bib section 0
+INFO - Processing section 0
+INFO - Looking for bibtex file 'literature.bib' for section 0
+INFO - LaTeX decoding ...
+INFO - Found BibTeX data source 'literature.bib'
+Latexmk: Found biber source file(s) [literature.bib, student_thesis.bcf]
+Latexmk: Error return from 'biber student_thesis'
+I will add to its source list, anything cached from analysis of bcf file.
+Latexmk: Summary of warnings from last run of *latex:
+  Latex failed to resolve 77 reference(s)
+  Latex failed to resolve 44 citation(s)
+Latexmk: ====Problematic refs and citations with line #s in .tex file:
+  Citation 'Simonyi1979' on page 1 undefined on input line 7
+  Citation 'Chung-Wen1975' on page 1 undefined on input line 7
+  Citation 'Monk2003' on page 1 undefined on input line 7
+  Citation 'Garcia2020' on page 1 undefined on input line 7
+  Citation 'Schoeps2010' on page 1 undefined on input line 7
+  Reference `tab:doe-targets' on page 1 undefined on input line 7
+  Reference `tab:doe-targets' on page 1 undefined on input line 7
+ And 114 more --- see log file 'student_thesis.log'
+Latexmk: Errors, so I did not complete making targets
+Collected error summary (may duplicate other messages):
+  biber student_thesis: Command for 'biber student_thesis' gave return code 25
+
+Latexmk: Sometimes, the -f option can be used to get latexmk
+  to try to force complete processing.
+  But normally, you will need to correct the file(s) that caused the
+  error, and then rerun latexmk.
+  In some cases, it is best to clean out generated files before rerunning
+  latexmk after you've corrected the files.

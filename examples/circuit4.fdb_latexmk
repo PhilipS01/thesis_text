@@ -1,8 +1,8 @@
 # Fdb version 4
-["lualatex"] 1789760133.4866 "/Users/philipsimon/thesis/examples/circuit3.tex" "circuit3.pdf" "circuit3" 1789760134.58734 0
+["lualatex"] 1789760382.39778 "/Users/philipsimon/thesis/examples/circuit4.tex" "circuit4.pdf" "circuit4" 1789760383.39199 0
   "/Users/philipsimon/Library/texlive/2026/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1776522239.10636 127327 bb05cc850edf5447a76a9cb72263daaf ""
   "/Users/philipsimon/Library/texlive/2026/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1776522239.05984 434256 383e2e5160283ba5b99d8642bde934fb ""
-  "/Users/philipsimon/thesis/examples/circuit3.tex" 1789760133.35477 1623 0867a9e23550fee5c755ada51efb5ace ""
+  "/Users/philipsimon/thesis/examples/circuit4.tex" 1789760382.26674 1409 9eedb5f3d41bb7ac8f84345116f75d05 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf" 1255129361 111536 ae9d1b331000d544f47e5223081b7b54 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1136768653 1528 abec98dbc43e172678c11b3b9031252a ""
@@ -14,7 +14,6 @@
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy5.tfm" 1136768653 1112 14d5d5f6bd3c949edecb5b872f295553 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy7.tfm" 1136768653 1120 2b3f9b25605010c69bc328bea6ac000f ""
-  "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2026/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex" 1770238256 48595 84cc144096eb9d88ce14e3e877f4c5d5 ""
@@ -193,10 +192,10 @@
   "/usr/local/texlive/2026/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1740687098 13566 16df94dd2de231b2bca0aaa0190941fe ""
   "/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1776006599 5573038 b99aad5e4898a9034e953632f940512b ""
   "/usr/local/texlive/2026/texmf-var/web2c/luahbtex/lualatex.fmt" 1776006513 5657140 17697765d1663e4eed73a6be483a9fe4 ""
-  "circuit3.aux" 1789760134.53016 32 3985256e7290058c681f74d7a3565a19 "lualatex"
-  "circuit3.tex" 1789760133.35477 1623 0867a9e23550fee5c755ada51efb5ace ""
+  "circuit4.aux" 1789760383.33954 32 3985256e7290058c681f74d7a3565a19 "lualatex"
+  "circuit4.tex" 1789760382.26674 1409 9eedb5f3d41bb7ac8f84345116f75d05 ""
   (generated)
-  "circuit3.aux"
-  "circuit3.log"
-  "circuit3.pdf"
+  "circuit4.aux"
+  "circuit4.log"
+  "circuit4.pdf"
   (rewritten before read)

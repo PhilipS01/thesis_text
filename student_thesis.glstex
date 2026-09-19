@@ -141,7 +141,7 @@ group={\bibglsnumbergroup{11}{11}{symbols}}}%
 
 \bibglsnewsymbol{iC}%
 {symbol={\si{\ampere}},
-location={\glsnoidxdisplayloc{}{page}{glsnumberformat}{4}\bibglsdelimN \glsnoidxdisplayloc{}{page}{glsnumberformat}{6}\bibglsdelimN \glsnoidxdisplayloc{}{page}{glsnumberformat}{7}\bibglsdelimN \glsnoidxdisplayloc{}{page}{glsnumberformat}{10}\bibglsdelimN \glsnoidxdisplayloc{}{page}{glsnumberformat}{17}\bibglslastDelimN \glsnoidxdisplayloc{}{page}{glsnumberformat}{24}},
+location={\glsnoidxdisplayloc{}{page}{glsnumberformat}{4}\bibglsdelimN \glsnoidxdisplayloc{}{page}{glsnumberformat}{6}\bibglsdelimN \glsnoidxdisplayloc{}{page}{glsnumberformat}{7}\bibglsdelimN \glsnoidxdisplayloc{}{page}{glsnumberformat}{10}\bibglslastDelimN \glsnoidxdisplayloc{}{page}{glsnumberformat}{17}},
 sort={12},
 type={symbols},
 group={\bibglsnumbergroup{12}{12}{symbols}}}%
@@ -152,7 +152,6 @@ group={\bibglsnumbergroup{12}{12}{symbols}}}%
 \glsxtrfieldlistadd{iC}{loclist}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{7}}
 \glsxtrfieldlistadd{iC}{loclist}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{10}}
 \glsxtrfieldlistadd{iC}{loclist}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{17}}
-\glsxtrfieldlistadd{iC}{loclist}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{24}}
 
 
 \bibglshypergroup{symbols}{\bibglsnumbergroup{20}{20}{symbols}}
@@ -264,7 +263,7 @@ group={\bibglsnumbergroup{42}{42}{symbols}}}%
 
 \bibglsnewsymbol{tn}%
 {symbol={\si{\second}},
-location={\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}\bibglsdelimN \glsnoidxdisplayloc{}{page}{glsnumberformat}{10}\bibglsdelimN \glsnoidxdisplayloc{}{page}{glsnumberformat}{11}\bibglsdelimN \glsnoidxdisplayloc{}{page}{glsnumberformat}{15}\bibglslastDelimN \glsnoidxdisplayloc{}{page}{glsnumberformat}{24}},
+location={\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}\bibglsdelimN \glsnoidxdisplayloc{}{page}{glsnumberformat}{10}\bibglsdelimN \glsnoidxdisplayloc{}{page}{glsnumberformat}{11}\bibglslastDelimN \glsnoidxdisplayloc{}{page}{glsnumberformat}{15}},
 sort={50},
 type={symbols},
 group={\bibglsnumbergroup{50}{50}{symbols}}}%
@@ -274,7 +273,6 @@ group={\bibglsnumbergroup{50}{50}{symbols}}}%
 \glsxtrfieldlistadd{tn}{loclist}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{10}}
 \glsxtrfieldlistadd{tn}{loclist}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{11}}
 \glsxtrfieldlistadd{tn}{loclist}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{15}}
-\glsxtrfieldlistadd{tn}{loclist}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{24}}
 
 
 \bibglshypergroup{symbols}{\bibglsnumbergroup{51}{51}{symbols}}
